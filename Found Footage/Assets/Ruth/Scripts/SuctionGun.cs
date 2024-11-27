@@ -5,13 +5,15 @@ public class SuctionGun : MonoBehaviour
 {
     //Gun stats
     public int damage;
-    public int float timeBetweenShooting, range, reloadTime, timeBetweenShots;
+    public float timeBetweenShooting, range, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;
     public bool allowButtonHold;
     int bulletsShot;
+    int bulletsLeft;
 
     //bools
     bool shooting, readyToShoot;
+    bool reloading;
 
     //Reference
     public Camera fpsCam;
@@ -22,7 +24,7 @@ public class SuctionGun : MonoBehaviour
     private void MyInput()
     {
         if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
-        else shooting = Input().GetKeyDown(KeyCode.Mouse0);
+        else shooting = Input.GetKeyDown(KeyCode.Mouse0);
 
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
 
@@ -37,17 +39,17 @@ public class SuctionGun : MonoBehaviour
         readyToShoot = false;
 
         //RayCast
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out rayHit, range, whatIsEnemy)
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out rayHit, range, whatIsEnemy))
         {
             Debug.Log(rayHit.collider.name);
 
             //enemy must be tagged as enemy to work and needs to have a script with a take damage function
-            if (rayHit.collider.CompareTag("Enemy"))
-                rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);
+            //if (rayHit.collider.CompareTag("Enemy"))
+                //rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);
         }
 
         bulletsLeft--;
-        invoke("ResetShot", timeBetweenShooting);
+        Invoke("ResetShot", timeBetweenShooting);
     }
 
     private void ResetShot()
