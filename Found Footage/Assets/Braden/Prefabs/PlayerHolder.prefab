@@ -436,7 +436,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -458,7 +458,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c8ded9b5539717489c73281a6cea429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 2
+  mouseSensitivity: 5
+  controllerSensitivity: 5
+  isController: 0
   orientation: {fileID: 1760663019217300902}
 --- !u!1 &1760663020362367105
 GameObject:

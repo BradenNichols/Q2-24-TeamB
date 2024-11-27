@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6729a59d69c8dc41b2a44cea70ae9a5, type: 3}
+  m_Name: VHSEffectMaterialPointer
+  m_EditorClassIdentifier: 
+  VHSEffectMaterial: {fileID: 2100000, guid: c547c16e00e690f4ea5011596182f11a, type: 2}

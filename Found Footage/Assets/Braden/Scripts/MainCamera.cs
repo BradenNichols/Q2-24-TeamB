@@ -5,7 +5,10 @@ using UnityEngine.InputSystem;
 
 public class MainCamera : MonoBehaviour
 {
-    public float sensitivity;
+    public float mouseSensitivity;
+    public float controllerSensitivity;
+    public bool isController = false;
+
     public Transform orientation;
 
     float xRotation;
@@ -24,6 +27,11 @@ public class MainCamera : MonoBehaviour
     
     void Update()
     {
+        float sensitivity = mouseSensitivity;
+
+        if (isController)
+            sensitivity = controllerSensitivity;
+
         // axis
         float axisX = lookAxis.x * Time.deltaTime * (sensitivity * 6);
         float axisY = lookAxis.y * Time.deltaTime * (sensitivity * 6);
@@ -40,6 +48,9 @@ public class MainCamera : MonoBehaviour
     {
         lookAxis = context.ReadValue<Vector2>();
 
-        //print(lookAxis);
+        if (context.control.device.displayName.Contains("Controller"))
+            isController = true;
+        else
+            isController = false;
     }
 }
