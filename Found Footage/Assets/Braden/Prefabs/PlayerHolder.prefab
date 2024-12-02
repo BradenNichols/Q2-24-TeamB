@@ -617,3 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7761bc2a9ab88409847f58d76f20f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heldItem: {fileID: 0}
+  cameraTransform: {fileID: 1760663020273365346}
+  defaultOffset: {x: 0, y: 0, z: 2}
+  itemLerpSpeed: 30
