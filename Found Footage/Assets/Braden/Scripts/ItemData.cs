@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class ItemData : MonoBehaviour
 {
+    [Header("Settings")]
     public Vector3 holdingOffset;
+
+    [Header("Read-Only")]
+    public bool isHeld = false;
 }

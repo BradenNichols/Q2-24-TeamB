@@ -1,66 +1,99 @@
 
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SuctionGun : MonoBehaviour
 {
-    //Gun stats
-    public int damage;
-    public float timeBetweenShooting, range, reloadTime, timeBetweenShots;
-    public int magazineSize, bulletsPerTap;
-    public bool allowButtonHold;
-    int bulletsShot;
-    int bulletsLeft;
+    [Header("Weapon Stats")]
+    public int damage = 1;
+    public float range = 10;
+    public float magazineSize = 50;
+    public float weaponCooldown = 0.5f;
 
-    //bools
-    bool shooting, readyToShoot;
-    bool reloading;
+    [Header("Weapon Info")]
+    public float ammo = 10;
+    public bool isShooting = false;
+    public bool canShoot = false;
 
-    //Reference
+    [Header("References")]
+    public InputActionReference fireAction;
     public Camera fpsCam;
     public Transform attackPoint;
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
 
-    private void MyInput()
+    [Header("Private")]
+    private bool isButtonHeld = false;
+
+    // Unity Functions
+
+    void Start()
     {
-        if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
-        else shooting = Input.GetKeyDown(KeyCode.Mouse0);
-
-        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
-
-        //Shoot 
-        if (readyToShoot && shooting && !reloading && bulletsLeft  > 0){
-            Shoot();
-        }
+        fireAction.action.started += StartFireEvent;
+        fireAction.action.canceled += FinishFireEvent;
     }
 
-    private void Shoot()
+    void Update()
     {
-        readyToShoot = false;
-
-        //RayCast
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out rayHit, range, whatIsEnemy))
+        if (isShooting)
         {
-            Debug.Log(rayHit.collider.name);
+            // Shoot update
 
-            //enemy must be tagged as enemy to work and needs to have a script with a take damage function
-            //if (rayHit.collider.CompareTag("Enemy"))
-                //rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);
+            if (ammo <= 0)
+                StopShooting();
+            else
+            {
+                // Raycast
+
+                /*
+                if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out rayHit, range, whatIsEnemy))
+                {
+                    Debug.Log(rayHit.collider.name);
+
+                    //enemy must be tagged as enemy to work and needs to have a script with a take damage function
+                    //if (rayHit.collider.CompareTag("Enemy"))
+                    //rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);
+                }*/
+            }
         }
-
-        bulletsLeft--;
-        Invoke("ResetShot", timeBetweenShooting);
     }
 
-    private void ResetShot()
+    // Input
+
+    public void StartFireEvent(InputAction.CallbackContext context)
     {
-        readyToShoot = true;
+        isButtonHeld = true;
+        BeginShooting();
     }
 
-    private void Reload()
+    public void FinishFireEvent(InputAction.CallbackContext context)
     {
-
+        isButtonHeld = false;
+        StopShooting();
     }
 
-    
+
+    // Functions
+
+    public void BeginShooting()
+    {
+        if (!canShoot || isShooting || ammo <= 0) return;
+
+        isShooting = true;
+        Debug.Log("Begin Shooting");
+    }
+
+    void StopShooting()
+    {
+        Debug.Log("Stop Shooting");
+        Invoke("ResetCD", weaponCooldown);
+    }
+
+    void ResetCD() 
+    { 
+        canShoot = true;
+
+        if (isButtonHeld)
+            BeginShooting();
+    }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1167624944554406186}
   - component: {fileID: 1167624944554406181}
   - component: {fileID: 1167624944554406180}
+  - component: {fileID: 8383795608808776266}
   m_Layer: 0
   m_Name: Protogeist
   m_TagString: Untagged
@@ -111,3 +112,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdingOffset: {x: 1, y: -0.5, z: 1.5}
+  isHeld: 0
+--- !u!114 &8383795608808776266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167624944554406183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99cf6e8a58e67d74192cb301c5592a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  range: 0
+  magazineSize: 0
+  weaponCooldown: 0.5
+  ammo: 10
+  isShooting: 0
+  canShoot: 0
+  fireAction: {fileID: 930609360388481532, guid: 12d58d4cd41281a4ca3eb6c8e5e5fb62,
+    type: 3}
+  fpsCam: {fileID: 0}
+  attackPoint: {fileID: 0}
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 0

@@ -59,7 +59,13 @@ public class Backpack : MonoBehaviour
     public void AddItem(GameObject item)
     {
         item.transform.parent = transform; // parent it to backpack
+        item.layer = LayerMask.NameToLayer("TopRender");
         item.SetActive(false);
+
+        Collider collider = item.GetComponent<Collider>();
+
+        if (collider)
+            collider.enabled = false;
     }
 
     public void EquipItem(GameObject item)
