@@ -85,6 +85,8 @@ public class SuctionGun : MonoBehaviour
 
     void StopShooting()
     {
+        isShooting = false;
+
         Debug.Log("Stop Shooting");
         Invoke("ResetCD", weaponCooldown);
     }
