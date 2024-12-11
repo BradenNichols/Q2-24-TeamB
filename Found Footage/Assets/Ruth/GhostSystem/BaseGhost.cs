@@ -9,11 +9,12 @@ public class BaseGhost : MonoBehaviour
     public int resistance;
     public GameObject target;
 
-    public BaseGhost (int attack, int defense)
+    public BaseGhost(int attack, int defense)
     {
+        /*
         this.speed = speed;
         this.damage = damage;
         this.resistance = resistance;
-        this.target = target;
+        this.target = target;*/
     }
 }

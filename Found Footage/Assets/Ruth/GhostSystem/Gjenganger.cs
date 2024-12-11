@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Gjenganger : BaseGhost
 {
+    public Gjenganger(int attack, int defense) : base(attack, defense)
+    {
+    }
+
     void Start()
     {
-        public static Gjenganger gjenganger = new Gjenganger();
+        
     }
 }
