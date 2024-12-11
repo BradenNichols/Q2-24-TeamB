@@ -6,6 +6,6 @@ public class Gjenganger : BaseGhost
 {
     void Start()
     {
-
+        public static Gjenganger gjenganger = new Gjenganger();
     }
 }
