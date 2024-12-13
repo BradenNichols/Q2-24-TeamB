@@ -30,23 +30,11 @@ public class StreamChats : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
-            CreateMessage(0); // testing keybind
+            CreateMessage(1); // testing keybind
     }
 
     public GameObject CreateMessage(int messageIndex)
     {
-        // Old Message
-
-        //GameObject oldestMessage;
-        /*
-        float oldYPos = 0;
-
-        if (chatQueue.Count > 0)
-        {
-            //oldestMessage = (GameObject)chatQueue.Peek();
-            oldYPos = ((GameObject)chatQueue.Peek()).GetComponent<RectTransform>().rect.y;
-        }*/
-
         // Create
 
         ChatMessage messageData = messages[messageIndex];
@@ -59,20 +47,8 @@ public class StreamChats : MonoBehaviour
         messageObject.name = messageIndex.ToString();
         messageObject.SetActive(true);
 
-        // After
-
-        //Debug.Log($"Create message (index {messageIndex.ToString()})");
-        /*chatQueue.Enqueue(messageObject);
-
-        Debug.Log(oldYPos);
-        Debug.Log(((GameObject)chatQueue.Peek()).GetComponent<RectTransform>().rect.y);
-
-        if (chatQueue.Count > 1 && oldYPos != ((GameObject)chatQueue.Peek()).GetComponent<RectTransform>().rect.y)
-        {
-            Destroy((GameObject)chatQueue.Dequeue());
-
-            Debug.Log("DESTROYED!");
-        }*/
+        // two problems: autoscrolling on new messages: https://discussions.unity.com/t/scrollview-auto-scroll-to-bottom/895083
+        // and weird offsets with different length messages: different prefab for different line lengths?
 
         return messageObject;
     }
