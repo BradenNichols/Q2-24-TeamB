@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44569707293815f46817178e6da4edc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdingOffset: {x: 1, y: -1, z: 1.2}
+  holdingOffset: {x: 1, y: -1.2, z: 1.2}
   isHeld: 0
 --- !u!114 &2428858460170666359
 MonoBehaviour:
@@ -253,20 +253,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99cf6e8a58e67d74192cb301c5592a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  range: 0
-  magazineSize: 0
+  damagePerSecond: 5
+  range: 10
+  magazineSize: 50
   weaponCooldown: 0.5
-  ammo: 10
+  ammo: 50
   isShooting: 0
   canShoot: 0
   fireAction: {fileID: 930609360388481532, guid: 12d58d4cd41281a4ca3eb6c8e5e5fb62,
     type: 3}
-  fpsCam: {fileID: 0}
   attackPoint: {fileID: 0}
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 0
+  enemyTag: 
 --- !u!60 &1262609711382976969
 PolygonCollider2D:
   m_ObjectHideFlags: 0

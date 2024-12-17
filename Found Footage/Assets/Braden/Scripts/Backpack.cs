@@ -76,6 +76,7 @@ public class Backpack : MonoBehaviour
 
         heldItem = item;
         heldItemData = item.GetComponent<ItemData>();
+        heldItemData.isHeld = true;
         item.SetActive(true);
     }
 
@@ -84,6 +85,7 @@ public class Backpack : MonoBehaviour
         if (heldItem != null)
         {
             heldItem.SetActive(false);
+            heldItemData.isHeld = false;
         }
 
         heldItem = null;

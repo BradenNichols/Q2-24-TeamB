@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class SuctionGun : MonoBehaviour
 {
     [Header("Weapon Stats")]
-    public int damage = 1;
+    public int damagePerSecond = 5;
     public float range = 10;
     public float magazineSize = 50;
     public float weaponCooldown = 0.5f;
@@ -17,10 +17,9 @@ public class SuctionGun : MonoBehaviour
 
     [Header("References")]
     public InputActionReference fireAction;
-    public Camera fpsCam;
     public Transform attackPoint;
-    public RaycastHit rayHit;
-    public LayerMask whatIsEnemy;
+    //public RaycastHit rayHit;
+    public string enemyTag;
 
     [Header("Private")]
     private bool isButtonHeld = false;

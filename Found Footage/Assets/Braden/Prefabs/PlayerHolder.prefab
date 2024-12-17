@@ -382,6 +382,7 @@ GameObject:
   - component: {fileID: 1760663019556657027}
   - component: {fileID: 1760663019556657052}
   - component: {fileID: 1760663019556657053}
+  - component: {fileID: 7314578115247715998}
   - component: {fileID: 1760663019556657054}
   m_Layer: 0
   m_Name: Player
@@ -446,6 +447,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   orientation: {fileID: 1760663019217300902}
+--- !u!114 &7314578115247715998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760663019556657026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fbc2a3fe379fe5429d855759cb865fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  maxHealth: 1
+  isAlive: 1
 --- !u!114 &1760663019556657054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,7 +787,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras:
-  - {fileID: 0}
+  - {fileID: 1088017696134645185}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
