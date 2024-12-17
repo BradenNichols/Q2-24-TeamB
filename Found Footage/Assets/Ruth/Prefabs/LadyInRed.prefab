@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4339837244693753789}
   - component: {fileID: 4339837244693753788}
   - component: {fileID: 2947749433667402731}
+  - component: {fileID: 8034679377790278538}
   m_Layer: 0
   m_Name: LadyInRed
   m_TagString: Enemy
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4339837244693753790
 MeshFilter:
@@ -115,3 +116,18 @@ MonoBehaviour:
   damage: 0
   resistance: 0
   target: {fileID: 0}
+--- !u!114 &8034679377790278538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4339837244693753787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fbc2a3fe379fe5429d855759cb865fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  maxHealth: 1
+  isAlive: 1
