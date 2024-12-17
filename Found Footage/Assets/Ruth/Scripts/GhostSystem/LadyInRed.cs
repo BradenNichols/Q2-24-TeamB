@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class LadyInRed : GhostStats
 {
-
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // the LadyInRed touched a Player
+        }
     }
 }
