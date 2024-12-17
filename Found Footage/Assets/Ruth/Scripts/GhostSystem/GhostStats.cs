@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LadyInRed : GhostStats
+public class GhostStats : MonoBehaviour
 {
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int speed;
+    public int damage;
+    public int resistance;
+    public GameObject target;
 
     // Update is called once per frame
     void Update()
