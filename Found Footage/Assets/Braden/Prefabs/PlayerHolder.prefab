@@ -802,7 +802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 5
   controllerSensitivity: 5
-  isController: 0
+  cameraLerpSpeed: 35
   orientation: {fileID: 1760663019217300902}
 --- !u!1 &1760663020362367105
 GameObject:
@@ -963,7 +963,8 @@ MonoBehaviour:
   cameraTransform: {fileID: 1760663020273365346}
   heldItem: {fileID: 0}
   defaultHoldOffset: {x: 0, y: 0, z: 0}
-  itemLerpSpeed: 45
+  itemPositionLerpSpeed: 55
+  itemRotationLerpSpeed: 45
 --- !u!1 &2870925442430992452
 GameObject:
   m_ObjectHideFlags: 0

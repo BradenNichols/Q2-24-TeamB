@@ -7,7 +7,8 @@ public class MainCamera : MonoBehaviour
 {
     public float mouseSensitivity;
     public float controllerSensitivity;
-    public bool isController = false;
+    public float cameraLerpSpeed;
+    bool isController = false;
 
     public Transform orientation;
 
@@ -40,8 +41,8 @@ public class MainCamera : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation - axisY, -90f, 90f);
 
         // rotate
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(xRotation, yRotation, 0), Time.deltaTime * cameraLerpSpeed);
+        orientation.rotation = Quaternion.Slerp(orientation.rotation, Quaternion.Euler(0, yRotation, 0), Time.deltaTime * cameraLerpSpeed);
     }
 
     public void LookEvent(InputAction.CallbackContext context)

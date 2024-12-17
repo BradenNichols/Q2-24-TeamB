@@ -14,7 +14,8 @@ public class Backpack : MonoBehaviour
 
     [Header("Settings")]
     public Vector3 defaultHoldOffset;
-    public float itemLerpSpeed;
+    public float itemPositionLerpSpeed;
+    public float itemRotationLerpSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class Backpack : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (heldItem != null)
         {
@@ -39,8 +40,8 @@ public class Backpack : MonoBehaviour
             Vector3 newPosition = cameraTransform.position +
                 (cameraTransform.forward * itemOffset.z + cameraTransform.right * itemOffset.x + cameraTransform.up * itemOffset.y);
 
-            heldItem.transform.rotation = cameraTransform.rotation;
-            heldItem.transform.position = Vector3.Lerp(heldItem.transform.position, newPosition, Time.deltaTime * itemLerpSpeed);
+            heldItem.transform.rotation = Quaternion.Slerp(heldItem.transform.rotation, cameraTransform.rotation, Time.deltaTime * itemRotationLerpSpeed);
+            heldItem.transform.position = Vector3.Lerp(heldItem.transform.position, newPosition, Time.deltaTime * itemPositionLerpSpeed);
         }
     }
 
