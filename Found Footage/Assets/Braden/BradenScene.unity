@@ -5466,6 +5466,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1088017696134645185, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 99aa7184baafe954d9acf87adfa45fb8, type: 2}
+    - target: {fileID: 1760663020273365374, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 99aa7184baafe954d9acf87adfa45fb8, type: 2}
     - target: {fileID: 1760663020362367105, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_Name
