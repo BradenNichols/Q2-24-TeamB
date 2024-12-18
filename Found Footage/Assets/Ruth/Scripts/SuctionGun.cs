@@ -5,24 +5,27 @@ using UnityEngine.InputSystem;
 public class SuctionGun : MonoBehaviour
 {
     [Header("Weapon Stats")]
-    public int damagePerSecond = 5;
-    public float range = 10;
-    public float magazineSize = 50;
+    public float damagePerSecond = 5;
+    public float castRange = 15;
+    public float castSizeMult = 3;
+    public float magazineSize = 25;
     public float weaponCooldown = 0.5f;
 
     [Header("Weapon Info")]
     public float ammo = 10;
+    public bool canShoot = true;
+    [HideInInspector]
     public bool isShooting = false;
-    public bool canShoot = false;
 
     [Header("References")]
     public InputActionReference fireAction;
-    public Transform attackPoint;
-    //public RaycastHit rayHit;
     public string enemyTag;
 
     [Header("Private")]
     private bool isButtonHeld = false;
+    private ItemData itemData;
+
+    // OLD POS OFFSET: Vector3(1, -1.2, 1.2) Vector3(0.800000012,-1.89999998,2) Vector3(-63,0,0)
 
     // Unity Functions
 
@@ -30,29 +33,35 @@ public class SuctionGun : MonoBehaviour
     {
         fireAction.action.started += StartFireEvent;
         fireAction.action.canceled += FinishFireEvent;
+
+        itemData = GetComponent<ItemData>();
     }
 
     void Update()
     {
-        if (isShooting)
+        if (isShooting) // Shoot update
         {
-            // Shoot update
+            if (ammo <= 0) { StopShooting(); return; }
+            ammo = Mathf.Clamp(ammo - Time.deltaTime, 0, ammo);
 
-            if (ammo <= 0)
-                StopShooting();
-            else
+            // Raycast
+
+            Transform firePoint = itemData.heldBackpack.cameraTransform;
+            RaycastHit hitInfo;
+
+            if (Physics.BoxCast(firePoint.position, (firePoint.localScale / 2) * castSizeMult, firePoint.forward, out hitInfo, firePoint.rotation, castRange)) // returns a bool if hit
             {
-                // Raycast
+                GameObject hitObject = hitInfo.collider.gameObject;
+                Debug.Log(hitObject.name);
 
-                /*
-                if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out rayHit, range, whatIsEnemy))
+                if (hitObject.CompareTag("Enemy"))
                 {
-                    Debug.Log(rayHit.collider.name);
+                    // do stuff
+                    GeneralStats enemyStats = hitObject.GetComponent<GeneralStats>();
 
-                    //enemy must be tagged as enemy to work and needs to have a script with a take damage function
-                    //if (rayHit.collider.CompareTag("Enemy"))
-                    //rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);
-                }*/
+                    if (enemyStats)
+                        enemyStats.TakeDamage(damagePerSecond * Time.deltaTime);
+                }
             }
         }
     }
@@ -79,12 +88,16 @@ public class SuctionGun : MonoBehaviour
         if (!canShoot || isShooting || ammo <= 0) return;
 
         isShooting = true;
-        Debug.Log("Begin Shooting");
+        //Debug.Log("Begin Shooting");
     }
 
     void StopShooting()
     {
-        Debug.Log("Stop Shooting");
+        if (!isShooting) return;
+
+        isShooting = false;
+
+        //Debug.Log("Stop Shooting");
         Invoke("ResetCD", weaponCooldown);
     }
 

@@ -5,8 +5,11 @@ using UnityEngine;
 public class ItemData : MonoBehaviour
 {
     [Header("Settings")]
-    public Vector3 holdingOffset;
+    public Vector3 holdPositionOffset;
+    public Vector3 holdRotationOffset;
 
     [Header("Read-Only")]
     public bool isHeld = false;
+    [HideInInspector]
+    public Backpack heldBackpack;
 }

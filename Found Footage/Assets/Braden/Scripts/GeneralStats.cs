@@ -8,7 +8,7 @@ public class GeneralStats : MonoBehaviour
     public float maxHealth = 1;
     public bool isAlive = true;
 
-    void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         if (!isAlive) return;
 
@@ -18,11 +18,13 @@ public class GeneralStats : MonoBehaviour
             Kill();
     }
 
-    void Kill()
+    public void Kill()
     {
         if (!isAlive) return;
 
         isAlive = false;
         health = 0;
+
+        Destroy(gameObject); // temporary
     }
 }

@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float groundDrag;
 
+    public bool isJumpEnabled = false;
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
@@ -79,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
     {
         bool isPressed = context.ReadValue<float>() > 0;
 
-        if (!isGrounded || !canJump || !isPressed)
+        if (!isGrounded || !canJump || !isPressed || !isJumpEnabled)
             return;
 
         canJump = false;

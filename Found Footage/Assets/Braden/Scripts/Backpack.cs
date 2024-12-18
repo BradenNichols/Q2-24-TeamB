@@ -13,15 +13,13 @@ public class Backpack : MonoBehaviour
     ItemData heldItemData;
 
     [Header("Settings")]
-    public Vector3 defaultHoldOffset;
     public float itemPositionLerpSpeed;
     public float itemRotationLerpSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        // transform.parent = GameObject.Find("Floor").transform;
-
+        // GUN TESTING
         GameObject testItem = GameObject.Find("Protogeist");
         AddItem(testItem);
         EquipItem(testItem);
@@ -32,15 +30,27 @@ public class Backpack : MonoBehaviour
     {
         if (heldItem != null)
         {
-            Vector3 itemOffset = defaultHoldOffset;
-            if (heldItemData) itemOffset = heldItemData.holdingOffset;
+            // Lerp Variables
 
-            // Lerp Item Position
+            Vector3 itemPosOffset = Vector3.zero;
+            Vector3 itemRotOffset = Vector3.zero;
 
-            Vector3 newPosition = cameraTransform.position +
-                (cameraTransform.forward * itemOffset.z + cameraTransform.right * itemOffset.x + cameraTransform.up * itemOffset.y);
+            if (heldItemData) { 
+                itemPosOffset = heldItemData.holdPositionOffset; 
+                itemRotOffset = heldItemData.holdRotationOffset; 
+            }
 
-            heldItem.transform.rotation = Quaternion.Slerp(heldItem.transform.rotation, cameraTransform.rotation, Time.deltaTime * itemRotationLerpSpeed);
+            // Lerp Item Position & Rotation
+
+            Vector3 newPosition = cameraTransform.position + (
+                cameraTransform.forward * itemPosOffset.z + 
+                cameraTransform.right * itemPosOffset.x + 
+                cameraTransform.up * itemPosOffset.y
+            );
+
+            Quaternion newRotation = cameraTransform.rotation * Quaternion.Euler(itemRotOffset.x, itemRotOffset.y, itemRotOffset.z);
+
+            heldItem.transform.rotation = Quaternion.Slerp(heldItem.transform.rotation, newRotation, Time.deltaTime * itemRotationLerpSpeed);
             heldItem.transform.position = Vector3.Lerp(heldItem.transform.position, newPosition, Time.deltaTime * itemPositionLerpSpeed);
         }
     }
@@ -75,8 +85,11 @@ public class Backpack : MonoBehaviour
         else if (heldItem != null) UnequipItem();
 
         heldItem = item;
+
         heldItemData = item.GetComponent<ItemData>();
         heldItemData.isHeld = true;
+        heldItemData.heldBackpack = this;
+
         item.SetActive(true);
     }
 
@@ -86,6 +99,7 @@ public class Backpack : MonoBehaviour
         {
             heldItem.SetActive(false);
             heldItemData.isHeld = false;
+            heldItemData.heldBackpack = null;
         }
 
         heldItem = null;
