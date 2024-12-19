@@ -25,7 +25,7 @@ public class SuctionGun : MonoBehaviour
     private bool isButtonHeld = false;
     private ItemData itemData;
 
-    // OLD POS OFFSET: Vector3(1, -1.2, 1.2) Vector3(0.800000012,-1.89999998,2) Vector3(-63,0,0)
+    // OLD POS OFFSET: Vector3(1, -1.2, 1.2)
 
     // Unity Functions
 
@@ -86,6 +86,11 @@ public class SuctionGun : MonoBehaviour
     public void BeginShooting()
     {
         if (!canShoot || isShooting || ammo <= 0) return;
+
+        if (!itemData.isHeld)
+        {
+            // need to equip
+        }
 
         isShooting = true;
         //Debug.Log("Begin Shooting");

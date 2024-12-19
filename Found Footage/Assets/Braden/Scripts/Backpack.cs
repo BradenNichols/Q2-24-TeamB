@@ -6,6 +6,7 @@ public class Backpack : MonoBehaviour
 {
     [Header("References")]
     public Transform cameraTransform;
+    public Camera topRenderCamera;
 
     [Header("Runtime")]
     [HideInInspector]
@@ -21,8 +22,16 @@ public class Backpack : MonoBehaviour
     {
         // GUN TESTING
         GameObject testItem = GameObject.Find("Protogeist");
+        GameObject flashItem = GameObject.Find("Flashlight");
+
         AddItem(testItem);
-        EquipItem(testItem);
+
+        if (flashItem)
+        {
+            AddItem(flashItem);
+            EquipItem(flashItem);
+        } else
+            EquipItem(testItem);
     }
 
     // Update is called once per frame
@@ -90,6 +99,8 @@ public class Backpack : MonoBehaviour
         heldItemData.isHeld = true;
         heldItemData.heldBackpack = this;
 
+        topRenderCamera.fieldOfView = heldItemData.holdFieldOfView;
+
         item.SetActive(true);
     }
 
@@ -100,6 +111,8 @@ public class Backpack : MonoBehaviour
             heldItem.SetActive(false);
             heldItemData.isHeld = false;
             heldItemData.heldBackpack = null;
+
+            topRenderCamera.fieldOfView = 60;
         }
 
         heldItem = null;

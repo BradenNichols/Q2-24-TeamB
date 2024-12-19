@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ItemData : MonoBehaviour
 {
-    [Header("Settings")]
+    [Header("Item Holding Data")]
     public Vector3 holdPositionOffset;
     public Vector3 holdRotationOffset;
+    public float holdFieldOfView = 60;
 
     [Header("Read-Only")]
     public bool isHeld = false;
