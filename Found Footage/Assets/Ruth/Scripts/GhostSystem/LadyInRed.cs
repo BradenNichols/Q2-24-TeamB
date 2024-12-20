@@ -9,7 +9,7 @@ public class LadyInRed : GhostStats
         if (collision.gameObject.CompareTag("Player"))
         {
             // the LadyInRed touched a Player
-            GeneralStats generalStats = new GeneralStats();
+            GeneralStats generalStats = collision.gameObject.GetComponent<GeneralStats>();
         }
     }
 }
