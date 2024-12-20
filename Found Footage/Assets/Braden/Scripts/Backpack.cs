@@ -26,11 +26,12 @@ public class Backpack : MonoBehaviour
 
         AddItem(testItem);
 
+        /*
         if (flashItem)
         {
             AddItem(flashItem);
             EquipItem(flashItem);
-        } else
+        } else*/
             EquipItem(testItem);
     }
 
