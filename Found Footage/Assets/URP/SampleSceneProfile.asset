@@ -144,13 +144,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb60a22f311433c4c962b888d1393f88, type: 3}
   m_Name: PaniniProjection
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   distance:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.157
   cropToFit:
-    m_OverrideState: 0
-    m_Value: 0.287
+    m_OverrideState: 1
+    m_Value: 0.26
 --- !u!114 &6137213363291699989
 MonoBehaviour:
   m_ObjectHideFlags: 3
