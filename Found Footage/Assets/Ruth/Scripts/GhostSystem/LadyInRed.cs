@@ -15,6 +15,8 @@ public class LadyInRed : MonoBehaviour
     Rigidbody rb;
     Animator animator;
 
+    public System.Action<GameObject> onDeath { get; internal set; }
+
     private void Start()
     {
         //animator = GetComponent<Animator>();
