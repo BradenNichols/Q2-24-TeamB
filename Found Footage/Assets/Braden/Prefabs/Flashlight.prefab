@@ -66,9 +66,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxBattery: 100
+  batteryDrainPerSecond: 20
+  shakeBatteryGain: 22
+  shakeTime: 0.26
+  shakePosition: {x: 0.75, y: -0.7, z: 0.2}
+  shakeRotation: {x: -50, y: 0, z: 0}
   battery: 50
+  isEnabled: 0
   canShake: 1
   isShaking: 0
+  spotLight: {fileID: 6697001263321325191}
   fireAction: {fileID: 1032447416603981528, guid: 12d58d4cd41281a4ca3eb6c8e5e5fb62,
     type: 3}
 --- !u!33 &7629746486735059991

@@ -1101,9 +1101,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 1760663020273365346}
   topRenderCamera: {fileID: 1088017696134645185}
+  gunEquipAction: {fileID: 930609360388481532, guid: 12d58d4cd41281a4ca3eb6c8e5e5fb62,
+    type: 3}
+  flashlightEquipAction: {fileID: 1032447416603981528, guid: 12d58d4cd41281a4ca3eb6c8e5e5fb62,
+    type: 3}
   heldItem: {fileID: 0}
-  itemPositionLerpSpeed: 55
-  itemRotationLerpSpeed: 45
+  itemPositionLerpSpeed: 50
+  itemRotationLerpSpeed: 40
 --- !u!1 &2870925442430992452
 GameObject:
   m_ObjectHideFlags: 0

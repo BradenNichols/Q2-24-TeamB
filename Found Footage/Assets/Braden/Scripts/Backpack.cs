@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Backpack : MonoBehaviour
 {
     [Header("References")]
     public Transform cameraTransform;
     public Camera topRenderCamera;
+    public InputActionReference gunEquipAction;
+    public InputActionReference flashlightEquipAction;
 
     [Header("Runtime")]
     [HideInInspector]
@@ -20,19 +23,21 @@ public class Backpack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // GUN TESTING
-        GameObject testItem = GameObject.Find("Protogeist");
+        // Input
+
+        gunEquipAction.action.started += EquipGunEvent;
+        flashlightEquipAction.action.started += EquipFlashlightEvent;
+
+        // ITEM TESTING
+
+        GameObject gunItem = GameObject.Find("Protogeist");
         GameObject flashItem = GameObject.Find("Flashlight");
 
-        AddItem(testItem);
+        if (gunItem)
+            AddItem(gunItem);
 
-        /*
         if (flashItem)
-        {
             AddItem(flashItem);
-            EquipItem(flashItem);
-        } else*/
-            EquipItem(testItem);
     }
 
     // Update is called once per frame
@@ -40,28 +45,64 @@ public class Backpack : MonoBehaviour
     {
         if (heldItem != null)
         {
-            // Lerp Variables
-
-            Vector3 itemPosOffset = Vector3.zero;
-            Vector3 itemRotOffset = Vector3.zero;
-
-            if (heldItemData) { 
-                itemPosOffset = heldItemData.holdPositionOffset; 
-                itemRotOffset = heldItemData.holdRotationOffset; 
-            }
-
             // Lerp Item Position & Rotation
 
-            Vector3 newPosition = cameraTransform.position + (
-                cameraTransform.forward * itemPosOffset.z + 
-                cameraTransform.right * itemPosOffset.x + 
-                cameraTransform.up * itemPosOffset.y
-            );
-
-            Quaternion newRotation = cameraTransform.rotation * Quaternion.Euler(itemRotOffset.x, itemRotOffset.y, itemRotOffset.z);
+            Vector3 newPosition = getHeldPosition();
+            Quaternion newRotation = getHeldRotation();
 
             heldItem.transform.rotation = Quaternion.Slerp(heldItem.transform.rotation, newRotation, Time.deltaTime * itemRotationLerpSpeed);
             heldItem.transform.position = Vector3.Lerp(heldItem.transform.position, newPosition, Time.deltaTime * itemPositionLerpSpeed);
+        }
+    }
+
+    // Held Stuff
+
+    Vector3 getHeldPosition()
+    {
+        Vector3 itemPosOffset = Vector3.zero;
+
+        if (heldItemData)
+            itemPosOffset = heldItemData.holdPositionOffset;
+
+        Vector3 newPosition = cameraTransform.position + (
+            cameraTransform.forward * itemPosOffset.z +
+            cameraTransform.right * itemPosOffset.x +
+            cameraTransform.up * itemPosOffset.y
+        );
+
+        return newPosition;
+    }
+
+    Quaternion getHeldRotation()
+    {
+        Vector3 itemRotOffset = Vector3.zero;
+
+        if (heldItemData)
+            itemRotOffset = heldItemData.holdRotationOffset;
+
+        Quaternion newRotation = cameraTransform.rotation * Quaternion.Euler(itemRotOffset.x, itemRotOffset.y, itemRotOffset.z);
+
+        return newRotation;
+    }
+
+    // Input
+
+    public void EquipGunEvent(InputAction.CallbackContext context)
+    {
+        GameObject gun = FindItem("Protogeist");
+
+        if (gun != null)
+            EquipItem(gun);
+    }
+
+    public void EquipFlashlightEvent(InputAction.CallbackContext context)
+    {
+        GameObject flashlight = FindItem("Flashlight");
+
+        if (flashlight != null)
+        {
+            EquipItem(flashlight);
+            flashlight.GetComponent<Flashlight>().ShakeFlashlight();
         }
     }
 
@@ -75,6 +116,17 @@ public class Backpack : MonoBehaviour
             items.Add(transform.GetChild(i).gameObject);
 
         return items;
+    }
+
+    public GameObject FindItem(string ItemName)
+    {
+        foreach (GameObject thisItem in GetItems())
+        {
+            if (thisItem.name == ItemName)
+                return thisItem;
+        }
+
+        return null;
     }
 
     public void AddItem(GameObject item)
@@ -101,6 +153,9 @@ public class Backpack : MonoBehaviour
         heldItemData.heldBackpack = this;
 
         topRenderCamera.fieldOfView = heldItemData.holdFieldOfView;
+
+        item.transform.rotation = getHeldRotation();
+        item.transform.position = getHeldPosition();
 
         item.SetActive(true);
     }
