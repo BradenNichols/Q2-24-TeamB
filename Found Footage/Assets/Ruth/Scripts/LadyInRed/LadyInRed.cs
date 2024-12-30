@@ -12,6 +12,11 @@ public class LadyInRed : MonoBehaviour
     private bool isRotatingRight = false;
     private bool isWalking = false;
 
+    //for the AI detection and enemy to chase 
+    public bool detecting = false;
+    public bool chase = false;
+    public float detectionRange;
+
     Rigidbody rb;
     Animator animator;
 
