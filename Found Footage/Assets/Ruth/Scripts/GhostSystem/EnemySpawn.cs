@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
     public GameObject mySphere; // The enemy prefab to spawn
-    public int maxEnemies = 5; // Maximum number of enemies allowed
+    public int maxEnemies = 10; // Maximum number of enemies allowed
     private List<GameObject> activeEnemies = new List<GameObject>(); // List to track active enemies
 
     void Start()

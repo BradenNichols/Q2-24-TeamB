@@ -5,7 +5,7 @@ using UnityEngine;
 public class LadyInRed : MonoBehaviour
 {
     public float movementSpeed = 20f;
-    public float roationSpeed = 100f;
+    public float rotationSpeed = 100f;
 
     private bool isWandering = false;
     private bool isRotatingLeft = false;
@@ -25,22 +25,23 @@ public class LadyInRed : MonoBehaviour
 
     private void Update()
     {
-        if(isWandering == false)
+        if (isWandering == false)
         {
             StartCoroutine(Wander());
         }
         if (isRotatingRight == true)
         {
-            transform.Rotate(transform.up * Time.deltaTime * roationSpeed);
+            transform.Rotate(transform.up * Time.deltaTime * rotationSpeed);
         }
         if (isRotatingLeft == true)
         {
-            transform.Rotate(transform.up * Time.deltaTime * -roationSpeed);
+            transform.Rotate(transform.up * Time.deltaTime * -rotationSpeed);
         }
         if (isWalking == true)
         {
-            rb.AddForce(transform.forward * movementSpeed);
-           // animator.SetBool("isRunning", true);
+            // Move the enemy directly instead of applying force
+            rb.MovePosition(rb.position + transform.forward * movementSpeed * Time.deltaTime);
+            //animator.SetBool("isRunning", true);
         }
         //if (isWalking == false)
         //{
@@ -59,7 +60,6 @@ public class LadyInRed : MonoBehaviour
         isWandering = true;
 
         yield return new WaitForSeconds(walkWait);
-        
 
         isWalking = true;
         yield return new WaitForSeconds(walkTime);
@@ -68,7 +68,7 @@ public class LadyInRed : MonoBehaviour
 
         yield return new WaitForSeconds(rotatateWait);
 
-        if(rotateDirection == 1)
+        if (rotateDirection == 1)
         {
             isRotatingLeft = true;
             yield return new WaitForSeconds(rotationTime);
@@ -85,3 +85,4 @@ public class LadyInRed : MonoBehaviour
         isWandering = false;
     }
 }
+
