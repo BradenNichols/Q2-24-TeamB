@@ -53,7 +53,7 @@ public class ViewCount : MonoBehaviour
     {
         // can be positive or negative amount
         viewers = Mathf.Clamp(viewers + viewerAmount, 0, 9999);
-        viewCount.text = $"Viewers: {viewers}";
+        viewCount.text = $"VI:{viewers}";
 
         if (viewerAmount >= 0)
         {

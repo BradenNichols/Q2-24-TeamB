@@ -1147,10 +1147,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Viewers: 0'
+  m_text: VI:68
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ac2f226fe9d2e4d4399210217e69d4d4, type: 2}
-  m_sharedMaterial: {fileID: -3818386446363434182, guid: ac2f226fe9d2e4d4399210217e69d4d4,
+  m_fontAsset: {fileID: 11400000, guid: fc52903fe6f663a4586af150392191d7, type: 2}
+  m_sharedMaterial: {fileID: 2176904559765020271, guid: fc52903fe6f663a4586af150392191d7,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
