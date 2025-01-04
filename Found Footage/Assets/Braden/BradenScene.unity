@@ -5483,6 +5483,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 23.61
       objectReference: {fileID: 0}
+    - target: {fileID: 1760663019556657054, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760663019556657054, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[14].m_ActionId
+      value: 65f881c5-20df-423b-b79e-ee759684ed94
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760663019556657054, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[14].m_ActionName
+      value: Player/SecondFire[/Mouse/rightButton]
+      objectReference: {fileID: 0}
     - target: {fileID: 1760663020362367105, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_Name
@@ -5548,6 +5563,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5798042685716280038, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7666775691179212856, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -5588,8 +5608,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5459908339425446762, guid: b8894d8103384c04da506c113d264d6c, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b8894d8103384c04da506c113d264d6c, type: 3}
 --- !u!1001 &2428858461750055980
