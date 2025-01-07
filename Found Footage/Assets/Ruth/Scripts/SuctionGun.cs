@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,7 @@ public class SuctionGun : MonoBehaviour
     public float castSizeMult = 3;
     public float magazineSize = 25;
     public float weaponCooldown = 0.5f;
+    public float ammoDepletionPerSecond = 10;
 
     [Header("Weapon Info")]
     public float ammo = 10;
@@ -42,7 +44,7 @@ public class SuctionGun : MonoBehaviour
         if (isShooting) // Shoot update
         {
             if (ammo <= 0) { StopShooting(); return; }
-            ammo = Mathf.Clamp(ammo - Time.deltaTime, 0, ammo);
+            ammo = Mathf.Clamp(ammo - (Time.deltaTime * ammoDepletionPerSecond), 0, ammo);
 
             // Raycast
 
@@ -64,6 +66,8 @@ public class SuctionGun : MonoBehaviour
                 }
             }
         }
+
+        // TODO: show ammo of the gun with a battery percentage
     }
 
     // Input
@@ -80,17 +84,18 @@ public class SuctionGun : MonoBehaviour
         StopShooting();
     }
 
+    // Other
+
+    public void AddAmmo(float amount)
+    {
+        ammo = Mathf.Clamp(ammo + amount, 0, 100);
+    }
 
     // Functions
 
     public void BeginShooting()
     {
         if (!canShoot || isShooting || ammo <= 0) return;
-
-        if (!itemData.isHeld)
-        {
-            // need to equip
-        }
 
         isShooting = true;
         //Debug.Log("Begin Shooting");

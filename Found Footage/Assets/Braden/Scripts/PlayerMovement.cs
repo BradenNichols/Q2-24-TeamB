@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     public float airMultiplier;
     bool canJump = true;
 
+    [Header("Input")]
+    public bool canInteract = true;
+
     [Header("Ground Check")]
     public float playerHeight;
     public LayerMask groundMask;

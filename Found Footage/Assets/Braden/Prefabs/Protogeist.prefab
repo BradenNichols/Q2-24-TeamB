@@ -133,8 +133,9 @@ MonoBehaviour:
   castRange: 15
   castSizeMult: 3
   magazineSize: 10
-  weaponCooldown: 0.5
-  ammo: 5
+  weaponCooldown: 0.3
+  ammoDepletionPerSecond: 10
+  ammo: 50
   canShoot: 1
   isShooting: 0
   fireAction: {fileID: 930609360388481532, guid: 12d58d4cd41281a4ca3eb6c8e5e5fb62,
