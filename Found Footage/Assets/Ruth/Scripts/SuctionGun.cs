@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,6 +22,7 @@ public class SuctionGun : MonoBehaviour
 
     [Header("References")]
     public InputActionReference fireAction;
+    public List<ParticleSystem> fireParticles = new();
     public string enemyTag;
 
     [Header("Private")]
@@ -98,6 +100,8 @@ public class SuctionGun : MonoBehaviour
         if (!canShoot || isShooting || ammo <= 0) return;
 
         isShooting = true;
+        fireParticles.ForEach(particle => particle.Play());
+
         //Debug.Log("Begin Shooting");
     }
 
@@ -106,6 +110,7 @@ public class SuctionGun : MonoBehaviour
         if (!isShooting) return;
 
         isShooting = false;
+        fireParticles.ForEach(particle => particle.Stop());
 
         //Debug.Log("Stop Shooting");
         Invoke("ResetCD", weaponCooldown);
