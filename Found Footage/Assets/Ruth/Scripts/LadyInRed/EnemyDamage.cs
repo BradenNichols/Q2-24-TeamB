@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDamage : GeneralStats
+public class EnemyDamage : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {

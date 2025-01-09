@@ -4,30 +4,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class SuctionGun : MonoBehaviour
+public class SuctionGun : BaseItem
 {
     [Header("Weapon Stats")]
-    public float damagePerSecond = 5;
+    public float damagePerSecond;
     public float castRange = 15;
     public float castSizeMult = 3;
     public float magazineSize = 25;
     public float weaponCooldown = 0.5f;
     public float ammoDepletionPerSecond = 10;
+    public Vector2 hitSensitivity;
 
     [Header("Weapon Info")]
     public float ammo = 10;
     public bool canShoot = true;
+    bool shootCooldown = false;
     [HideInInspector]
     public bool isShooting = false;
 
     [Header("References")]
     public InputActionReference fireAction;
-    public List<ParticleSystem> fireParticles = new();
+    public InputActionReference lookAction;
+
+    public ParticleSystem gasParticle;
+    ParticleSystemRenderer gasRenderer;
+
+    public ParticleSystem beamParticle;
+    ParticleSystemRenderer beamRenderer;
+
+    public Material hitGas;
+    Material defaultGas;
+
+    public Material hitBeam;
+    Material defaultBeam;
+
     public string enemyTag;
 
     [Header("Private")]
     private bool isButtonHeld = false;
     private ItemData itemData;
+    private MainCamera cameraScript;
 
     // OLD POS OFFSET: Vector3(1, -1.2, 1.2)
 
@@ -39,6 +55,14 @@ public class SuctionGun : MonoBehaviour
         fireAction.action.canceled += FinishFireEvent;
 
         itemData = GetComponent<ItemData>();
+
+        beamRenderer = beamParticle.GetComponent<ParticleSystemRenderer>();
+        defaultBeam = beamRenderer.material;
+
+        gasRenderer = gasParticle.GetComponent<ParticleSystemRenderer>();
+        defaultGas = gasRenderer.material;
+
+        cameraScript = GameObject.Find("PlayerCam").GetComponent<MainCamera>();
     }
 
     void Update()
@@ -50,22 +74,44 @@ public class SuctionGun : MonoBehaviour
 
             // Raycast
 
-            Transform firePoint = itemData.heldBackpack.cameraTransform;
+            bool hitEnemy = false;
+
+            Transform firePoint = beamParticle.transform;
             RaycastHit hitInfo;
 
             if (Physics.BoxCast(firePoint.position, (firePoint.localScale / 2) * castSizeMult, firePoint.forward, out hitInfo, firePoint.rotation, castRange)) // returns a bool if hit
             {
                 GameObject hitObject = hitInfo.collider.gameObject;
-                Debug.Log(hitObject.name);
+                //Debug.Log(hitObject.name);
 
                 if (hitObject.CompareTag("Enemy"))
                 {
                     // do stuff
                     GeneralStats enemyStats = hitObject.GetComponent<GeneralStats>();
 
-                    if (enemyStats)
+                    if (enemyStats && enemyStats.isAlive)
+                    {
                         enemyStats.TakeDamage(damagePerSecond * Time.deltaTime);
+                        hitEnemy = true;
+                    }
                 }
+            }
+
+            // Update Hitting
+
+            if (hitEnemy)
+            { 
+                beamRenderer.material = hitBeam;
+                gasRenderer.material = hitGas;
+
+                cameraScript.sensitivityMultiplier = hitSensitivity;
+            }
+            else
+            { 
+                beamRenderer.material = defaultBeam;
+                gasRenderer.material = defaultGas;
+
+                cameraScript.sensitivityMultiplier = Vector2.one;
             }
         }
 
@@ -86,6 +132,18 @@ public class SuctionGun : MonoBehaviour
         StopShooting();
     }
 
+    // Backpack
+
+    public override void Equip()
+    {
+        Invoke("ResetCD", weaponCooldown);
+    }
+
+    public override void Unequip()
+    {
+        StopShooting(false); // add cooldown and clear stuff
+    }
+
     // Other
 
     public void AddAmmo(float amount)
@@ -97,28 +155,33 @@ public class SuctionGun : MonoBehaviour
 
     public void BeginShooting()
     {
-        if (!canShoot || isShooting || ammo <= 0) return;
+        if (!canShoot || isShooting || shootCooldown || ammo <= 0 || !itemData.isHeld) return;
 
         isShooting = true;
-        fireParticles.ForEach(particle => particle.Play());
 
-        //Debug.Log("Begin Shooting");
+        gasParticle.Play();
+        beamParticle.Play();
     }
 
-    void StopShooting()
+    void StopShooting(bool ResetCD = true)
     {
         if (!isShooting) return;
 
         isShooting = false;
-        fireParticles.ForEach(particle => particle.Stop());
+        shootCooldown = true;
 
-        //Debug.Log("Stop Shooting");
-        Invoke("ResetCD", weaponCooldown);
+        gasParticle.Stop();
+        beamParticle.Stop();
+
+        cameraScript.sensitivityMultiplier = Vector2.one;
+
+        if (ResetCD)
+            Invoke("ResetCD", weaponCooldown);
     }
 
     void ResetCD() 
-    { 
-        canShoot = true;
+    {
+        shootCooldown = false;
 
         if (isButtonHeld)
             BeginShooting();

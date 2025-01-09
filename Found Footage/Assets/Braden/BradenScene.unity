@@ -5652,11 +5652,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5798042685716280038, guid: b8894d8103384c04da506c113d264d6c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7666775691179212856, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -5814,21 +5809,6 @@ PrefabInstance:
       propertyPath: fpsCam
       value: 
       objectReference: {fileID: 2133452818}
-    - target: {fileID: 2453663154421428802, guid: e7bd7cfefd79da34b8fa3548017d9582,
-        type: 3}
-      propertyPath: prewarm
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453663154421428802, guid: e7bd7cfefd79da34b8fa3548017d9582,
-        type: 3}
-      propertyPath: ShapeModule.alignToDirection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453663154421428802, guid: e7bd7cfefd79da34b8fa3548017d9582,
-        type: 3}
-      propertyPath: InitialModule.startSizeZ.scalar
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 2756115680474539679, guid: e7bd7cfefd79da34b8fa3548017d9582,
         type: 3}
       propertyPath: m_RootOrder

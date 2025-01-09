@@ -100,10 +100,7 @@ public class Backpack : MonoBehaviour
         GameObject flashlight = FindItem("Flashlight");
 
         if (flashlight != null)
-        {
             EquipItem(flashlight);
-            flashlight.GetComponent<Flashlight>().ShakeFlashlight();
-        }
     }
 
     // Public Functions
@@ -158,12 +155,22 @@ public class Backpack : MonoBehaviour
         item.transform.position = getHeldPosition();
 
         item.SetActive(true);
+
+        BaseItem itemClass = item.GetComponent<BaseItem>();
+
+        if (itemClass)
+            itemClass.Equip();
     }
 
     public void UnequipItem()
     {
         if (heldItem != null)
         {
+            BaseItem itemClass = heldItem.GetComponent<BaseItem>();
+
+            if (itemClass)
+                itemClass.Unequip();
+
             heldItem.SetActive(false);
             heldItemData.isHeld = false;
             heldItemData.heldBackpack = null;

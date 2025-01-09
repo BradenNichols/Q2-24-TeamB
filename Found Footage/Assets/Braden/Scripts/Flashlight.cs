@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Flashlight : MonoBehaviour
+public class Flashlight : BaseItem
 {
     [Header("Item Stats")]
     public float maxBattery = 100;
@@ -83,6 +83,19 @@ public class Flashlight : MonoBehaviour
     public void StartFireEvent(InputAction.CallbackContext context)
     {
         ShakeFlashlight();
+    }
+
+    // Backpack
+
+    public override void Equip()
+    {
+        ShakeFlashlight();
+    }
+
+    public override void Unequip()
+    {
+        itemData.holdPositionOffset = basePosition;
+        itemData.holdRotationOffset = baseRotation;
     }
 
     // Main

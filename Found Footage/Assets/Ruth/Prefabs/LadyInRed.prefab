@@ -62,10 +62,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b5a9008e20de1479c5460a899ff0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  damage: 0
-  resistance: 0
-  target: {fileID: 0}
 --- !u!114 &8034679377790278538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,8 +74,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fbc2a3fe379fe5429d855759cb865fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
-  maxHealth: 20
+  health: 4
+  maxHealth: 4
   isAlive: 1
 --- !u!23 &4339837244693753789
 MeshRenderer:

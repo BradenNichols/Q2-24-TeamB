@@ -5,8 +5,12 @@ using UnityEngine.InputSystem;
 
 public class MainCamera : MonoBehaviour
 {
-    public float mouseSensitivity;
-    public float controllerSensitivity;
+    public Vector2 mouseSensitivity;
+    public Vector2 controllerSensitivity;
+
+    [HideInInspector]
+    public Vector2 sensitivityMultiplier = Vector2.one;
+
     public float cameraLerpSpeed;
     bool isController = false;
 
@@ -20,9 +24,6 @@ public class MainCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //QualitySettings.vSyncCount = 0;  // VSync must be disabled
-        //Application.targetFrameRate = 20;
-
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -31,14 +32,16 @@ public class MainCamera : MonoBehaviour
     
     void Update()
     {
-        float sensitivity = mouseSensitivity;
+        Vector2 sensitivity = mouseSensitivity;
 
         if (isController)
             sensitivity = controllerSensitivity;
 
+        sensitivity *= sensitivityMultiplier;
+
         // axis
-        float axisX = lookAxis.x * Time.deltaTime * (sensitivity * 6);
-        float axisY = lookAxis.y * Time.deltaTime * (sensitivity * 6);
+        float axisX = lookAxis.x * Time.deltaTime * (sensitivity.x * 6);
+        float axisY = lookAxis.y * Time.deltaTime * (sensitivity.y * 6);
 
         yRotation += axisX;
         xRotation = Mathf.Clamp(xRotation - axisY, -90f, 90f);

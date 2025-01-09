@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     public Transform orientation;
 
+    [Header("Private")]
     Vector2 moveInput;
     Vector3 moveDirection;
     Rigidbody body;

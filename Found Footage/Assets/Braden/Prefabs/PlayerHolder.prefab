@@ -548,11 +548,14 @@ MonoBehaviour:
   jumpCooldown: 0.25
   airMultiplier: 0.4
   canInteract: 1
+  lookSensScale: {x: 1, y: 1}
   playerHeight: 2
   groundMask:
     serializedVersion: 2
     m_Bits: 64
   orientation: {fileID: 1760663019217300902}
+  lookAction: {fileID: -5603497225220420079, guid: 12d58d4cd41281a4ca3eb6c8e5e5fb62,
+    type: 3}
 --- !u!114 &7314578115247715998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,8 +950,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c8ded9b5539717489c73281a6cea429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 5
-  controllerSensitivity: 5
+  mouseSensitivity: {x: 5, y: 5}
+  controllerSensitivity: {x: 5, y: 5}
   cameraLerpSpeed: 35
   orientation: {fileID: 1760663019217300902}
 --- !u!114 &4017350548072240013
