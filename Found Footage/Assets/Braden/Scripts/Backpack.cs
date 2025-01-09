@@ -119,7 +119,7 @@ public class Backpack : MonoBehaviour
     {
         foreach (GameObject thisItem in GetItems())
         {
-            if (thisItem.name == ItemName)
+            if (thisItem.name.Contains(ItemName))
                 return thisItem;
         }
 
