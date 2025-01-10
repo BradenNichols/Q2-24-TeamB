@@ -1254,6 +1254,7 @@ GameObject:
   - component: {fileID: 1760663020273365372}
   - component: {fileID: 1760663020273365347}
   - component: {fileID: 4017350548072240013}
+  - component: {fileID: 3675890004259250225}
   m_Layer: 0
   m_Name: PlayerCam
   m_TagString: Untagged
@@ -1396,6 +1397,20 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
+--- !u!114 &3675890004259250225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760663020273365345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3607dc8787af1f04eb696cf6512cab9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture: {fileID: 8400000, guid: 99aa7184baafe954d9acf87adfa45fb8, type: 2}
+  material: {fileID: 2100000, guid: 93f1379e41055f7459a87b68bcace970, type: 2}
 --- !u!1 &1760663020362367105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,7 +1495,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPosition: {fileID: 1760663020986952842}
-  lowPixelCanvas: {fileID: 5798042685716280038}
 --- !u!1 &1760663020986952841
 GameObject:
   m_ObjectHideFlags: 0
