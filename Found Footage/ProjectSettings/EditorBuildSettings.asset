@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: f3610c035b5ddfc4284b1523b9cbb12e
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: c5bfd60d83272a543bcfbb1365531560
+  - enabled: 1
+    path: Assets/Thomas/ThomasTest.unity
+    guid: b3897c80647c28e40bf4e6e76771d3a2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 91ebe045a58eab542b648e01c855b8b9,
       type: 2}

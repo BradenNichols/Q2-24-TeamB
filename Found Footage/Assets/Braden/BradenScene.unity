@@ -681,6 +681,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 167516723154502506, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 211506556900386742, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_Layer
@@ -688,8 +693,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 392598365699229285, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: m_fontSizeBase
+      value: 118
       objectReference: {fileID: 0}
     - target: {fileID: 410263267416408998, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
@@ -786,11 +791,6 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[14].m_ActionName
       value: Player/SecondFire[/Mouse/rightButton]
       objectReference: {fileID: 0}
-    - target: {fileID: 1760663020273365372, guid: b8894d8103384c04da506c113d264d6c,
-        type: 3}
-      propertyPath: m_Cameras.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1760663020362367105, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_Name
@@ -871,22 +871,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3675890004259250225, guid: b8894d8103384c04da506c113d264d6c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3675890004259250225, guid: b8894d8103384c04da506c113d264d6c,
-        type: 3}
-      propertyPath: minimapCamera
-      value: 
-      objectReference: {fileID: 2133452818}
-    - target: {fileID: 3675890004259250225, guid: b8894d8103384c04da506c113d264d6c,
-        type: 3}
-      propertyPath: minimapShader
-      value: 
-      objectReference: {fileID: -6465566751694194690, guid: e2eda068379831d4ebf6f94fe869b6b0,
-        type: 3}
     - target: {fileID: 4152828310664233453, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_Name
@@ -921,6 +905,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690734249302261593, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5798042685716280038, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
@@ -971,6 +960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271077830883495263, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8459382226467466978, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}

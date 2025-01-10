@@ -40,8 +40,9 @@ MonoBehaviour:
       type: 3}
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
-  - {fileID: 2491520928085954923}
-  m_RendererFeatureMap: adc0de57c6d2eee56bd1035d15a99322
+  - {fileID: 506095770043148166}
+  - {fileID: 2760534685636381804}
+  m_RendererFeatureMap: adc0de57c6d2eee586e7bfe36b0306076c4c80afab634f26
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -63,10 +64,10 @@ MonoBehaviour:
   m_AssetVersion: 2
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147483647
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147483647
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0
@@ -76,13 +77,27 @@ MonoBehaviour:
     zFailOperation: 0
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
-  m_DepthPrimingMode: 1
-  m_CopyDepthMode: 0
+  m_DepthPrimingMode: 0
+  m_CopyDepthMode: 1
   m_AccurateGbufferNormals: 0
   m_ClusteredRendering: 0
   m_TileSize: 32
   m_IntermediateTextureMode: 0
---- !u!114 &2491520928085954923
+--- !u!114 &506095770043148166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fee2e9c49efa148bbba3c8bbbcdf54, type: 3}
+  m_Name: FullScreenRenderPassFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  material: {fileID: 2100000, guid: 93f1379e41055f7459a87b68bcace970, type: 2}
+--- !u!114 &2760534685636381804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,15 +112,15 @@ MonoBehaviour:
   m_Active: 0
   settings:
     passTag: RenderObjects
-    Event: 300
+    Event: 600
     filterSettings:
-      RenderQueueType: 0
+      RenderQueueType: 1
       LayerMask:
         serializedVersion: 2
-        m_Bits: 2147483647
+        m_Bits: 32
       PassNames: []
-    overrideMaterial: {fileID: 2100000, guid: 93f1379e41055f7459a87b68bcace970, type: 2}
-    overrideMaterialPassIndex: 1
+    overrideMaterial: {fileID: 0}
+    overrideMaterialPassIndex: 0
     overrideDepthState: 0
     depthCompareFunction: 4
     enableWrite: 1
