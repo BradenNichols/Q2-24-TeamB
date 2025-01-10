@@ -398,7 +398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3138616531880482444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -808,10 +808,6 @@ MonoBehaviour:
   pauseMenu: {fileID: 7523781159924753737}
   pauseAction: {fileID: 7914706200544206842, guid: 12d58d4cd41281a4ca3eb6c8e5e5fb62,
     type: 3}
-  pixelsImage: {fileID: 6235139339805321600}
-  playerCamera: {fileID: 1760663020273365374}
-  lowPixels: {fileID: 8400000, guid: 99aa7184baafe954d9acf87adfa45fb8, type: 2}
-  medPixels: {fileID: 8400000, guid: 5648334c35ce57a4aa0dab23a26897d5, type: 2}
 --- !u!223 &2949682866126349196
 Canvas:
   m_ObjectHideFlags: 0
@@ -1309,12 +1305,12 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 119
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 99aa7184baafe954d9acf87adfa45fb8, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -2758,7 +2754,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 16
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &2913514466020092102
 MonoBehaviour:
@@ -3051,7 +3047,7 @@ GameObject:
   - component: {fileID: 7504243830520411767}
   - component: {fileID: 6130400831805273561}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3098,7 +3094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.64705884}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.74509805}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

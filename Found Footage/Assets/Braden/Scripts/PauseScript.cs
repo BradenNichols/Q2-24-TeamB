@@ -15,11 +15,12 @@ public class PauseScript : MonoBehaviour
     public GameObject pauseMenu;
     public InputActionReference pauseAction;
 
+    /*
     [Header("Pixel References")]
     public RawImage pixelsImage;
     public Camera playerCamera;
     public RenderTexture lowPixels;
-    public RenderTexture medPixels;
+    public RenderTexture medPixels;*/
 
     // Input
     void Start()
@@ -46,8 +47,8 @@ public class PauseScript : MonoBehaviour
 
             pauseMenu.SetActive(true);
 
-            playerCamera.targetTexture = medPixels;
-            pixelsImage.texture = medPixels;
+            //playerCamera.targetTexture = medPixels;
+            //pixelsImage.texture = medPixels;
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -58,8 +59,8 @@ public class PauseScript : MonoBehaviour
         {
             pauseMenu.SetActive(false);
 
-            playerCamera.targetTexture = lowPixels;
-            pixelsImage.texture = lowPixels;
+            //playerCamera.targetTexture = lowPixels;
+            //pixelsImage.texture = lowPixels;
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
