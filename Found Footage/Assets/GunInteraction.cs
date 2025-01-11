@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class GunInteraction : MonoBehaviour
 {
+    [Header("References")]
     public GameObject idk;
     public Backpack backpack;
+    public ViewCount viewCount;
 
     public void interact ()
     {
         GameObject getgun = Instantiate(idk);
         backpack.AddItem(getgun);
         backpack.EquipItem(getgun);
-        Destroy(gameObject);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        viewCount.noDecay = false;
+
+        Destroy(gameObject);
     }
 }

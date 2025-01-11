@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDamage : MonoBehaviour
+public class BaseEnemy : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // the LadyInRed touched a Player
+            // the Enemy touched a Player
+
             GeneralStats generalStats = collision.gameObject.GetComponent<GeneralStats>();
+            generalStats.Kill();
         }
     }
 }

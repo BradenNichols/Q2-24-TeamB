@@ -17,6 +17,7 @@ public class Backpack : MonoBehaviour
     ItemData heldItemData;
 
     [Header("Settings")]
+    public string defaultEquipItem = "";
     public float itemPositionLerpSpeed;
     public float itemRotationLerpSpeed;
 
@@ -28,7 +29,7 @@ public class Backpack : MonoBehaviour
         gunEquipAction.action.started += EquipGunEvent;
         flashlightEquipAction.action.started += EquipFlashlightEvent;
 
-        // ITEM TESTING
+        // ITEM SETUP
 
         GameObject gunItem = GameObject.Find("Protogeist");
         GameObject flashItem = GameObject.Find("Flashlight");
@@ -38,6 +39,8 @@ public class Backpack : MonoBehaviour
 
         if (flashItem)
             AddItem(flashItem);
+
+        EquipItem(FindItem(defaultEquipItem));
     }
 
     // Update is called once per frame
@@ -140,7 +143,7 @@ public class Backpack : MonoBehaviour
 
     public void EquipItem(GameObject item)
     {
-        if (heldItem == item) return;
+        if (heldItem == item || item == null) return;
         else if (heldItem != null) UnequipItem();
 
         heldItem = item;

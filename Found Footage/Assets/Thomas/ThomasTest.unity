@@ -14587,7 +14587,7 @@ PrefabInstance:
     - target: {fileID: 6795251876367414194, guid: 4a325c76d16b27a42871bcca096da262,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.225971e-16
+      value: -9.58
       objectReference: {fileID: 0}
     - target: {fileID: 6795251876367414194, guid: 4a325c76d16b27a42871bcca096da262,
         type: 3}
@@ -20405,6 +20405,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3132388156241652433, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: noDecay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7666775691179212856, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -20418,6 +20423,18 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b8894d8103384c04da506c113d264d6c, type: 3}
+--- !u!114 &1760663021194662285 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3132388156241652433, guid: b8894d8103384c04da506c113d264d6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1760663021194662284}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf55904214e4ec43ab6bb923a55a9e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &1848392398077973279
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20710,23 +20727,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2428858460634890700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3275348619952487583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44569707293815f46817178e6da4edc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  holdPositionOffset: {x: 0.4, y: -1.95, z: 0.2}
-  holdRotationOffset: {x: -1, y: 0, z: 0}
-  holdFieldOfView: 39.6
-  isHeld: 0
-  heldBackpack: {fileID: 0}
 --- !u!33 &2452426782680786913
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20897,12 +20897,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2756115680052192805}
-  - component: {fileID: 2428858460634890700}
-  - component: {fileID: 1262609711552026995}
-  - component: {fileID: 3275348619952487585}
   - component: {fileID: 3275348619952487584}
+  - component: {fileID: 3275348619952487585}
+  - component: {fileID: 1262609711552026995}
   m_Layer: 0
-  m_Name: Protogeist:map
+  m_Name: ProtogeistMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20922,6 +20921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idk: {fileID: 3275348619487738917, guid: e7bd7cfefd79da34b8fa3548017d9582, type: 3}
   backpack: {fileID: 137205536}
+  viewCount: {fileID: 1760663021194662285}
 --- !u!114 &3275348619952487585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20936,7 +20936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnabled: 1
   hasInteracted: 0
-  interactDistance: 10
+  interactDistance: 5
   inputAction: {fileID: 3121896550370009706, guid: 12d58d4cd41281a4ca3eb6c8e5e5fb62,
     type: 3}
   events:

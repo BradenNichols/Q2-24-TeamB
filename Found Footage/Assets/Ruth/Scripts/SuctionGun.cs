@@ -1,6 +1,5 @@
 
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -43,6 +42,7 @@ public class SuctionGun : BaseItem
     [Header("Private")]
     private bool isButtonHeld = false;
     private ItemData itemData;
+    private ViewCount viewCount;
     private MainCamera cameraScript;
 
     // OLD POS OFFSET: Vector3(1, -1.2, 1.2)
@@ -63,6 +63,7 @@ public class SuctionGun : BaseItem
         defaultGas = gasRenderer.material;
 
         cameraScript = GameObject.Find("PlayerCam").GetComponent<MainCamera>();
+        viewCount = GameObject.Find("Player").GetComponent<ViewCount>();
     }
 
     void Update()
@@ -93,6 +94,11 @@ public class SuctionGun : BaseItem
                     {
                         enemyStats.TakeDamage(damagePerSecond * Time.deltaTime);
                         hitEnemy = true;
+
+                        if (!enemyStats.isAlive) // we killed them
+                        {
+                            viewCount.AddViewers(UnityEngine.Random.Range(enemyStats.minViewerAdd, enemyStats.maxViewerAdd));
+                        }
                     }
                 }
             }
@@ -105,6 +111,7 @@ public class SuctionGun : BaseItem
                 gasRenderer.material = hitGas;
 
                 cameraScript.sensitivityMultiplier = hitSensitivity;
+                viewCount.AddViewers(0); // reset the decay
             }
             else
             { 

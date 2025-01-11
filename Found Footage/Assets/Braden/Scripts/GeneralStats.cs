@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class GeneralStats : MonoBehaviour
 {
+    [Header("Health")]
     public float health = 1;
     public float maxHealth = 1;
+
+    [Header("Info")]
     public bool isAlive = true;
+    public string characterType = "";
+
+    [Header("On Death")]
+    public int minViewerAdd = 0;
+    public int maxViewerAdd = 0;
 
     public void TakeDamage(float damage)
     {

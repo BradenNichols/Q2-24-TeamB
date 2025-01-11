@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 9205975918949474834}
   - component: {fileID: 5926434368662235726}
   - component: {fileID: 5690734249302261593}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 5626621013456412247}
   - component: {fileID: 4460412245269768282}
   - component: {fileID: 7484573009477325365}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 1825191502475482560}
   - component: {fileID: 2206367289595556764}
   - component: {fileID: 1629265616304612788}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PausedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 6294185066584728988}
   - component: {fileID: 7889318512633182888}
   - component: {fileID: 6184421756984168689}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Chat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 2949682866126349196}
   - component: {fileID: 4835585772517209678}
   - component: {fileID: 606056465175261094}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -895,6 +895,9 @@ MonoBehaviour:
   health: 1
   maxHealth: 1
   isAlive: 1
+  characterType: Player
+  minViewerAdd: 0
+  maxViewerAdd: 0
 --- !u!114 &3132388156241652433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,14 +910,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf55904214e4ec43ab6bb923a55a9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForViewerDecay: 10
-  decayTickLength: 2.5
+  timeForViewerDecay: 30
+  decayTickLength: 3
   minViewersLostPerTick: 3
   maxViewersLostPerTick: 7
   isSystemEnabled: 1
-  viewers: 68
-  timeSinceViewGain: 0
+  noDecay: 0
+  viewers: 0
+  minInitialViewers: 61
+  maxInitialViewers: 68
   viewCount: {fileID: 392598365699229285}
+  timeSinceViewGain: 0
+  timeSinceDecayLost: 0
+  greenTime: 0
+  isDecaying: 0
 --- !u!114 &1760663019556657054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,6 +1054,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: c6371996-f961-4075-bb00-cf65d20050dc
     m_ActionName: Player/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 97efd7ad-63a8-4abf-bd72-039f48f21421
+    m_ActionName: Player/NextSlide[/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2f9dbedb-65ff-4f6a-8fa0-fcfd16f2906b
+    m_ActionName: Player/LastSlide[/Keyboard/a,/Keyboard/leftArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1429,7 +1446,7 @@ GameObject:
   - component: {fileID: 7067099728820925386}
   - component: {fileID: 4070308994178529555}
   - component: {fileID: 392598365699229285}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ViewCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1605,6 +1622,7 @@ MonoBehaviour:
   flashlightEquipAction: {fileID: 1032447416603981528, guid: 12d58d4cd41281a4ca3eb6c8e5e5fb62,
     type: 3}
   heldItem: {fileID: 0}
+  defaultEquipItem: 
   itemPositionLerpSpeed: 50
   itemRotationLerpSpeed: 40
 --- !u!1 &2870925442430992452
@@ -1618,7 +1636,7 @@ GameObject:
   - component: {fileID: 8828851627227916519}
   - component: {fileID: 890486976654749120}
   - component: {fileID: 4134271806710656529}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ExampleMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1842,7 +1860,7 @@ GameObject:
   - component: {fileID: 5319773965455317349}
   - component: {fileID: 6392577956615942433}
   - component: {fileID: 7747166341312484441}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Viewport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1932,7 +1950,7 @@ GameObject:
   - component: {fileID: 7666775691179212856}
   - component: {fileID: 162494938573844238}
   - component: {fileID: 7458448703180333276}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ExampleMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2067,7 +2085,7 @@ GameObject:
   - component: {fileID: 263983188695117813}
   - component: {fileID: 2792693565185981075}
   - component: {fileID: 167516723154502506}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2203,7 +2221,7 @@ GameObject:
   - component: {fileID: 3115667613095710826}
   - component: {fileID: 8211603871380869035}
   - component: {fileID: 1010734118382701049}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2337,7 +2355,7 @@ GameObject:
   - component: {fileID: 1184260581744550426}
   - component: {fileID: 3212229130946553862}
   - component: {fileID: 8433957625405075983}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2469,7 +2487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3649652298791688380}
   - component: {fileID: 7122309229220276689}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2535,7 +2553,7 @@ GameObject:
   - component: {fileID: 6769137812191827235}
   - component: {fileID: 2913514466020092102}
   - component: {fileID: 3479704006881529276}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2640,7 +2658,7 @@ GameObject:
   - component: {fileID: 2090675184463248549}
   - component: {fileID: 397402410174831246}
   - component: {fileID: 8271077830883495263}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2776,7 +2794,7 @@ GameObject:
   - component: {fileID: 2040984239936946794}
   - component: {fileID: 6305737067504186992}
   - component: {fileID: 2849788460424782472}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ChatOld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2879,7 +2897,7 @@ GameObject:
   - component: {fileID: 4977707634835274507}
   - component: {fileID: 7504243830520411767}
   - component: {fileID: 6130400831805273561}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

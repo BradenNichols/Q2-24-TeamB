@@ -66,12 +66,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxBattery: 100
-  batteryDrainPerSecond: 20
-  shakeBatteryGain: 22
+  batteryDrainPerSecond: 12
+  shakeBatteryGain: 24
   shakeTime: 0.26
   shakePosition: {x: 0.75, y: -0.7, z: 0.2}
   shakeRotation: {x: -50, y: 0, z: 0}
-  battery: 50
+  battery: 75
   isEnabled: 0
   canShake: 1
   isShaking: 0

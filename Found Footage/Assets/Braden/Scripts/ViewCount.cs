@@ -13,43 +13,78 @@ public class ViewCount : MonoBehaviour
 
     [Header("Data")]
     public bool isSystemEnabled = false;
+    public bool noDecay = false;
     public int viewers = 0;
-    [HideInInspector]
-    public float timeSinceViewGain = 0;
-    float timeSinceDecayLost = 0;
+
+    [Header("Initial")]
+    public int minInitialViewers = 0;
+    public int maxInitialViewers = 0;
 
     [Header("References")]
     public TMP_Text viewCount;
 
+    [Header("_Internal")]
+    public float timeSinceViewGain = 0;
+    public float timeSinceDecayLost = 0;
+    public float greenTime = 0;
+    public bool isDecaying = false;
+
     void Start()
     {
-        AddViewers(0);
+        AddViewers(Random.Range(minInitialViewers, maxInitialViewers), false);
         SetEnabled(isSystemEnabled);
     }
 
     void Update()
     {
-        if (!isSystemEnabled) return;
+        if (!isSystemEnabled || noDecay) return;
 
-        timeSinceViewGain += Time.deltaTime;
-
-        if (timeSinceViewGain >= timeForViewerDecay)
+        if (isSystemEnabled)
         {
-            timeSinceDecayLost += Time.deltaTime;
-
-            if (timeSinceDecayLost >= decayTickLength)
+            if (!noDecay)
             {
-                int viewersLost = (int)(Random.Range(minViewersLostPerTick, maxViewersLostPerTick) * (timeSinceDecayLost / decayTickLength));
-                AddViewers(-viewersLost);
+                timeSinceViewGain += Time.deltaTime;
 
-                timeSinceDecayLost = 0;
+                if (timeSinceViewGain >= timeForViewerDecay)
+                {
+                    if (!isDecaying)
+                        AddViewers(-1);
+                    else
+                    {
+                        timeSinceDecayLost += Time.deltaTime;
+
+                        if (timeSinceDecayLost >= decayTickLength)
+                        {
+                            int viewersLost = (int)(Random.Range(minViewersLostPerTick, maxViewersLostPerTick) * (timeSinceDecayLost / decayTickLength));
+                            AddViewers(-viewersLost);
+
+                            timeSinceDecayLost = 0;
+                        }
+                    }
+                }
+            }
+
+            if (greenTime > 0)
+            {
+                greenTime = Mathf.Clamp(greenTime - Time.deltaTime, 0, greenTime);
+                SetColor(Color.green);
+
+                if (greenTime <= 0)
+                    SetColor(Color.white);
             }
         }
     }
 
+    // Private Functions
+
+    void SetColor(Color targetColor)
+    {
+        viewCount.color = targetColor;
+    }
+
     // Public Functions
 
-    public void AddViewers(int viewerAmount)
+    public void AddViewers(int viewerAmount, bool shouldColor = true)
     {
         // can be positive or negative amount
         viewers = Mathf.Clamp(viewers + viewerAmount, 0, 9999);
@@ -59,9 +94,16 @@ public class ViewCount : MonoBehaviour
         {
             timeSinceViewGain = 0;
             timeSinceDecayLost = 0; // just to reset it
-            viewCount.color = Color.white;
-        } else
-            viewCount.color = Color.red;
+
+            if (viewerAmount > 0 && shouldColor)
+                greenTime = 1.2f;
+            else
+                SetColor(Color.white);
+        }
+        else
+            SetColor(Color.red);
+
+        isDecaying = viewerAmount < 0;
     }
 
     public void SetEnabled(bool isEnabled)

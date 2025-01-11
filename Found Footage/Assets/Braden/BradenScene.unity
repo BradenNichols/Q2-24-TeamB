@@ -306,6 +306,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5943885340781497027, guid: 1a561b3cb055b5e4092190b7c8bfd53e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a561b3cb055b5e4092190b7c8bfd53e, type: 3}
@@ -779,7 +784,7 @@ PrefabInstance:
     - target: {fileID: 1760663019556657054, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 15
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1760663019556657054, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
@@ -788,8 +793,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1760663019556657054, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_ActionId
+      value: 97efd7ad-63a8-4abf-bd72-039f48f21421
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760663019556657054, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[18].m_ActionId
+      value: 2f9dbedb-65ff-4f6a-8fa0-fcfd16f2906b
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760663019556657054, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_ActionName
       value: Player/SecondFire[/Mouse/rightButton]
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760663019556657054, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_ActionName
+      value: Player/NextSlide[/Keyboard/d,/Keyboard/rightArrow]
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760663019556657054, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[18].m_ActionName
+      value: Player/LastSlide[/Keyboard/a,/Keyboard/leftArrow]
       objectReference: {fileID: 0}
     - target: {fileID: 1760663020362367105, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
