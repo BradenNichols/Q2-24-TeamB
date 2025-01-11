@@ -8,6 +8,7 @@ public class GunInteraction : MonoBehaviour
     public GameObject idk;
     public Backpack backpack;
     public ViewCount viewCount;
+    public Tooltip gunTooltip;
 
     public void interact ()
     {
@@ -16,6 +17,7 @@ public class GunInteraction : MonoBehaviour
         backpack.EquipItem(getgun);
 
         viewCount.noDecay = false;
+        gunTooltip.Type();
 
         Destroy(gameObject);
     }

@@ -14561,12 +14561,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 270}
---- !u!224 &1396440435 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2604635644440452098, guid: b8894d8103384c04da506c113d264d6c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1760663021194662284}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1401637791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16399,6 +16393,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 270}
+--- !u!114 &1680489470 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9048349997405322243, guid: b8894d8103384c04da506c113d264d6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1760663021194662284}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1685794104
 GameObject:
   m_ObjectHideFlags: 0
@@ -17082,97 +17088,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
---- !u!1 &1743255748
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1743255749}
-  - component: {fileID: 1743255752}
-  - component: {fileID: 1743255751}
-  - component: {fileID: 1743255750}
-  m_Layer: 5
-  m_Name: FadeIn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1743255749
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743255748}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 36.61, y: 47.49, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1396440435}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 540}
-  m_SizeDelta: {x: 302.1, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1743255750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743255748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 952af242db50c374dbe1c36ea820faf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endAlpha: 0
-  fadeTime: 2.2
---- !u!114 &1743255751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743255748}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1743255752
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743255748}
-  m_CullTransparentMesh: 1
 --- !u!1 &1770317354
 GameObject:
   m_ObjectHideFlags: 0
@@ -19305,6 +19220,114 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046280589}
   m_Mesh: {fileID: -5495902117074765545, guid: 0e39ec6ddfcead74e801129fb78c45c3, type: 3}
+--- !u!1 &2052595673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2052595675}
+  - component: {fileID: 2052595674}
+  m_Layer: 0
+  m_Name: Tooltip1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2052595674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052595673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd856ff16660974697dff7523a1eddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+  - text: Press RMB/LT to equip the flashlight.
+    typeTime: 0.045
+    waitTime: 2
+  - text: Shake it to replenish battery.
+    typeTime: 0.05
+    waitTime: 5
+  initialWait: 2.5
+  playOnStart: 1
+  textLabel: {fileID: 1680489470}
+--- !u!4 &2052595675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052595673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 109
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2065839950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2065839952}
+  - component: {fileID: 2065839951}
+  m_Layer: 0
+  m_Name: Tooltip2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2065839951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065839950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd856ff16660974697dff7523a1eddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+  - text: The Protogeist weapon can exterminate ghosts.
+    typeTime: 0.05
+    waitTime: 2
+  - text: Viewers enjoy paranormal activity...
+    typeTime: 0.075
+    waitTime: 4.5
+  initialWait: 1
+  playOnStart: 0
+  textLabel: {fileID: 1680489470}
+--- !u!4 &2065839952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065839950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 110
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2089633534
 GameObject:
   m_ObjectHideFlags: 0
@@ -20432,12 +20455,27 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 89460211665546004, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_Name
+      value: Tooltip
+      objectReference: {fileID: 0}
     - target: {fileID: 167516723154502506, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2176904559765020271, guid: fc52903fe6f663a4586af150392191d7,
         type: 2}
+    - target: {fileID: 854635006107121100, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088017696134645185, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1760663019556657027, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -20448,6 +20486,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7f15a9c0e9fbf354f97023735f577555, type: 2}
+    - target: {fileID: 1760663020273365372, guid: b8894d8103384c04da506c113d264d6c,
+        type: 3}
+      propertyPath: m_Cameras.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1760663020362367105, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_Name
@@ -20541,11 +20584,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2604635644440452098, guid: b8894d8103384c04da506c113d264d6c,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1743255749}
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b8894d8103384c04da506c113d264d6c, type: 3}
 --- !u!114 &1760663021194662285 stripped
 MonoBehaviour:
@@ -21046,6 +21085,7 @@ MonoBehaviour:
   idk: {fileID: 3275348619487738917, guid: e7bd7cfefd79da34b8fa3548017d9582, type: 3}
   backpack: {fileID: 137205536}
   viewCount: {fileID: 1760663021194662285}
+  gunTooltip: {fileID: 2065839951}
 --- !u!114 &3275348619952487585
 MonoBehaviour:
   m_ObjectHideFlags: 0
