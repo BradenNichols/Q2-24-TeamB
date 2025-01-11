@@ -348,7 +348,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.5754717, g: 0.48046458, b: 0.48046458, a: 1}
     m_HighlightedColor: {r: 0.7830189, g: 0.6685208, b: 0.6685208, a: 1}
     m_PressedColor: {r: 0.8301887, g: 0.7322891, b: 0.7322891, a: 1}
-    m_SelectedColor: {r: 0.8962264, g: 0.76517445, b: 0.76517445, a: 1}
+    m_SelectedColor: {r: 0.94509804, g: 0.90588236, b: 0.61960787, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -706,6 +706,8 @@ MonoBehaviour:
   pauseMenu: {fileID: 7523781159924753737}
   pauseAction: {fileID: 7914706200544206842, guid: 12d58d4cd41281a4ca3eb6c8e5e5fb62,
     type: 3}
+  eventSystem: {fileID: 1535395127887126516}
+  selectButton: {fileID: 5592370599854335716}
 --- !u!223 &2949682866126349196
 Canvas:
   m_ObjectHideFlags: 0
@@ -2291,7 +2293,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.5754717, g: 0.48046458, b: 0.48046458, a: 1}
     m_HighlightedColor: {r: 0.7830189, g: 0.6685208, b: 0.6685208, a: 1}
     m_PressedColor: {r: 0.8301887, g: 0.7322891, b: 0.7322891, a: 1}
-    m_SelectedColor: {r: 0.8962264, g: 0.76517445, b: 0.76517445, a: 1}
+    m_SelectedColor: {r: 0.94509804, g: 0.90588236, b: 0.61960787, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2445,8 +2447,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TitleScreen, Assembly-CSharp
+      - m_Target: {fileID: 4405131117077167117}
+        m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:

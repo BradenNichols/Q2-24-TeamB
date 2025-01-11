@@ -91,7 +91,7 @@ public class Backpack : MonoBehaviour
     {
         GameObject gun = FindItem("Protogeist");
 
-        if (gun != null)
+        if (gun != null && Time.timeScale > 0)
             EquipItem(gun);
     }
 
@@ -99,7 +99,7 @@ public class Backpack : MonoBehaviour
     {
         GameObject flashlight = FindItem("Flashlight");
 
-        if (flashlight != null)
+        if (flashlight != null && Time.timeScale > 0)
             EquipItem(flashlight);
     }
 

@@ -122,6 +122,8 @@ public class SuctionGun : BaseItem
 
     public void StartFireEvent(InputAction.CallbackContext context)
     {
+        if (Time.timeScale == 0) return;
+
         isButtonHeld = true;
         BeginShooting();
     }
