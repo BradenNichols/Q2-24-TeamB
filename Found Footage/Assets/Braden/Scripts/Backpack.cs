@@ -40,7 +40,8 @@ public class Backpack : MonoBehaviour
         if (flashItem)
             AddItem(flashItem);
 
-        EquipItem(FindItem(defaultEquipItem));
+        if (defaultEquipItem != "")
+            EquipItem(FindItem(defaultEquipItem));
     }
 
     // Update is called once per frame

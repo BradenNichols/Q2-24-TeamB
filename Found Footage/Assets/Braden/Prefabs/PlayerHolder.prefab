@@ -1440,7 +1440,7 @@ MonoBehaviour:
   mouseSensitivity: {x: 3, y: 3}
   controllerSensitivity: {x: 3, y: 3}
   sensitivityMultiplier: {x: 1, y: 1}
-  cameraLerpSpeed: 35
+  cameraLerpSpeed: 45
   orientation: {fileID: 1760663019217300902}
 --- !u!114 &4017350548072240013
 MonoBehaviour:

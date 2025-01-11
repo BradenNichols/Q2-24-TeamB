@@ -46,7 +46,7 @@ public class ViewCount : MonoBehaviour
             {
                 timeSinceViewGain += Time.deltaTime;
 
-                if (timeSinceViewGain >= timeForViewerDecay)
+                if (timeSinceViewGain >= timeForViewerDecay && viewers > 0)
                 {
                     if (!isDecaying)
                         AddViewers(-1);
@@ -59,8 +59,8 @@ public class ViewCount : MonoBehaviour
                             int viewersLost = (int)(Random.Range(minViewersLostPerTick, maxViewersLostPerTick) * (timeSinceDecayLost / decayTickLength));
                             AddViewers(-viewersLost);
 
-                            viewDecayLabel.enabled = true;
                             timeSinceDecayLost = 0;
+                            viewDecayLabel.enabled = viewers > 0;
                         }
                     }
                 }
