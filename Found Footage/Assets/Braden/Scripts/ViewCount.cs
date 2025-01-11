@@ -22,6 +22,7 @@ public class ViewCount : MonoBehaviour
 
     [Header("References")]
     public TMP_Text viewCount;
+    public TMP_Text viewDecayLabel;
 
     [Header("_Internal")]
     public float timeSinceViewGain = 0;
@@ -58,6 +59,7 @@ public class ViewCount : MonoBehaviour
                             int viewersLost = (int)(Random.Range(minViewersLostPerTick, maxViewersLostPerTick) * (timeSinceDecayLost / decayTickLength));
                             AddViewers(-viewersLost);
 
+                            viewDecayLabel.enabled = true;
                             timeSinceDecayLost = 0;
                         }
                     }
@@ -95,8 +97,10 @@ public class ViewCount : MonoBehaviour
             timeSinceViewGain = 0;
             timeSinceDecayLost = 0; // just to reset it
 
+            viewDecayLabel.enabled = false;
+
             if (viewerAmount > 0 && shouldColor)
-                greenTime = 1.2f;
+                greenTime = 1f;
             else
                 SetColor(Color.white);
         }
