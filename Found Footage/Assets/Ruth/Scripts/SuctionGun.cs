@@ -44,6 +44,7 @@ public class SuctionGun : BaseItem
     private ItemData itemData;
     private ViewCount viewCount;
     private MainCamera cameraScript;
+    private Tooltip noBatteryTip;
 
     // OLD POS OFFSET: Vector3(1, -1.2, 1.2)
 
@@ -55,6 +56,7 @@ public class SuctionGun : BaseItem
         fireAction.action.canceled += FinishFireEvent;
 
         itemData = GetComponent<ItemData>();
+        noBatteryTip = GetComponent<Tooltip>();
 
         beamRenderer = beamParticle.GetComponent<ParticleSystemRenderer>();
         defaultBeam = beamRenderer.material;
@@ -70,7 +72,14 @@ public class SuctionGun : BaseItem
     {
         if (isShooting) // Shoot update
         {
-            if (ammo <= 0) { StopShooting(); return; }
+            if (ammo <= 0) {
+                if (noBatteryTip.playedTimes == 0)
+                    noBatteryTip.Play();
+
+                StopShooting();
+                return;
+            }
+
             ammo = Mathf.Clamp(ammo - (Time.deltaTime * ammoDepletionPerSecond), 0, ammo);
 
             // Raycast

@@ -19,23 +19,31 @@ public class Tooltip : MonoBehaviour
     public float initialWait;
     public bool playOnStart = true;
 
+    [HideInInspector]
+    public int playedTimes = 0;
+
     [Header("References")]
     public TMP_Text textLabel;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (!textLabel)
+            textLabel = GameObject.Find("Tooltip").GetComponent<TMP_Text>();
+
         if (playOnStart)
-            Type();
+            Play();
     }
 
-    public void Type()
+    public void Play()
     {
         StartCoroutine(PlayTooltip());
     }
 
     IEnumerator PlayTooltip()
     {
+        playedTimes++;
+
         yield return new WaitForSeconds(initialWait);
         textLabel.enabled = true;
         textLabel.text = "";
@@ -45,10 +53,18 @@ public class Tooltip : MonoBehaviour
             for (int i = 0; i < entry.text.Length; i++)
             {
                 textLabel.text += entry.text[i];
+
+                if (textLabel.text == "") // if something cancels us
+                    yield break;
+
                 yield return new WaitForSeconds(entry.typeTime);
             }
 
             yield return new WaitForSeconds(entry.waitTime);
+
+            if (textLabel.text == "") // if something cancels us
+                yield break;
+
             textLabel.text += "\n";
         }
 

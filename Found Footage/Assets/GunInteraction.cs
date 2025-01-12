@@ -17,7 +17,7 @@ public class GunInteraction : MonoBehaviour
         backpack.EquipItem(getgun);
 
         viewCount.noDecay = false;
-        gunTooltip.Type();
+        gunTooltip.Play();
 
         Destroy(gameObject);
     }

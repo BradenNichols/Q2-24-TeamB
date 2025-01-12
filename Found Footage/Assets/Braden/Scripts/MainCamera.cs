@@ -25,6 +25,9 @@ public class MainCamera : MonoBehaviour
     
     void Update()
     {
+        if (!transform)
+            return;
+
         Vector2 sensitivity = mouseSensitivity;
 
         if (isController)
