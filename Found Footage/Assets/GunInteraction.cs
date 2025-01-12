@@ -10,6 +10,7 @@ public class GunInteraction : MonoBehaviour
     public ViewCount viewCount;
     public Tooltip gunTooltip;
 
+
     public void interact ()
     {
         GameObject getgun = Instantiate(idk);
