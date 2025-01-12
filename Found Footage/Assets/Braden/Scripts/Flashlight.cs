@@ -24,6 +24,8 @@ public class Flashlight : BaseItem
     [Header("References")]
     public Light spotLight;
     public InputActionReference fireAction;
+    public AudioSource clickSound;
+    public AudioSource humSound;
 
     [Header("Private")]
     private ItemData itemData;
@@ -121,6 +123,11 @@ public class Flashlight : BaseItem
 
         isEnabled = enabled;
         spotLight.enabled = enabled;
+
+        if (isEnabled)
+            humSound.Play();
+        else
+            humSound.Stop();
     }
 
     // Shake
@@ -133,6 +140,7 @@ public class Flashlight : BaseItem
         EnableFlashlight(false);
 
         battery = Mathf.Clamp(battery + shakeBatteryGain, 0, maxBattery);
+        clickSound.Play();
 
         Invoke("StopShake", shakeTime);
     }
