@@ -3601,7 +3601,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240253533}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -29427,6 +29427,7 @@ MonoBehaviour:
   backpack: {fileID: 137205536}
   viewCount: {fileID: 1760663021194662285}
   gunTooltip: {fileID: 2065839951}
+  barrier: {fileID: 240253533}
 --- !u!114 &3275348619952487585
 MonoBehaviour:
   m_ObjectHideFlags: 0

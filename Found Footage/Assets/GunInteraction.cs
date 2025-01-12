@@ -9,7 +9,7 @@ public class GunInteraction : MonoBehaviour
     public Backpack backpack;
     public ViewCount viewCount;
     public Tooltip gunTooltip;
-
+    public GameObject barrier;
 
     public void interact ()
     {
@@ -20,6 +20,7 @@ public class GunInteraction : MonoBehaviour
         viewCount.noDecay = false;
         gunTooltip.Play();
 
+        Destroy(barrier);
         Destroy(gameObject);
     }
 }

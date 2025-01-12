@@ -9,7 +9,7 @@ public class CamSet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!transform) return;
+        if (!transform || !cameraPosition) return;
         transform.position = cameraPosition.position;
     }
 }
