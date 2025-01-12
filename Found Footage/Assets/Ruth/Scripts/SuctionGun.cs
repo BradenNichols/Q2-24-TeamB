@@ -154,8 +154,19 @@ public class SuctionGun : BaseItem
 
     // Backpack
 
+    public override void Disable()
+    {
+        StopShooting();
+    }
+
+    public override void Enable()
+    {
+        ResetCD(); // will start shooting if held
+    }
+
     public override void Equip()
     {
+        shootCooldown = true;
         Invoke("ResetCD", weaponCooldown);
     }
 
@@ -175,7 +186,7 @@ public class SuctionGun : BaseItem
 
     public void BeginShooting()
     {
-        if (!canShoot || isShooting || shootCooldown || ammo <= 0 || !itemData.isHeld) return;
+        if (!canShoot || isShooting || shootCooldown || ammo <= 0 || !itemData.isHeld || isDisabled) return;
 
         isShooting = true;
 

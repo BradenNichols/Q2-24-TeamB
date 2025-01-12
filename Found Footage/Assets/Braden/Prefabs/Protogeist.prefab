@@ -4946,8 +4946,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99cf6e8a58e67d74192cb301c5592a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDisabled: 0
   damagePerSecond: 1
-  castRange: 15
+  castRange: 18
   castSizeMult: 0.65
   magazineSize: 10
   weaponCooldown: 0.3

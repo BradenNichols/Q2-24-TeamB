@@ -11,14 +11,18 @@ public class Backpack : MonoBehaviour
     public InputActionReference gunEquipAction;
     public InputActionReference flashlightEquipAction;
 
+    [Header("Data")]
+    public bool canEquip = true;
+
     [Header("Runtime")]
     [HideInInspector]
     public GameObject heldItem;
     ItemData heldItemData;
 
     [Header("Settings")]
-    public string defaultEquipItem = "";
+    public Vector3 itemPositionOffset = Vector3.zero;
     public float itemPositionLerpSpeed;
+    public Vector3 itemRotationOffset = Vector3.zero;
     public float itemRotationLerpSpeed;
 
     // Start is called before the first frame update
@@ -39,9 +43,6 @@ public class Backpack : MonoBehaviour
 
         if (flashItem)
             AddItem(flashItem);
-
-        if (defaultEquipItem != "")
-            EquipItem(FindItem(defaultEquipItem));
     }
 
     // Update is called once per frame
@@ -68,10 +69,16 @@ public class Backpack : MonoBehaviour
         if (heldItemData)
             itemPosOffset = heldItemData.holdPositionOffset;
 
-        Vector3 newPosition = cameraTransform.position + (
+        Vector3 newPosition = cameraTransform.position + ( // item position offset
             cameraTransform.forward * itemPosOffset.z +
             cameraTransform.right * itemPosOffset.x +
             cameraTransform.up * itemPosOffset.y
+        );
+
+        newPosition += ( // global position offset
+            cameraTransform.forward * itemPositionOffset.z +
+            cameraTransform.right * itemPositionOffset.x +
+            cameraTransform.up * itemPositionOffset.y
         );
 
         return newPosition;
@@ -84,7 +91,10 @@ public class Backpack : MonoBehaviour
         if (heldItemData)
             itemRotOffset = heldItemData.holdRotationOffset;
 
-        Quaternion newRotation = cameraTransform.rotation * Quaternion.Euler(itemRotOffset.x, itemRotOffset.y, itemRotOffset.z);
+        Quaternion newRotation = cameraTransform.rotation 
+            * Quaternion.Euler(itemRotOffset.x, itemRotOffset.y, itemRotOffset.z); // item rotation offset
+
+        newRotation *= Quaternion.Euler(itemRotationOffset.x, itemRotationOffset.y, itemRotationOffset.z); // global rotation offset
 
         return newRotation;
     }
@@ -144,7 +154,7 @@ public class Backpack : MonoBehaviour
 
     public void EquipItem(GameObject item)
     {
-        if (heldItem == item || item == null) return;
+        if (heldItem == item || item == null || !canEquip) return;
         else if (heldItem != null) UnequipItem();
 
         heldItem = item;

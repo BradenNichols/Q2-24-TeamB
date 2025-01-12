@@ -56,7 +56,7 @@ public class Flashlight : BaseItem
             itemData.holdPositionOffset = basePosition;
             itemData.holdRotationOffset = baseRotation;
 
-            if (itemData.isHeld)
+            if (itemData.isHeld && isEnabled)
             {
                 battery = Mathf.Clamp(battery - (batteryDrainPerSecond * Time.deltaTime), 0, maxBattery);
 
@@ -88,6 +88,17 @@ public class Flashlight : BaseItem
 
     // Backpack
 
+    public override void Disable()
+    {
+        StopShake();
+        EnableFlashlight(false);
+    }
+
+    public override void Enable()
+    {
+        EnableFlashlight(true);
+    }
+
     public override void Equip()
     {
         ShakeFlashlight();
@@ -105,6 +116,9 @@ public class Flashlight : BaseItem
     {
         if (isEnabled == enabled) return;
 
+        if (battery <= 0 && enabled)
+            return;
+
         isEnabled = enabled;
         spotLight.enabled = enabled;
     }
@@ -113,7 +127,7 @@ public class Flashlight : BaseItem
 
     public void ShakeFlashlight()
     {
-        if (!canShake || isShaking || !itemData.isHeld) return;
+        if (!canShake || isShaking || !itemData.isHeld || isDisabled) return;
 
         isShaking = true;
         EnableFlashlight(false);

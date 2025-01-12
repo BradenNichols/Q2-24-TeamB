@@ -38,8 +38,6 @@ public class ViewCount : MonoBehaviour
 
     void Update()
     {
-        if (!isSystemEnabled || noDecay) return;
-
         if (isSystemEnabled)
         {
             if (!noDecay)

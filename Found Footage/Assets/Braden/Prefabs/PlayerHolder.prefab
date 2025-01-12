@@ -1244,18 +1244,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ed32243a4f115342afece20933d49a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  walkSpeed: 4
   groundDrag: 5
   isJumpEnabled: 0
   jumpForce: 9
   jumpCooldown: 0.25
   airMultiplier: 0.4
+  sprintSpeed: 6.5
+  sprintFOV: 86
+  sprintPositionOffset: {x: 0, y: -0.13, z: 0}
+  sprintRotationOffset: {x: 10, y: 0, z: 0}
+  canSprint: 1
+  isSprinting: 0
   canInteract: 1
   playerHeight: 2
   groundMask:
     serializedVersion: 2
     m_Bits: 64
   orientation: {fileID: 1760663019217300902}
+  backpack: {fileID: 5816427279985323180}
+  camera: {fileID: 1760663020273365347}
 --- !u!114 &7314578115247715998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1439,6 +1447,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 2f9dbedb-65ff-4f6a-8fa0-fcfd16f2906b
     m_ActionName: Player/LastSlide[/Keyboard/a,/Keyboard/leftArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1760663019556657053}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: SprintEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7f658f28-1eb8-4fcd-88ae-93da187c296a
+    m_ActionName: Player/Sprint[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1551,10 +1575,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760663020273365346}
+  - component: {fileID: 1760663020273365347}
   - component: {fileID: 1760663020273365374}
   - component: {fileID: 1760663020273365373}
   - component: {fileID: 1760663020273365372}
-  - component: {fileID: 1760663020273365347}
   - component: {fileID: 4017350548072240013}
   m_Layer: 0
   m_Name: PlayerCam
@@ -1579,6 +1603,26 @@ Transform:
   m_Father: {fileID: 1760663020723807703}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1760663020273365347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760663020273365345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8ded9b5539717489c73281a6cea429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: {x: 3, y: 3}
+  controllerSensitivity: {x: 3, y: 3}
+  sensitivityMultiplier: {x: 1, y: 1}
+  cameraLerpSpeed: 45
+  FOVLerpSpeed: 7
+  targetFOV: 0
+  baseFOV: 0
+  orientation: {fileID: 1760663019217300902}
 --- !u!20 &1760663020273365374
 Camera:
   m_ObjectHideFlags: 0
@@ -1664,23 +1708,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!114 &1760663020273365347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760663020273365345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c8ded9b5539717489c73281a6cea429, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSensitivity: {x: 3, y: 3}
-  controllerSensitivity: {x: 3, y: 3}
-  sensitivityMultiplier: {x: 1, y: 1}
-  cameraLerpSpeed: 45
-  orientation: {fileID: 1760663019217300902}
 --- !u!114 &4017350548072240013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1999,9 +2026,11 @@ MonoBehaviour:
     type: 3}
   flashlightEquipAction: {fileID: 1032447416603981528, guid: 12d58d4cd41281a4ca3eb6c8e5e5fb62,
     type: 3}
+  canEquip: 1
   heldItem: {fileID: 0}
-  defaultEquipItem: 
+  itemPositionOffset: {x: 0, y: 0, z: 0}
   itemPositionLerpSpeed: 50
+  itemRotationOffset: {x: 0, y: 0, z: 0}
   itemRotationLerpSpeed: 40
 --- !u!1 &2870925442430992452
 GameObject:

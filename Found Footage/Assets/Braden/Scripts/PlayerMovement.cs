@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
+    public float walkSpeed;
     public float groundDrag;
 
     public bool isJumpEnabled = false;
@@ -14,6 +14,14 @@ public class PlayerMovement : MonoBehaviour
     public float jumpCooldown;
     public float airMultiplier;
     bool canJump = true;
+
+    [Header("Sprint")]
+    public float sprintSpeed = 6.5f;
+    public float sprintFOV = 80;
+    public Vector3 sprintPositionOffset;
+    public Vector3 sprintRotationOffset;
+    public bool canSprint = true;
+    public bool isSprinting = false;
 
     [Header("Input")]
     public bool canInteract = true;
@@ -25,11 +33,15 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("References")]
     public Transform orientation;
+    public Backpack backpack;
+    public new MainCamera camera;
 
     [Header("Private")]
     Vector2 moveInput;
     Vector3 moveDirection;
     Rigidbody body;
+
+    float moveSpeed;
 
     void Start()
     {
@@ -42,6 +54,12 @@ public class PlayerMovement : MonoBehaviour
     // Set data on update
     void Update()
     {
+        // Determine Speed
+        if (isSprinting)
+            moveSpeed = sprintSpeed;
+        else
+            moveSpeed = walkSpeed;
+
         // Speed Control
         Vector3 flatVelocity = new Vector3(body.velocity.x, 0, body.velocity.z);
 
@@ -73,11 +91,68 @@ public class PlayerMovement : MonoBehaviour
         body.AddForce(moveForce, ForceMode.Force);
     }
 
+    // [Sprinting] //
+
+    public void setSprinting(bool state)
+    {
+        if (isSprinting == state || (state == true && !canSprint)) return;
+
+        isSprinting = state;
+
+        if (isSprinting)
+        {
+            camera.targetFOV = sprintFOV;
+
+            backpack.itemPositionOffset = sprintPositionOffset;
+            backpack.itemRotationOffset = sprintRotationOffset;
+            backpack.canEquip = false;
+
+            GameObject heldItem = backpack.heldItem;
+
+            if (heldItem != null)
+            {
+                BaseItem itemClass = heldItem.GetComponent<BaseItem>();
+
+                if (itemClass)
+                {
+                    itemClass.isDisabled = true;
+                    itemClass.Disable();
+                }
+            }
+        } else
+        {
+            camera.targetFOV = camera.baseFOV;
+
+            backpack.itemPositionOffset = Vector3.zero;
+            backpack.itemRotationOffset = Vector3.zero;
+            backpack.canEquip = true;
+
+            GameObject heldItem = backpack.heldItem;
+
+            if (heldItem != null)
+            {
+                BaseItem itemClass = heldItem.GetComponent<BaseItem>();
+
+                if (itemClass)
+                {
+                    itemClass.isDisabled = false;
+                    itemClass.Enable();
+                }
+            }
+        }
+    }
+
     // [Input Events] //
 
     public void MoveEvent(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+    }
+
+    public void SprintEvent(InputAction.CallbackContext context)
+    {
+        bool isPressed = context.ReadValue<float>() > 0;
+        setSprinting(isPressed);
     }
 
     public void JumpEvent(InputAction.CallbackContext context)
