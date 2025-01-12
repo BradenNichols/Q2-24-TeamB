@@ -4948,7 +4948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePerSecond: 1
   castRange: 15
-  castSizeMult: 0.75
+  castSizeMult: 0.65
   magazineSize: 10
   weaponCooldown: 0.3
   ammoDepletionPerSecond: 10

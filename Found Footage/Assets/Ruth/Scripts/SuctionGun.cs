@@ -68,7 +68,7 @@ public class SuctionGun : BaseItem
         viewCount = GameObject.Find("Player").GetComponent<ViewCount>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (isShooting) // Shoot update
         {
@@ -80,16 +80,18 @@ public class SuctionGun : BaseItem
                 return;
             }
 
-            ammo = Mathf.Clamp(ammo - (Time.deltaTime * ammoDepletionPerSecond), 0, ammo);
+            ammo = Mathf.Clamp(ammo - (Time.fixedDeltaTime * ammoDepletionPerSecond), 0, ammo);
 
             // Raycast
 
             bool hitEnemy = false;
 
-            Transform firePoint = beamParticle.transform;
+            Transform firePoint = cameraScript.transform;
+            Vector3 firePosition = firePoint.position + (firePoint.right * 0.4f);
+
             RaycastHit hitInfo;
 
-            if (Physics.BoxCast(firePoint.position, (firePoint.localScale / 2) * castSizeMult, firePoint.forward, out hitInfo, firePoint.rotation, castRange)) // returns a bool if hit
+            if (Physics.BoxCast(firePosition, (firePoint.localScale / 2) * castSizeMult, firePoint.forward, out hitInfo, firePoint.rotation, castRange)) // returns a bool if hit
             {
                 GameObject hitObject = hitInfo.collider.gameObject;
                 //Debug.Log(hitObject.name);
@@ -101,7 +103,7 @@ public class SuctionGun : BaseItem
 
                     if (enemyStats && enemyStats.isAlive)
                     {
-                        enemyStats.TakeDamage(damagePerSecond * Time.deltaTime);
+                        enemyStats.TakeDamage(damagePerSecond * Time.fixedDeltaTime);
                         hitEnemy = true;
 
                         if (!enemyStats.isAlive) // we killed them

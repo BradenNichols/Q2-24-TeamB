@@ -4,15 +4,69 @@ using UnityEngine;
 
 public class TheMare : BaseEnemy
 {
+    [Header("Mare AI")]
+    public List<Transform> retreatSpots;
+    public float retreatWalkSpeed = 8;
+    public bool isRetreating = false;
+
+    float pathEndThreshold = 0.5f;
+
     // Start is called before the first frame update
-    void Start()
+    new void Start()
     {
-        
+        base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    new void Update()
     {
-        
+        if (!myStats.isAlive)
+        {
+            if (!isRetreating)
+            {
+                Debug.Log("RETREATING");
+
+                isRetreating = true;
+
+                shouldPathToTarget = false;
+                isTouchActive = false;
+                shouldSlowOnShot = false;
+
+                agent.speed = retreatWalkSpeed;
+
+                Transform retreat = getFarthestRetreatFromPlayer();
+                agent.SetDestination(retreat.position);
+            } else // we have set it already
+            {
+                if (agent.remainingDistance <= agent.stoppingDistance + pathEndThreshold)
+                { // reached the retreat position
+                    Destroy(gameObject);
+                    return;
+                }
+            }
+        }
+
+        base.Update(); // pathing and such
+    }
+
+    // Functions
+
+    Transform getFarthestRetreatFromPlayer()
+    {
+        Transform retreatSpot = transform;
+        float farthestDistance = -1;
+
+        foreach (Transform spot in retreatSpots)
+        {
+            float distance = Vector3.Distance(spot.position, playerTransform.position);
+
+            if (farthestDistance == -1 || distance > farthestDistance)
+            {
+                retreatSpot = spot;
+                farthestDistance = distance;
+            }
+        }
+
+        return retreatSpot;
     }
 }

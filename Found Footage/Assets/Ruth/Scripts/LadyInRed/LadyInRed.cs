@@ -22,13 +22,15 @@ public class LadyInRed : BaseEnemy
 
     public System.Action<GameObject> onDeath { get; internal set; }
 
-    private void Start()
+    new void Start()
     {
+        base.Start();
+
         //animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    new void Update()
     {
         if (isWandering == false)
         {

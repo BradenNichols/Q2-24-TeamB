@@ -8,7 +8,6 @@ public class MainCamera : MonoBehaviour
     public Vector2 mouseSensitivity;
     public Vector2 controllerSensitivity;
 
-    [HideInInspector]
     public Vector2 sensitivityMultiplier = Vector2.one;
 
     public float cameraLerpSpeed;
@@ -25,7 +24,7 @@ public class MainCamera : MonoBehaviour
     
     void Update()
     {
-        if (!transform)
+        if (!transform || !orientation)
             return;
 
         Vector2 sensitivity = mouseSensitivity;
