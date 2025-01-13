@@ -458,8 +458,8 @@ GameObject:
   - component: {fileID: 1227415323}
   - component: {fileID: 1227415322}
   m_Layer: 0
-  m_Name: Holder
-  m_TagString: Untagged
+  m_Name: The Mare
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -519,7 +519,7 @@ MonoBehaviour:
   slowTimeOnShot: 0.6
   slowOnShotSpeed: 2.5
   target: {fileID: 2059631362}
-  shouldPathToTarget: 0
+  shouldPathToTarget: 1
   myStats: {fileID: 1227415324}
   agent: {fileID: 1227415322}
   animator: {fileID: 5667134547892203393}
@@ -8381,7 +8381,7 @@ GameObject:
   - component: {fileID: 5667134547892203394}
   - component: {fileID: 5667134547892203393}
   m_Layer: 0
-  m_Name: The Mare
+  m_Name: Holder
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

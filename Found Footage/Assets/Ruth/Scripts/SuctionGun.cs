@@ -101,6 +101,9 @@ public class SuctionGun : BaseItem
                     // do stuff
                     GeneralStats enemyStats = hitObject.GetComponent<GeneralStats>();
 
+                    if (!enemyStats)
+                        enemyStats = hitObject.GetComponentInParent<GeneralStats>();
+
                     if (enemyStats && enemyStats.isAlive)
                     {
                         enemyStats.TakeDamage(damagePerSecond * Time.fixedDeltaTime);
