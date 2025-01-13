@@ -18,10 +18,17 @@ public class PlayerMovement : MonoBehaviour
     [Header("Sprint")]
     public float sprintSpeed = 6.5f;
     public float sprintFOV = 80;
+    public float sprintBobAdd = 5;
     public Vector3 sprintPositionOffset;
     public Vector3 sprintRotationOffset;
     public bool canSprint = true;
     public bool isSprinting = false;
+
+    [Header("Head Bob")]
+    public float defaultBobbingSpeed = 14;
+    public float bobbingAmount = 0.05f;
+    float defaultBobPosY = 0;
+    float bobTimer = 0;
 
     [Header("Input")]
     public bool canInteract = true;
@@ -48,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody>();
         body.freezeRotation = true;
 
+        defaultBobPosY = camera.transform.localPosition.y;
         Physics.gravity = new Vector3(0, -16f, 0); // default is -9.81
     }
 
@@ -71,6 +79,25 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 limitedVelocity = flatVelocity.normalized * moveSpeed;
             body.velocity = new Vector3(limitedVelocity.x, body.velocity.y, limitedVelocity.z);
+        }
+
+        // Headbob
+        float bobSpeed = defaultBobbingSpeed;
+
+        if (isSprinting)
+            bobSpeed += sprintBobAdd;
+
+        if (moveDirection.magnitude > 0)
+        {
+            bobTimer += Time.deltaTime * bobSpeed;
+            camera.transform.localPosition = new Vector3(camera.transform.localPosition.x, 
+                defaultBobPosY + Mathf.Sin(bobTimer) * bobbingAmount, camera.transform.localPosition.z);
+        } else
+        {
+            bobTimer = 0;
+            camera.transform.localPosition = 
+                new Vector3(camera.transform.localPosition.x, 
+                Mathf.Lerp(camera.transform.localPosition.y, defaultBobPosY, Time.deltaTime * bobSpeed), camera.transform.localPosition.z);
         }
 
         // Drag

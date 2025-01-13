@@ -755,6 +755,16 @@ PrefabInstance:
       objectReference: {fileID: 2059631362}
     - target: {fileID: 1335050021517314116, guid: 1cc2d6c2ae79dcc4a92ed8ead0b58720,
         type: 3}
+      propertyPath: isTouchActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335050021517314116, guid: 1cc2d6c2ae79dcc4a92ed8ead0b58720,
+        type: 3}
+      propertyPath: shouldPathToTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335050021517314116, guid: 1cc2d6c2ae79dcc4a92ed8ead0b58720,
+        type: 3}
       propertyPath: retreatSpots.Array.data[0]
       value: 
       objectReference: {fileID: 838558179}

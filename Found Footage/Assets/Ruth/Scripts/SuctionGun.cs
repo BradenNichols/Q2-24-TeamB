@@ -37,14 +37,16 @@ public class SuctionGun : BaseItem
     public Material hitBeam;
     Material defaultBeam;
 
+    public AudioSource activeSound;
     public string enemyTag;
 
     [Header("Private")]
     private bool isButtonHeld = false;
-    private ItemData itemData;
-    private ViewCount viewCount;
-    private MainCamera cameraScript;
-    private Tooltip noBatteryTip;
+    float activeSoundVolume;
+    ItemData itemData;
+    ViewCount viewCount;
+    MainCamera cameraScript;
+    Tooltip noBatteryTip;
 
     // OLD POS OFFSET: Vector3(1, -1.2, 1.2)
 
@@ -57,6 +59,7 @@ public class SuctionGun : BaseItem
 
         itemData = GetComponent<ItemData>();
         noBatteryTip = GetComponent<Tooltip>();
+        activeSoundVolume = activeSound.volume;
 
         beamRenderer = beamParticle.GetComponent<ParticleSystemRenderer>();
         defaultBeam = beamRenderer.material;
@@ -195,6 +198,9 @@ public class SuctionGun : BaseItem
 
         gasParticle.Play();
         beamParticle.Play();
+
+        activeSound.volume = activeSoundVolume;
+        activeSound.Play();
     }
 
     void StopShooting(bool ResetCD = true)
@@ -207,6 +213,7 @@ public class SuctionGun : BaseItem
         gasParticle.Stop();
         beamParticle.Stop();
 
+        activeSound.volume = 0; // prevent popping sound
         cameraScript.sensitivityMultiplier = Vector2.one;
 
         if (ResetCD)
