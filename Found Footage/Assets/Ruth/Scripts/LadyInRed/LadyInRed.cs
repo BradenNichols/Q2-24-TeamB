@@ -18,7 +18,6 @@ public class LadyInRed : BaseEnemy
     public float detectionRange;
 
     Rigidbody rb;
-    Animator animator;
 
     public System.Action<GameObject> onDeath { get; internal set; }
 

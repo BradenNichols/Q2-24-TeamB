@@ -18,6 +18,7 @@ public class BaseEnemy : MonoBehaviour
     [Header("References")]
     [SerializeField] protected GeneralStats myStats;
     [SerializeField] protected NavMeshAgent agent;
+    [SerializeField] protected Animator animator;
     protected Transform playerTransform;
     protected float baseSpeed;
 
@@ -41,6 +42,8 @@ public class BaseEnemy : MonoBehaviour
             else
                 agent.speed = baseSpeed;
         }
+
+        animator.SetBool("IsMoving", agent.velocity.magnitude > 0);
     }
 
     // Unity Functions
