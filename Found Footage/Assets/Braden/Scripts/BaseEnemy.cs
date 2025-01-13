@@ -16,7 +16,7 @@ public class BaseEnemy : MonoBehaviour
     public bool shouldPathToTarget = true;
 
     [Header("References")]
-    [SerializeField] protected GeneralStats myStats;
+    public GeneralStats stats;
     [SerializeField] protected NavMeshAgent agent;
     [SerializeField] protected Animator animator;
     protected Transform playerTransform;
@@ -37,27 +37,12 @@ public class BaseEnemy : MonoBehaviour
 
         if (shouldSlowOnShot)
         {
-            if (myStats.lastDamaged != null && myStats.lastDamaged <= slowTimeOnShot)
+            if (stats.lastDamaged != null && stats.lastDamaged <= slowTimeOnShot)
                 agent.speed = slowOnShotSpeed;
             else
                 agent.speed = baseSpeed;
         }
 
         animator.SetBool("IsMoving", agent.velocity.magnitude > 0);
-    }
-
-    // Unity Functions
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (!isTouchActive || !myStats || !myStats.isAlive) return;
-
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            // the Enemy touched a Player
-
-            GeneralStats generalStats = collision.gameObject.GetComponent<GeneralStats>();
-            generalStats.Kill();
-        }
     }
 }

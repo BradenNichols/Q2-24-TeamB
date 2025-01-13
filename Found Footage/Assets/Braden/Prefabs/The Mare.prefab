@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7591551060480459984}
   m_Layer: 0
   m_Name: DEF-toe.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6623558906981390239}
   m_Layer: 0
   m_Name: forearm_tweak.R.001_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 2193093846739119067}
   m_Layer: 0
   m_Name: ORG-spine.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 1954524633982613180}
   m_Layer: 0
   m_Name: head
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 709017455715994325}
   m_Layer: 0
   m_Name: upper_arm.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 2440090214665199218}
   m_Layer: 0
   m_Name: metarig
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 8207749273702673323}
   m_Layer: 0
   m_Name: thigh_tweak.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 5496289846658324541}
   m_Layer: 0
   m_Name: MCH-spine.005
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 4922252493581995453}
   m_Layer: 0
   m_Name: ORG-spine.004
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 797772551391156711}
   m_Layer: 0
   m_Name: DEF-toe.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 6475443096222676341}
   m_Layer: 0
   m_Name: shoulder.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 2439932072119995794}
   m_Layer: 0
   m_Name: foot_ik.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 6632637285191620166}
   m_Layer: 0
   m_Name: MCH-upper_arm_tweak.L.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 664634727321490223}
   m_Layer: 0
   m_Name: MCH-upper_arm_parent_widget.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 2942882253533873580}
   m_Layer: 0
   m_Name: thigh_ik.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 7458179931911496101}
   m_Layer: 0
   m_Name: MCH-WGT-chest
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 562997136617589364}
   m_Layer: 0
   m_Name: VIS_thigh_ik_pole.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -555,7 +555,7 @@ GameObject:
   - component: {fileID: 5173149387199136128}
   m_Layer: 0
   m_Name: tweak_spine.005_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -586,7 +586,7 @@ GameObject:
   - component: {fileID: 2311169617917119409}
   m_Layer: 0
   m_Name: ORG-hand.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 5887838858873229449}
   m_Layer: 0
   m_Name: DEF-thigh.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 1865454084923636756}
   m_Layer: 0
   m_Name: MCH-forearm_tweak.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 9200838572429093330}
   m_Layer: 0
   m_Name: forearm_tweak.L.001_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 1590261342418571529}
   m_Layer: 0
   m_Name: DEF-pelvis.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 8200747683370007553}
   m_Layer: 0
   m_Name: forearm.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -779,7 +779,7 @@ GameObject:
   - component: {fileID: 4984329325639257087}
   m_Layer: 0
   m_Name: ORG-thigh.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -813,7 +813,7 @@ GameObject:
   - component: {fileID: 3382351720279678852}
   m_Layer: 0
   m_Name: tweak_spine.005
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: 2356903534850636146}
   m_Layer: 0
   m_Name: upper_arm_tweak.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -876,7 +876,7 @@ GameObject:
   - component: {fileID: 197635777809667617}
   m_Layer: 0
   m_Name: MCH-toe_ik_parent.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -908,7 +908,7 @@ GameObject:
   - component: {fileID: 2669065767780365731}
   m_Layer: 0
   m_Name: MCH-toe_ik_parent.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -940,7 +940,7 @@ GameObject:
   - component: {fileID: 1658933967144631600}
   m_Layer: 0
   m_Name: upper_arm_tweak.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -972,7 +972,7 @@ GameObject:
   - component: {fileID: 3789882917321653478}
   m_Layer: 0
   m_Name: DEF-upper_arm.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1004,7 +1004,7 @@ GameObject:
   - component: {fileID: 657911080734835404}
   m_Layer: 0
   m_Name: hand_fk.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 2133765094065889572}
   m_Layer: 0
   m_Name: shoulder.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 5607844493269550574}
   m_Layer: 0
   m_Name: head_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1097,7 +1097,7 @@ GameObject:
   - component: {fileID: 6079540579801861716}
   m_Layer: 0
   m_Name: upper_arm_parent.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1128,7 +1128,7 @@ GameObject:
   - component: {fileID: 4410577497276822128}
   m_Layer: 0
   m_Name: ORG-heel.02.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1159,7 +1159,7 @@ GameObject:
   - component: {fileID: 8670725003454204548}
   m_Layer: 0
   m_Name: MCH-toe_fk.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1191,7 +1191,7 @@ GameObject:
   - component: {fileID: 8174693565414406431}
   m_Layer: 0
   m_Name: MCH-heel.02_rock2.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1223,7 +1223,7 @@ GameObject:
   - component: {fileID: 1596870828965828998}
   m_Layer: 0
   m_Name: upper_arm_parent.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1255,7 +1255,7 @@ GameObject:
   - component: {fileID: 2003566789822296048}
   m_Layer: 0
   m_Name: ORG-heel.02.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1286,7 +1286,7 @@ GameObject:
   - component: {fileID: 8119044759439106917}
   m_Layer: 0
   m_Name: ORG-shin.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1320,7 +1320,7 @@ GameObject:
   - component: {fileID: 5755416350172952194}
   m_Layer: 0
   m_Name: hand_fk.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1353,7 +1353,7 @@ GameObject:
   - component: {fileID: 396991908379709446}
   m_Layer: 0
   m_Name: DEF-foot.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1385,7 +1385,7 @@ GameObject:
   - component: {fileID: 6016481974678286326}
   m_Layer: 0
   m_Name: chest
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1417,7 +1417,7 @@ GameObject:
   - component: {fileID: 8248271122521867581}
   m_Layer: 0
   m_Name: foot_fk.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1450,7 +1450,7 @@ GameObject:
   - component: {fileID: 7726047866309179819}
   m_Layer: 0
   m_Name: DEF-pelvis.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1483,7 +1483,7 @@ GameObject:
   - component: {fileID: 2448945313109387163}
   m_Layer: 0
   m_Name: hand_ik.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1537,7 +1537,7 @@ Transform:
   m_Children:
   - {fileID: 6298680587960394341}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1335050021517314115
 MonoBehaviour:
@@ -1569,19 +1569,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062b3144baf4e104fbad6e4ebdf7731b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTouchActive: 0
+  isTouchActive: 1
   shouldSlowOnShot: 1
   slowTimeOnShot: 0.6
-  slowOnShotSpeed: 2.5
+  slowOnShotSpeed: 3
   target: {fileID: 0}
   shouldPathToTarget: 1
-  myStats: {fileID: 1335050021517314115}
+  stats: {fileID: 1335050021517314115}
   agent: {fileID: 1335050021517314117}
   animator: {fileID: 6639071333868599518}
   retreatSpots:
   - {fileID: 0}
   - {fileID: 0}
-  retreatWalkSpeed: 8
+  retreatWalkSpeed: 7.5
   isRetreating: 0
 --- !u!195 &1335050021517314117
 NavMeshAgent:
@@ -1593,10 +1593,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 4.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 330
+  m_AngularSpeed: 360
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -1616,7 +1616,7 @@ GameObject:
   - component: {fileID: 4578379649979182402}
   m_Layer: 0
   m_Name: tweak_spine.004_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1647,7 +1647,7 @@ GameObject:
   - component: {fileID: 3474452791967835475}
   m_Layer: 0
   m_Name: upper_arm_ik_target.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1679,7 +1679,7 @@ GameObject:
   - component: {fileID: 8025848580126433870}
   m_Layer: 0
   m_Name: hand.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1710,7 +1710,7 @@ GameObject:
   - component: {fileID: 8642344223825134648}
   m_Layer: 0
   m_Name: MCH-hand_fk.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1742,7 +1742,7 @@ GameObject:
   - component: {fileID: 1969612203769995619}
   m_Layer: 0
   m_Name: MCH-upper_arm_parent_widget.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1773,7 +1773,7 @@ GameObject:
   - component: {fileID: 4816117576112496408}
   m_Layer: 0
   m_Name: MCH-foot_ik.parent.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1805,7 +1805,7 @@ GameObject:
   - component: {fileID: 8949406053572563658}
   m_Layer: 0
   m_Name: DEF-toe.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1836,7 +1836,7 @@ GameObject:
   - component: {fileID: 5014272317260239704}
   m_Layer: 0
   m_Name: hand.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1867,7 +1867,7 @@ GameObject:
   - component: {fileID: 8154120060688504606}
   m_Layer: 0
   m_Name: MCH-WGT-hips_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1898,7 +1898,7 @@ GameObject:
   - component: {fileID: 2311337897248703028}
   m_Layer: 0
   m_Name: hand_ik.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1930,7 +1930,7 @@ GameObject:
   - component: {fileID: 2458573873743130892}
   m_Layer: 0
   m_Name: MCH-shin_ik.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1961,7 +1961,7 @@ GameObject:
   - component: {fileID: 1813352222894592320}
   m_Layer: 0
   m_Name: upper_arm_ik_target.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1992,7 +1992,7 @@ GameObject:
   - component: {fileID: 2145701688398149730}
   m_Layer: 0
   m_Name: DEF-thigh.R.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2024,7 +2024,7 @@ GameObject:
   - component: {fileID: 1502747370375660695}
   m_Layer: 0
   m_Name: hand_tweak.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2055,7 +2055,7 @@ GameObject:
   - component: {fileID: 6342196757744364958}
   m_Layer: 0
   m_Name: forearm_fk.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2087,7 +2087,7 @@ GameObject:
   - component: {fileID: 2091706442443475146}
   m_Layer: 0
   m_Name: ORG-upper_arm.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2121,7 +2121,7 @@ GameObject:
   - component: {fileID: 6422616706779359071}
   m_Layer: 0
   m_Name: hips
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2153,7 +2153,7 @@ GameObject:
   - component: {fileID: 6364375777485878428}
   m_Layer: 0
   m_Name: MCH-upper_arm_tweak.R.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2185,7 +2185,7 @@ GameObject:
   - component: {fileID: 1230437165772447140}
   m_Layer: 0
   m_Name: thigh_tweak.R.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2217,7 +2217,7 @@ GameObject:
   - component: {fileID: 2249234193988434546}
   m_Layer: 0
   m_Name: MCH-shin_tweak.R.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2249,7 +2249,7 @@ GameObject:
   - component: {fileID: 6385830177691955411}
   m_Layer: 0
   m_Name: ORG-spine.003
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2284,7 +2284,7 @@ GameObject:
   - component: {fileID: 2786372345532683013}
   m_Layer: 0
   m_Name: DEF-forearm.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2316,7 +2316,7 @@ GameObject:
   - component: {fileID: 860818755919329853}
   m_Layer: 0
   m_Name: MCH-forearm_ik.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2348,7 +2348,7 @@ GameObject:
   - component: {fileID: 1911096821156946466}
   m_Layer: 0
   m_Name: shin_tweak.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2379,7 +2379,7 @@ GameObject:
   - component: {fileID: 6140746350917223681}
   m_Layer: 0
   m_Name: hand_tweak.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2410,7 +2410,7 @@ GameObject:
   - component: {fileID: 9142834507614035694}
   m_Layer: 0
   m_Name: shin_fk.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2442,7 +2442,7 @@ GameObject:
   - component: {fileID: 4184890373013130267}
   m_Layer: 0
   m_Name: MCH-shin_tweak.L.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2474,7 +2474,7 @@ GameObject:
   - component: {fileID: 5820117651538972200}
   m_Layer: 0
   m_Name: ORG-toe.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2506,7 +2506,7 @@ GameObject:
   - component: {fileID: 6433074844629907125}
   m_Layer: 0
   m_Name: thigh_parent.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2538,7 +2538,7 @@ GameObject:
   - component: {fileID: 4581473108376404739}
   m_Layer: 0
   m_Name: MCH-spine.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2570,7 +2570,7 @@ GameObject:
   - component: {fileID: 1937477666992035156}
   m_Layer: 0
   m_Name: hips_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2601,7 +2601,7 @@ GameObject:
   - component: {fileID: 7327386905046361294}
   m_Layer: 0
   m_Name: toe_ik.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2632,7 +2632,7 @@ GameObject:
   - component: {fileID: 6763460615154975748}
   m_Layer: 0
   m_Name: MCH-foot_fk.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2664,7 +2664,7 @@ GameObject:
   - component: {fileID: 2697854502899812197}
   m_Layer: 0
   m_Name: thigh_tweak.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2695,7 +2695,7 @@ GameObject:
   - component: {fileID: 4425152118701111054}
   m_Layer: 0
   m_Name: toe_fk.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2726,7 +2726,7 @@ GameObject:
   - component: {fileID: 1041063548724526405}
   m_Layer: 0
   m_Name: MCH-upper_arm_tweak.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2758,7 +2758,7 @@ GameObject:
   - component: {fileID: 7007614131738265225}
   m_Layer: 0
   m_Name: MCH-foot_tweak.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2791,7 +2791,7 @@ GameObject:
   - component: {fileID: 5664286665806341048}
   m_Layer: 0
   m_Name: pelvis.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2822,7 +2822,7 @@ GameObject:
   - component: {fileID: 4356612971236771911}
   m_Layer: 0
   m_Name: toe_ik.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2854,7 +2854,7 @@ GameObject:
   - component: {fileID: 6333875893920439006}
   m_Layer: 0
   m_Name: MCH-toe_fk.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2886,7 +2886,7 @@ GameObject:
   - component: {fileID: 381357905434903163}
   m_Layer: 0
   m_Name: spine.002
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2918,7 +2918,7 @@ GameObject:
   - component: {fileID: 4626502803138436581}
   m_Layer: 0
   m_Name: upper_arm_ik_target.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2950,7 +2950,7 @@ GameObject:
   - component: {fileID: 5742611096056451645}
   m_Layer: 0
   m_Name: MCH-heel.02_roll2.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2982,7 +2982,7 @@ GameObject:
   - component: {fileID: 7759588591695903598}
   m_Layer: 0
   m_Name: ORG-spine.006
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3014,7 +3014,7 @@ GameObject:
   - component: {fileID: 7471852435626500910}
   m_Layer: 0
   m_Name: hand_fk.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3047,7 +3047,7 @@ GameObject:
   - component: {fileID: 4293736658863561780}
   m_Layer: 0
   m_Name: spine.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3079,7 +3079,7 @@ GameObject:
   - component: {fileID: 3235137630730646089}
   m_Layer: 0
   m_Name: MCH-thigh_parent_widget.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3110,7 +3110,7 @@ GameObject:
   - component: {fileID: 9112090079461874946}
   m_Layer: 0
   m_Name: heel.02.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3142,7 +3142,7 @@ GameObject:
   - component: {fileID: 5277974821680797982}
   m_Layer: 0
   m_Name: VIS_upper_arm_ik_pole.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3173,7 +3173,7 @@ GameObject:
   - component: {fileID: 8742986223612825324}
   m_Layer: 0
   m_Name: toe_ik.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3205,7 +3205,7 @@ GameObject:
   - component: {fileID: 1810591471341215971}
   m_Layer: 0
   m_Name: shin_tweak.R.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3237,7 +3237,7 @@ GameObject:
   - component: {fileID: 6045436870240098097}
   m_Layer: 0
   m_Name: shin_tweak.R.001_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3268,7 +3268,7 @@ GameObject:
   - component: {fileID: 3758853363621682549}
   m_Layer: 0
   m_Name: DEF-shin.L.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3300,7 +3300,7 @@ GameObject:
   - component: {fileID: 837935496726781994}
   m_Layer: 0
   m_Name: DEF-shoulder.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3332,7 +3332,7 @@ GameObject:
   - component: {fileID: 2433759671223678708}
   m_Layer: 0
   m_Name: Cylinder.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3634,7 +3634,7 @@ GameObject:
   - component: {fileID: 7008185531492913373}
   m_Layer: 0
   m_Name: foot_heel_ik.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3665,7 +3665,7 @@ GameObject:
   - component: {fileID: 2858901940873028387}
   m_Layer: 0
   m_Name: ORG-forearm.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3699,7 +3699,7 @@ GameObject:
   - component: {fileID: 6785086027124220848}
   m_Layer: 0
   m_Name: DEF-shoulder.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3731,7 +3731,7 @@ GameObject:
   - component: {fileID: 2981392943096566884}
   m_Layer: 0
   m_Name: MCH-upper_arm_tweak.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3763,7 +3763,7 @@ GameObject:
   - component: {fileID: 3424146528086888724}
   m_Layer: 0
   m_Name: foot_fk.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3796,7 +3796,7 @@ GameObject:
   - component: {fileID: 6323507509973429260}
   m_Layer: 0
   m_Name: MCH-thigh_ik_swing.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3828,7 +3828,7 @@ GameObject:
   - component: {fileID: 1071374404633742413}
   m_Layer: 0
   m_Name: MCH-spine.002
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3860,7 +3860,7 @@ GameObject:
   - component: {fileID: 2624130637219750745}
   m_Layer: 0
   m_Name: MCH-upper_arm_ik_target.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3891,7 +3891,7 @@ GameObject:
   - component: {fileID: 1442863545702055148}
   m_Layer: 0
   m_Name: MCH-thigh_parent.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3924,7 +3924,7 @@ GameObject:
   - component: {fileID: 6030826231114243864}
   m_Layer: 0
   m_Name: MCH-upper_arm_ik_target.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3955,7 +3955,7 @@ GameObject:
   - component: {fileID: 7882133314853769161}
   m_Layer: 0
   m_Name: MCH-hand_ik.parent.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3987,7 +3987,7 @@ GameObject:
   - component: {fileID: 2221367673164034990}
   m_Layer: 0
   m_Name: DEF-spine.002
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4019,7 +4019,7 @@ GameObject:
   - component: {fileID: 1371905219982248192}
   m_Layer: 0
   m_Name: thigh_parent.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4051,7 +4051,7 @@ GameObject:
   - component: {fileID: 9091476616580620938}
   m_Layer: 0
   m_Name: foot_heel_ik.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4082,7 +4082,7 @@ GameObject:
   - component: {fileID: 3585824655378889674}
   m_Layer: 0
   m_Name: MCH-hand_fk.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4114,7 +4114,7 @@ GameObject:
   - component: {fileID: 2474385066704709877}
   m_Layer: 0
   m_Name: MCH-shin_tweak.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4147,7 +4147,7 @@ GameObject:
   - component: {fileID: 2992007827947716832}
   m_Layer: 0
   m_Name: foot_ik.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4179,7 +4179,7 @@ GameObject:
   - component: {fileID: 780917323081167221}
   m_Layer: 0
   m_Name: upper_arm_tweak.R.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4212,7 +4212,7 @@ GameObject:
   - component: {fileID: 5446554309164398697}
   m_Layer: 0
   m_Name: MCH-shin_ik.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4244,7 +4244,7 @@ GameObject:
   - component: {fileID: 186246039600323817}
   m_Layer: 0
   m_Name: foot_spin_ik.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4277,7 +4277,7 @@ GameObject:
   - component: {fileID: 8734818508272371762}
   m_Layer: 0
   m_Name: shin.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4309,7 +4309,7 @@ GameObject:
   - component: {fileID: 6640243506101943633}
   m_Layer: 0
   m_Name: thigh_ik.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4341,7 +4341,7 @@ GameObject:
   - component: {fileID: 5838886567106827059}
   m_Layer: 0
   m_Name: foot_heel_ik.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4373,7 +4373,7 @@ GameObject:
   - component: {fileID: 6961021573283516402}
   m_Layer: 0
   m_Name: tweak_spine
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4405,7 +4405,7 @@ GameObject:
   - component: {fileID: 7920517669809731821}
   m_Layer: 0
   m_Name: VIS_thigh_ik_pole.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4437,7 +4437,7 @@ GameObject:
   - component: {fileID: 2008987532887496116}
   m_Layer: 0
   m_Name: MCH-heel.02_rock1.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4469,7 +4469,7 @@ GameObject:
   - component: {fileID: 7260115300702780293}
   m_Layer: 0
   m_Name: ORG-upper_arm.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4503,7 +4503,7 @@ GameObject:
   - component: {fileID: 8441416756779685492}
   m_Layer: 0
   m_Name: ORG-toe.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4534,7 +4534,7 @@ GameObject:
   - component: {fileID: 7835423610345862430}
   m_Layer: 0
   m_Name: forearm_tweak.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4567,7 +4567,7 @@ GameObject:
   - component: {fileID: 8356392253129737097}
   m_Layer: 0
   m_Name: ORG-pelvis.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4599,7 +4599,7 @@ GameObject:
   - component: {fileID: 6995753799486926563}
   m_Layer: 0
   m_Name: foot_tweak.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4630,7 +4630,7 @@ GameObject:
   - component: {fileID: 6469406481915024449}
   m_Layer: 0
   m_Name: shin.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4662,7 +4662,7 @@ GameObject:
   - component: {fileID: 282692618944705970}
   m_Layer: 0
   m_Name: VIS_thigh_ik_pole.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4693,7 +4693,7 @@ GameObject:
   - component: {fileID: 2824883387754856006}
   m_Layer: 0
   m_Name: MCH-pivot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4725,7 +4725,7 @@ GameObject:
   - component: {fileID: 8320592785805722862}
   m_Layer: 0
   m_Name: MCH-heel.02_roll1.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4758,7 +4758,7 @@ GameObject:
   - component: {fileID: 8575259327478751683}
   m_Layer: 0
   m_Name: shoulder.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4790,7 +4790,7 @@ GameObject:
   - component: {fileID: 5992690924690070067}
   m_Layer: 0
   m_Name: spine.006_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4821,7 +4821,7 @@ GameObject:
   - component: {fileID: 4501253403223402960}
   m_Layer: 0
   m_Name: ORG-hand.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4853,7 +4853,7 @@ GameObject:
   - component: {fileID: 2132336950915044624}
   m_Layer: 0
   m_Name: hand_tweak.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4886,7 +4886,7 @@ GameObject:
   - component: {fileID: 6027062641883725463}
   m_Layer: 0
   m_Name: foot_spin_ik.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4919,7 +4919,7 @@ GameObject:
   - component: {fileID: 2684246680963852856}
   m_Layer: 0
   m_Name: DEF-forearm.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4951,7 +4951,7 @@ GameObject:
   - component: {fileID: 8211141623835877477}
   m_Layer: 0
   m_Name: ORG-spine.005
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4983,7 +4983,7 @@ GameObject:
   - component: {fileID: 4625909309435756756}
   m_Layer: 0
   m_Name: MCH-thigh_tweak.R.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5015,7 +5015,7 @@ GameObject:
   - component: {fileID: 4976612480117021081}
   m_Layer: 0
   m_Name: MCH-spine.003
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5047,7 +5047,7 @@ GameObject:
   - component: {fileID: 1260330660863750530}
   m_Layer: 0
   m_Name: shin_tweak.L.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5080,7 +5080,7 @@ GameObject:
   - component: {fileID: 9026063847664138658}
   m_Layer: 0
   m_Name: chest_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5111,7 +5111,7 @@ GameObject:
   - component: {fileID: 8822056014381712657}
   m_Layer: 0
   m_Name: ORG-spine.002_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5142,7 +5142,7 @@ GameObject:
   - component: {fileID: 6367900677541882601}
   m_Layer: 0
   m_Name: ORG-forearm.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5176,7 +5176,7 @@ GameObject:
   - component: {fileID: 7059342650644296430}
   m_Layer: 0
   m_Name: DEF-thigh.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5208,7 +5208,7 @@ GameObject:
   - component: {fileID: 3477283076867673783}
   m_Layer: 0
   m_Name: MCH-ROT-neck
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5240,7 +5240,7 @@ GameObject:
   - component: {fileID: 5346483953210673569}
   m_Layer: 0
   m_Name: DEF-spine
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5272,7 +5272,7 @@ GameObject:
   - component: {fileID: 8473047373807779219}
   m_Layer: 0
   m_Name: upper_arm_parent.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5304,7 +5304,7 @@ GameObject:
   - component: {fileID: 7216265124650047213}
   m_Layer: 0
   m_Name: pelvis.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5336,7 +5336,7 @@ GameObject:
   - component: {fileID: 3807103708503343952}
   m_Layer: 0
   m_Name: ORG-foot.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5370,7 +5370,7 @@ GameObject:
   - component: {fileID: 5363191336066318318}
   m_Layer: 0
   m_Name: upper_arm_ik.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5402,7 +5402,7 @@ GameObject:
   - component: {fileID: 7487360531181410502}
   m_Layer: 0
   m_Name: thigh_ik_target.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5433,7 +5433,7 @@ GameObject:
   - component: {fileID: 1508632088880618706}
   m_Layer: 0
   m_Name: toe_fk.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5466,7 +5466,7 @@ GameObject:
   - component: {fileID: 7981489751742514936}
   m_Layer: 0
   m_Name: DEF-toe.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5498,7 +5498,7 @@ GameObject:
   - component: {fileID: 2393531379941662914}
   m_Layer: 0
   m_Name: ORG-toe.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5529,7 +5529,7 @@ GameObject:
   - component: {fileID: 5729802421989074103}
   m_Layer: 0
   m_Name: MCH-upper_arm_parent_widget.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5562,7 +5562,7 @@ GameObject:
   - component: {fileID: 3070009277401487643}
   m_Layer: 0
   m_Name: thigh_fk.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5594,7 +5594,7 @@ GameObject:
   - component: {fileID: 1073907804258005932}
   m_Layer: 0
   m_Name: torso
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5629,7 +5629,7 @@ GameObject:
   - component: {fileID: 3200684620969148564}
   m_Layer: 0
   m_Name: toe.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5660,7 +5660,7 @@ GameObject:
   - component: {fileID: 5816969749094477333}
   m_Layer: 0
   m_Name: DEF-shoulder.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5691,7 +5691,7 @@ GameObject:
   - component: {fileID: 3903837843738868685}
   m_Layer: 0
   m_Name: forearm_tweak.R.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5724,7 +5724,7 @@ GameObject:
   - component: {fileID: 7612110911192412176}
   m_Layer: 0
   m_Name: spine_fk
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5758,7 +5758,7 @@ GameObject:
   - component: {fileID: 1839034768535283824}
   m_Layer: 0
   m_Name: ORG-spine.001_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5789,7 +5789,7 @@ GameObject:
   - component: {fileID: 853283206586243056}
   m_Layer: 0
   m_Name: forearm_tweak.L.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5822,7 +5822,7 @@ GameObject:
   - component: {fileID: 6245090976068843375}
   m_Layer: 0
   m_Name: DEF-hand.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5854,7 +5854,7 @@ GameObject:
   - component: {fileID: 3269466048338094524}
   m_Layer: 0
   m_Name: root
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5890,7 +5890,7 @@ GameObject:
   - component: {fileID: 4777517425417185123}
   m_Layer: 0
   m_Name: thigh_fk.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5922,7 +5922,7 @@ GameObject:
   - component: {fileID: 3394839601095902785}
   m_Layer: 0
   m_Name: foot_tweak.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5955,7 +5955,7 @@ GameObject:
   - component: {fileID: 1115244191643864333}
   m_Layer: 0
   m_Name: hand.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5987,7 +5987,7 @@ GameObject:
   - component: {fileID: 2173035577883622077}
   m_Layer: 0
   m_Name: upper_arm.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6019,7 +6019,7 @@ GameObject:
   - component: {fileID: 2229727947409695503}
   m_Layer: 0
   m_Name: MCH-forearm_ik.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6050,7 +6050,7 @@ GameObject:
   - component: {fileID: 748328436509068834}
   m_Layer: 0
   m_Name: shin_fk.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6083,7 +6083,7 @@ GameObject:
   - component: {fileID: 2572838703174383987}
   m_Layer: 0
   m_Name: thigh_parent.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6114,7 +6114,7 @@ GameObject:
   - component: {fileID: 8766545821115416756}
   m_Layer: 0
   m_Name: rig
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6156,7 +6156,7 @@ GameObject:
   - component: {fileID: 3721719631626574171}
   m_Layer: 0
   m_Name: MCH-thigh_parent_widget.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6189,7 +6189,7 @@ GameObject:
   - component: {fileID: 4844509344846923535}
   m_Layer: 0
   m_Name: DEF-thigh.L.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6221,7 +6221,7 @@ GameObject:
   - component: {fileID: 6669706367314338358}
   m_Layer: 0
   m_Name: MCH-thigh_ik_swing.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6253,7 +6253,7 @@ GameObject:
   - component: {fileID: 6388520827866307888}
   m_Layer: 0
   m_Name: spine.004
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6285,7 +6285,7 @@ GameObject:
   - component: {fileID: 7443421860126712908}
   m_Layer: 0
   m_Name: upper_arm_tweak.R.001_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6316,7 +6316,7 @@ GameObject:
   - component: {fileID: 44925158935438241}
   m_Layer: 0
   m_Name: ORG-heel.02.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6348,7 +6348,7 @@ GameObject:
   - component: {fileID: 8416474990846261385}
   m_Layer: 0
   m_Name: upper_arm_fk.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6380,7 +6380,7 @@ GameObject:
   - component: {fileID: 1881033499446397417}
   m_Layer: 0
   m_Name: shin_tweak.L.001_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6411,7 +6411,7 @@ GameObject:
   - component: {fileID: 6328670777388694198}
   m_Layer: 0
   m_Name: shin_tweak.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6443,7 +6443,7 @@ GameObject:
   - component: {fileID: 5614682787932247168}
   m_Layer: 0
   m_Name: ORG-spine.002
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6475,7 +6475,7 @@ GameObject:
   - component: {fileID: 4728341203763077411}
   m_Layer: 0
   m_Name: heel.02.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6506,7 +6506,7 @@ GameObject:
   - component: {fileID: 3371238660172808842}
   m_Layer: 0
   m_Name: shin_tweak.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6537,7 +6537,7 @@ GameObject:
   - component: {fileID: 3196711055937347684}
   m_Layer: 0
   m_Name: ORG-spine
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6580,7 +6580,7 @@ GameObject:
   - component: {fileID: 170048521232840318}
   m_Layer: 0
   m_Name: VIS_upper_arm_ik_pole.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6612,7 +6612,7 @@ GameObject:
   - component: {fileID: 5600957891572018918}
   m_Layer: 0
   m_Name: thigh.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6644,7 +6644,7 @@ GameObject:
   - component: {fileID: 338151298170672399}
   m_Layer: 0
   m_Name: foot_tweak.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6677,7 +6677,7 @@ GameObject:
   - component: {fileID: 8627611398091678180}
   m_Layer: 0
   m_Name: MCH-shin_ik.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6709,7 +6709,7 @@ GameObject:
   - component: {fileID: 6419943331918130819}
   m_Layer: 0
   m_Name: MCH-upper_arm_ik_target.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6742,7 +6742,7 @@ GameObject:
   - component: {fileID: 3170672406094359908}
   m_Layer: 0
   m_Name: DEF-pelvis.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6773,7 +6773,7 @@ GameObject:
   - component: {fileID: 3133514333741611270}
   m_Layer: 0
   m_Name: DEF-foot.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6805,7 +6805,7 @@ GameObject:
   - component: {fileID: 4461584633158074033}
   m_Layer: 0
   m_Name: spine_fk.002
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6838,7 +6838,7 @@ GameObject:
   - component: {fileID: 5351249822563488470}
   m_Layer: 0
   m_Name: shoulder.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6869,7 +6869,7 @@ GameObject:
   - component: {fileID: 7786144993302677185}
   m_Layer: 0
   m_Name: shoulder.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6901,7 +6901,7 @@ GameObject:
   - component: {fileID: 8365303178050456857}
   m_Layer: 0
   m_Name: DEF-upper_arm.R.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6933,7 +6933,7 @@ GameObject:
   - component: {fileID: 5739001435107178443}
   m_Layer: 0
   m_Name: tweak_spine.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6965,7 +6965,7 @@ GameObject:
   - component: {fileID: 2053360502406471871}
   m_Layer: 0
   m_Name: upper_arm_parent.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6996,7 +6996,7 @@ GameObject:
   - component: {fileID: 7079144536935850411}
   m_Layer: 0
   m_Name: MCH-thigh_ik_target.parent.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7028,7 +7028,7 @@ GameObject:
   - component: {fileID: 3324700812635755288}
   m_Layer: 0
   m_Name: thigh_tweak.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7059,7 +7059,7 @@ GameObject:
   - component: {fileID: 4717688069986671621}
   m_Layer: 0
   m_Name: MCH-forearm_tweak.L.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7091,7 +7091,7 @@ GameObject:
   - component: {fileID: 5918350698247647006}
   m_Layer: 0
   m_Name: DEF-spine.005
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7123,7 +7123,7 @@ GameObject:
   - component: {fileID: 5991996892221726140}
   m_Layer: 0
   m_Name: thigh_ik_target.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7154,7 +7154,7 @@ GameObject:
   - component: {fileID: 4250696262997598565}
   m_Layer: 0
   m_Name: MCH-thigh_tweak.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7186,7 +7186,7 @@ GameObject:
   - component: {fileID: 1925393857688377981}
   m_Layer: 0
   m_Name: MCH-forearm_tweak.R.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7218,7 +7218,7 @@ GameObject:
   - component: {fileID: 1055048555881254486}
   m_Layer: 0
   m_Name: shoulder.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7250,7 +7250,7 @@ GameObject:
   - component: {fileID: 8343151719028328831}
   m_Layer: 0
   m_Name: thigh_tweak.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7283,7 +7283,7 @@ GameObject:
   - component: {fileID: 3055923867416907114}
   m_Layer: 0
   m_Name: ORG-pelvis.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7315,7 +7315,7 @@ GameObject:
   - component: {fileID: 2052004819590738913}
   m_Layer: 0
   m_Name: DEF-shin.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7347,7 +7347,7 @@ GameObject:
   - component: {fileID: 2015625858242711238}
   m_Layer: 0
   m_Name: MCH-thigh_tweak.L.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7379,7 +7379,7 @@ GameObject:
   - component: {fileID: 314445336006619339}
   m_Layer: 0
   m_Name: ORG-shin.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7413,7 +7413,7 @@ GameObject:
   - component: {fileID: 2154239450600131386}
   m_Layer: 0
   m_Name: MCH-WGT-chest_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7444,7 +7444,7 @@ GameObject:
   - component: {fileID: 8522000192269268519}
   m_Layer: 0
   m_Name: thigh_parent.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7475,7 +7475,7 @@ GameObject:
   - component: {fileID: 7566908888321101212}
   m_Layer: 0
   m_Name: upper_arm_fk.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7507,7 +7507,7 @@ GameObject:
   - component: {fileID: 2509065122551313763}
   m_Layer: 0
   m_Name: pelvis.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7539,7 +7539,7 @@ GameObject:
   - component: {fileID: 1601311313019720914}
   m_Layer: 0
   m_Name: toe_fk.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7572,7 +7572,7 @@ GameObject:
   - component: {fileID: 5668792876995327083}
   m_Layer: 0
   m_Name: MCH-heel.02_roll1.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7605,7 +7605,7 @@ GameObject:
   - component: {fileID: 1888784716668718475}
   m_Layer: 0
   m_Name: spine
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7641,7 +7641,7 @@ GameObject:
   - component: {fileID: 6525510563722045997}
   m_Layer: 0
   m_Name: ORG-heel.02.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7673,7 +7673,7 @@ GameObject:
   - component: {fileID: 8936638466479710421}
   m_Layer: 0
   m_Name: heel.02.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7705,7 +7705,7 @@ GameObject:
   - component: {fileID: 6638174271280548906}
   m_Layer: 0
   m_Name: MCH-heel.02_rock1.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7737,7 +7737,7 @@ GameObject:
   - component: {fileID: 5136040515070947702}
   m_Layer: 0
   m_Name: DEF-pelvis.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7768,7 +7768,7 @@ GameObject:
   - component: {fileID: 8212417570265222358}
   m_Layer: 0
   m_Name: upper_arm_ik_target.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7799,7 +7799,7 @@ GameObject:
   - component: {fileID: 887648355760505580}
   m_Layer: 0
   m_Name: forearm_tweak.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7830,7 +7830,7 @@ GameObject:
   - component: {fileID: 5207999287268574492}
   m_Layer: 0
   m_Name: MCH-thigh_parent_widget.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7861,7 +7861,7 @@ GameObject:
   - component: {fileID: 2161790817252438214}
   m_Layer: 0
   m_Name: MCH-shin_ik.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7892,7 +7892,7 @@ GameObject:
   - component: {fileID: 738300617415051908}
   m_Layer: 0
   m_Name: MCH-hand_ik.parent.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7924,7 +7924,7 @@ GameObject:
   - component: {fileID: 2289948973629378054}
   m_Layer: 0
   m_Name: DEF-spine.006_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7955,7 +7955,7 @@ GameObject:
   - component: {fileID: 969998604163212542}
   m_Layer: 0
   m_Name: MCH-ROT-head
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7988,6 +7988,7 @@ GameObject:
   - component: {fileID: 6639071333868599516}
   - component: {fileID: 6639071333868599517}
   - component: {fileID: 6639071333868599518}
+  - component: {fileID: 7795581082331118507}
   m_Layer: 0
   m_Name: Holder
   m_TagString: Enemy
@@ -8063,6 +8064,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7795581082331118507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639071333868599519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ee9f6ec3ea86641b6b1dc45fb133a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyClass: {fileID: 1335050021517314116}
 --- !u!1 &6657099660327745024
 GameObject:
   m_ObjectHideFlags: 0
@@ -8074,7 +8088,7 @@ GameObject:
   - component: {fileID: 2458841120575837071}
   m_Layer: 0
   m_Name: shin_tweak.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8106,7 +8120,7 @@ GameObject:
   - component: {fileID: 7543565500062493523}
   m_Layer: 0
   m_Name: hand.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8138,7 +8152,7 @@ GameObject:
   - component: {fileID: 4006267173357952479}
   m_Layer: 0
   m_Name: upper_arm_tweak.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8171,7 +8185,7 @@ GameObject:
   - component: {fileID: 1850806247831705989}
   m_Layer: 0
   m_Name: MCH-thigh_ik_target.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8204,7 +8218,7 @@ GameObject:
   - component: {fileID: 2215194536376883541}
   m_Layer: 0
   m_Name: upper_arm_tweak.L.001_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8235,7 +8249,7 @@ GameObject:
   - component: {fileID: 6276521350387906009}
   m_Layer: 0
   m_Name: MCH-thigh_ik_target.parent.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8267,7 +8281,7 @@ GameObject:
   - component: {fileID: 8297264075440556202}
   m_Layer: 0
   m_Name: Face_control_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8298,7 +8312,7 @@ GameObject:
   - component: {fileID: 4271212441381750300}
   m_Layer: 0
   m_Name: MCH-foot_ik.parent.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8330,7 +8344,7 @@ GameObject:
   - component: {fileID: 7095785818224808178}
   m_Layer: 0
   m_Name: thigh.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8362,7 +8376,7 @@ GameObject:
   - component: {fileID: 3114279805375111554}
   m_Layer: 0
   m_Name: MCH-upper_arm_ik_target.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8395,7 +8409,7 @@ GameObject:
   - component: {fileID: 1847010171155058083}
   m_Layer: 0
   m_Name: ORG-toe.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8427,7 +8441,7 @@ GameObject:
   - component: {fileID: 5166599790880450073}
   m_Layer: 0
   m_Name: MCH-STR-neck
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8460,7 +8474,7 @@ GameObject:
   - component: {fileID: 6679015821809616392}
   m_Layer: 0
   m_Name: ORG-shoulder.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8497,7 +8511,7 @@ GameObject:
   - component: {fileID: 1935618438214852023}
   m_Layer: 0
   m_Name: MCH-foot_tweak.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8530,7 +8544,7 @@ GameObject:
   - component: {fileID: 3522533406595070405}
   m_Layer: 0
   m_Name: forearm_fk.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8562,7 +8576,7 @@ GameObject:
   - component: {fileID: 8937243726327617072}
   m_Layer: 0
   m_Name: MCH-heel.02_roll2.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8594,7 +8608,7 @@ GameObject:
   - component: {fileID: 8456409605203114458}
   m_Layer: 0
   m_Name: MCH-spine
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8626,7 +8640,7 @@ GameObject:
   - component: {fileID: 9024136344786333021}
   m_Layer: 0
   m_Name: MCH-upper_arm_ik_swing.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8658,7 +8672,7 @@ GameObject:
   - component: {fileID: 4026459341432354049}
   m_Layer: 0
   m_Name: foot.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8691,7 +8705,7 @@ GameObject:
   - component: {fileID: 5405088389125505431}
   m_Layer: 0
   m_Name: thigh_tweak.L.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8723,7 +8737,7 @@ GameObject:
   - component: {fileID: 5333865411571486022}
   m_Layer: 0
   m_Name: DEF-spine.006
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8755,7 +8769,7 @@ GameObject:
   - component: {fileID: 4257621775039288378}
   m_Layer: 0
   m_Name: forearm_tweak.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8788,7 +8802,7 @@ GameObject:
   - component: {fileID: 1284292287780632845}
   m_Layer: 0
   m_Name: MCH-forearm_ik.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8820,7 +8834,7 @@ GameObject:
   - component: {fileID: 8236210183064725011}
   m_Layer: 0
   m_Name: thigh_tweak.L.001_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8851,7 +8865,7 @@ GameObject:
   - component: {fileID: 6766686757297303730}
   m_Layer: 0
   m_Name: upper_arm_tweak.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8882,7 +8896,7 @@ GameObject:
   - component: {fileID: 3993062377408560307}
   m_Layer: 0
   m_Name: MCH-hand_tweak.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8915,7 +8929,7 @@ GameObject:
   - component: {fileID: 6082622551415519157}
   m_Layer: 0
   m_Name: MCH-thigh_parent_widget.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8948,7 +8962,7 @@ GameObject:
   - component: {fileID: 4049278761590945813}
   m_Layer: 0
   m_Name: thigh_ik_target.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8980,7 +8994,7 @@ GameObject:
   - component: {fileID: 7661921242837013628}
   m_Layer: 0
   m_Name: tweak_spine.003
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9013,7 +9027,7 @@ GameObject:
   - component: {fileID: 7007728881658167484}
   m_Layer: 0
   m_Name: tweak_spine.004
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9045,7 +9059,7 @@ GameObject:
   - component: {fileID: 4942633753673949654}
   m_Layer: 0
   m_Name: MCH-torso.parent
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9077,7 +9091,7 @@ GameObject:
   - component: {fileID: 3684937978304001478}
   m_Layer: 0
   m_Name: heel.02.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9108,7 +9122,7 @@ GameObject:
   - component: {fileID: 1206345378806785668}
   m_Layer: 0
   m_Name: upper_arm_ik.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9140,7 +9154,7 @@ GameObject:
   - component: {fileID: 3678352586708311617}
   m_Layer: 0
   m_Name: MCH-foot_fk.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9172,7 +9186,7 @@ GameObject:
   - component: {fileID: 6434921752819557932}
   m_Layer: 0
   m_Name: Face_control
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9204,7 +9218,7 @@ GameObject:
   - component: {fileID: 1591730886939370685}
   m_Layer: 0
   m_Name: toe.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9235,7 +9249,7 @@ GameObject:
   - component: {fileID: 4509370050986746298}
   m_Layer: 0
   m_Name: DEF-hand.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9266,7 +9280,7 @@ GameObject:
   - component: {fileID: 2464942071308823884}
   m_Layer: 0
   m_Name: VIS_thigh_ik_pole.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9297,7 +9311,7 @@ GameObject:
   - component: {fileID: 3069121846450521387}
   m_Layer: 0
   m_Name: spine_fk.003
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9332,7 +9346,7 @@ GameObject:
   - component: {fileID: 411591795368146520}
   m_Layer: 0
   m_Name: toe_fk.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9363,7 +9377,7 @@ GameObject:
   - component: {fileID: 3086947165710083760}
   m_Layer: 0
   m_Name: MCH-upper_arm_parent.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9396,7 +9410,7 @@ GameObject:
   - component: {fileID: 8453778158721952534}
   m_Layer: 0
   m_Name: toe.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9428,7 +9442,7 @@ GameObject:
   - component: {fileID: 5177267307145716939}
   m_Layer: 0
   m_Name: MCH-hand_tweak.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9461,7 +9475,7 @@ GameObject:
   - component: {fileID: 2529025765028668446}
   m_Layer: 0
   m_Name: MCH-shin_tweak.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9494,7 +9508,7 @@ GameObject:
   - component: {fileID: 6362708769950000987}
   m_Layer: 0
   m_Name: foot_heel_ik.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9526,7 +9540,7 @@ GameObject:
   - component: {fileID: 3306231795188315367}
   m_Layer: 0
   m_Name: ORG-foot.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9560,7 +9574,7 @@ GameObject:
   - component: {fileID: 1792870562335701399}
   m_Layer: 0
   m_Name: DEF-spine.004
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9592,7 +9606,7 @@ GameObject:
   - component: {fileID: 9122514999816095445}
   m_Layer: 0
   m_Name: DEF-forearm.R.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9624,7 +9638,7 @@ GameObject:
   - component: {fileID: 8208257722773177215}
   m_Layer: 0
   m_Name: DEF-hand.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9655,7 +9669,7 @@ GameObject:
   - component: {fileID: 3983071894941214800}
   m_Layer: 0
   m_Name: MCH-thigh_ik_target.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9688,7 +9702,7 @@ GameObject:
   - component: {fileID: 1831520385614110550}
   m_Layer: 0
   m_Name: ORG-spine.006_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9719,7 +9733,7 @@ GameObject:
   - component: {fileID: 3829845658304673556}
   m_Layer: 0
   m_Name: VIS_upper_arm_ik_pole.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9750,7 +9764,7 @@ GameObject:
   - component: {fileID: 4460652381158163410}
   m_Layer: 0
   m_Name: hand_tweak.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9783,7 +9797,7 @@ GameObject:
   - component: {fileID: 5406047484254729025}
   m_Layer: 0
   m_Name: VIS_upper_arm_ik_pole.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9815,7 +9829,7 @@ GameObject:
   - component: {fileID: 5965726606074551615}
   m_Layer: 0
   m_Name: toe_ik.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9846,7 +9860,7 @@ GameObject:
   - component: {fileID: 8222077823487116766}
   m_Layer: 0
   m_Name: spine_fk.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9878,7 +9892,7 @@ GameObject:
   - component: {fileID: 8962962069385233643}
   m_Layer: 0
   m_Name: MCH-thigh_parent.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9911,7 +9925,7 @@ GameObject:
   - component: {fileID: 4444571553768881469}
   m_Layer: 0
   m_Name: DEF-shin.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9943,7 +9957,7 @@ GameObject:
   - component: {fileID: 3875063152326889148}
   m_Layer: 0
   m_Name: MCH-upper_arm_parent_widget.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9976,7 +9990,7 @@ GameObject:
   - component: {fileID: 6782736055974035640}
   m_Layer: 0
   m_Name: MCH-heel.02_rock2.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10008,7 +10022,7 @@ GameObject:
   - component: {fileID: 7107537194599939144}
   m_Layer: 0
   m_Name: toe.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10040,7 +10054,7 @@ GameObject:
   - component: {fileID: 6717640325137033950}
   m_Layer: 0
   m_Name: ORG-thigh.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10074,7 +10088,7 @@ GameObject:
   - component: {fileID: 8399025281219699120}
   m_Layer: 0
   m_Name: MCH-forearm_tweak.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10107,7 +10121,7 @@ GameObject:
   - component: {fileID: 8632058470055330074}
   m_Layer: 0
   m_Name: MCH-thigh_tweak.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10139,7 +10153,7 @@ GameObject:
   - component: {fileID: 5973677297074997692}
   m_Layer: 0
   m_Name: DEF-spine.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10171,7 +10185,7 @@ GameObject:
   - component: {fileID: 7529640721155989092}
   m_Layer: 0
   m_Name: foot.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10204,7 +10218,7 @@ GameObject:
   - component: {fileID: 4805581249179557221}
   m_Layer: 0
   m_Name: spine.005
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10236,7 +10250,7 @@ GameObject:
   - component: {fileID: 2369986994522251228}
   m_Layer: 0
   m_Name: upper_arm_tweak.L.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10269,7 +10283,7 @@ GameObject:
   - component: {fileID: 1416484196001601061}
   m_Layer: 0
   m_Name: hand_fk.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10300,7 +10314,7 @@ GameObject:
   - component: {fileID: 623499951352623818}
   m_Layer: 0
   m_Name: DEF-shin.R.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10332,7 +10346,7 @@ GameObject:
   - component: {fileID: 3387669585985844180}
   m_Layer: 0
   m_Name: DEF-upper_arm.L.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10364,7 +10378,7 @@ GameObject:
   - component: {fileID: 7846100622302099708}
   m_Layer: 0
   m_Name: pelvis.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10395,7 +10409,7 @@ GameObject:
   - component: {fileID: 6457499126951414461}
   m_Layer: 0
   m_Name: MCH-upper_arm_ik_swing.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10427,7 +10441,7 @@ GameObject:
   - component: {fileID: 2086580324091620349}
   m_Layer: 0
   m_Name: MCH-foot_roll.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10459,7 +10473,7 @@ GameObject:
   - component: {fileID: 7294836682350984573}
   m_Layer: 0
   m_Name: tweak_spine.002
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10491,7 +10505,7 @@ GameObject:
   - component: {fileID: 2342473432691178080}
   m_Layer: 0
   m_Name: ORG-shoulder.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10528,7 +10542,7 @@ GameObject:
   - component: {fileID: 2221881697608686657}
   m_Layer: 0
   m_Name: MCH-upper_arm_ik_target.parent.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10560,7 +10574,7 @@ GameObject:
   - component: {fileID: 615250817299906584}
   m_Layer: 0
   m_Name: MCH-upper_arm_parent.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10593,7 +10607,7 @@ GameObject:
   - component: {fileID: 4197099650379549579}
   m_Layer: 0
   m_Name: neck
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10627,7 +10641,7 @@ GameObject:
   - component: {fileID: 4031436329016400076}
   m_Layer: 0
   m_Name: MCH-upper_arm_ik_target.parent.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10659,7 +10673,7 @@ GameObject:
   - component: {fileID: 3998417814682061035}
   m_Layer: 0
   m_Name: thigh_ik_target.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10691,7 +10705,7 @@ GameObject:
   - component: {fileID: 4304626622713697287}
   m_Layer: 0
   m_Name: DEF-hand.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10723,7 +10737,7 @@ GameObject:
   - component: {fileID: 6946925093495961939}
   m_Layer: 0
   m_Name: MCH-forearm_ik.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10754,7 +10768,7 @@ GameObject:
   - component: {fileID: 2851589472752194741}
   m_Layer: 0
   m_Name: DEF-upper_arm.L
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10786,7 +10800,7 @@ GameObject:
   - component: {fileID: 9217897668430206863}
   m_Layer: 0
   m_Name: forearm_tweak.R_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10817,7 +10831,7 @@ GameObject:
   - component: {fileID: 7186474045412550769}
   m_Layer: 0
   m_Name: spine.003
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10851,7 +10865,7 @@ GameObject:
   - component: {fileID: 5065260634332980921}
   m_Layer: 0
   m_Name: DEF-spine.003
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10883,7 +10897,7 @@ GameObject:
   - component: {fileID: 296170502389898752}
   m_Layer: 0
   m_Name: forearm.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10915,7 +10929,7 @@ GameObject:
   - component: {fileID: 2303813153545789173}
   m_Layer: 0
   m_Name: MCH-foot_roll.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10947,7 +10961,7 @@ GameObject:
   - component: {fileID: 4894262615124760988}
   m_Layer: 0
   m_Name: thigh_tweak.R.001_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10978,7 +10992,7 @@ GameObject:
   - component: {fileID: 489369621529732289}
   m_Layer: 0
   m_Name: DEF-shoulder.R
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11011,7 +11025,7 @@ GameObject:
   - component: {fileID: 2451190027624295520}
   m_Layer: 0
   m_Name: foot_tweak.L_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11042,7 +11056,7 @@ GameObject:
   - component: {fileID: 3638668189324552875}
   m_Layer: 0
   m_Name: DEF-forearm.L.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11075,7 +11089,7 @@ GameObject:
   - component: {fileID: 4039415317289646240}
   m_Layer: 0
   m_Name: spine.006
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11107,7 +11121,7 @@ GameObject:
   - component: {fileID: 3642863590101521062}
   m_Layer: 0
   m_Name: MCH-WGT-hips
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

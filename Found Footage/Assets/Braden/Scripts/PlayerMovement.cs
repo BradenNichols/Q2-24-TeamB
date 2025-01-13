@@ -37,8 +37,8 @@ public class PlayerMovement : MonoBehaviour
     public new MainCamera camera;
 
     [Header("Private")]
-    Vector2 moveInput;
-    Vector3 moveDirection;
+    public Vector2 moveInput;
+    public Vector3 moveDirection;
     Rigidbody body;
 
     float moveSpeed;
@@ -54,6 +54,10 @@ public class PlayerMovement : MonoBehaviour
     // Set data on update
     void Update()
     {
+        // Check sprinting movement
+        if (moveInput.y <= 0 && isSprinting)
+            setSprinting(false);
+
         // Determine Speed
         if (isSprinting)
             moveSpeed = sprintSpeed;
@@ -96,6 +100,9 @@ public class PlayerMovement : MonoBehaviour
     public void setSprinting(bool state)
     {
         if (isSprinting == state || (state == true && !canSprint)) return;
+
+        if (state == true && moveInput.y <= 0)
+            return;
 
         isSprinting = state;
 

@@ -20,7 +20,7 @@ public class TheMare : BaseEnemy
     // Update is called once per frame
     new void Update()
     {
-        if (!myStats.isAlive)
+        if (!stats.isAlive)
         {
             if (!isRetreating)
             {
