@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 moveInput;
     public Vector3 moveDirection;
     Rigidbody body;
+    public AudioSource footstepsSound;
 
     float moveSpeed;
 
@@ -107,6 +108,15 @@ public class PlayerMovement : MonoBehaviour
             body.drag = groundDrag;
         else
             body.drag = 0;
+
+        if(moveDirection.magnitude > 0)
+        {
+             footstepsSound.enabled = true;
+        }
+        else
+        {
+            footstepsSound.enabled = false;
+        }
     }
 
     // Move player on fixed update
