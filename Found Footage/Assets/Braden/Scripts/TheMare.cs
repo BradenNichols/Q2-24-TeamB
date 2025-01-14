@@ -6,6 +6,7 @@ public class TheMare : BaseEnemy
 {
     [Header("Mare AI")]
     public List<Transform> retreatSpots;
+    public bool isFinalSpawn;
     public float retreatWalkSpeed = 8;
     public bool isRetreating = false;
 
@@ -22,28 +23,41 @@ public class TheMare : BaseEnemy
     {
         if (!stats.isAlive)
         {
-            if (!isRetreating)
+            if (!isFinalSpawn)
             {
-                Debug.Log("RETREATING");
+                // not final spawn; should retreat
 
-                isRetreating = true;
+                if (!isRetreating)
+                {
+                    isRetreating = true;
+                    Debug.Log("RETREATING");
 
+                    shouldPathToTarget = false;
+                    isTouchActive = false;
+                    shouldSlowOnShot = false;
+
+                    agent.speed = retreatWalkSpeed;
+
+                    Transform retreat = getFarthestRetreatFromPlayer();
+                    agent.SetDestination(retreat.position);
+                }
+                else // we have set it already
+                {
+                    if (agent.remainingDistance <= agent.stoppingDistance + pathEndThreshold)
+                    { // reached the retreat position
+                        Debug.Log("REACHED RETREAT");
+                        Destroy(gameObject);
+                        return;
+                    }
+                }
+            } else
+            {
+                // final spawn, death handled in GeneralStats
                 shouldPathToTarget = false;
                 isTouchActive = false;
                 shouldSlowOnShot = false;
 
-                agent.speed = retreatWalkSpeed;
-
-                Transform retreat = getFarthestRetreatFromPlayer();
-                agent.SetDestination(retreat.position);
-            } else // we have set it already
-            {
-                if (agent.remainingDistance <= agent.stoppingDistance + pathEndThreshold)
-                { // reached the retreat position
-                    Debug.Log("REACHED RETREAT");
-                    Destroy(gameObject);
-                    return;
-                }
+                agent.speed = 0;
             }
         }
 

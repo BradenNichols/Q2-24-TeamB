@@ -5,7 +5,8 @@ using UnityEngine;
 [System.Serializable]
 
 public class SpawnTime {
-    public float viewCount;
+    public float atViewCount;
+    public bool isFinalSpawn;
     public bool hasSpawned;
 }
 
@@ -32,20 +33,21 @@ public class MareSpawner : AISpawner
             SpawnTime spawnData = spawnTimings[i];
             if (spawnData.hasSpawned) continue;
 
-            if (viewCount.viewers >= spawnData.viewCount)
+            if (viewCount.viewers >= spawnData.atViewCount)
             {
                 spawnData.hasSpawned = true;
-                SpawnEnemy();
+                SpawnEnemy(spawnData.isFinalSpawn);
             }
         }
     }
 
-    public new GameObject SpawnEnemy()
+    public GameObject SpawnEnemy(bool isFinalSpawn)
     {
         GameObject newEnemy = base.SpawnEnemy();
 
         TheMare mareClass = newEnemy.GetComponent<TheMare>();
         mareClass.retreatSpots = retreatSpots;
+        mareClass.isFinalSpawn = isFinalSpawn;
         mareClass.target = player.transform;
 
         return newEnemy;

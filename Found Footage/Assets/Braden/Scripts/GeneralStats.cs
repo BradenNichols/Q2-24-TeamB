@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GeneralStats : MonoBehaviour
 {
     [Header("Health")]
     public float health = 1;
     public float maxHealth = 1;
+    public bool isImmune = false;
 
     [Header("Info")]
     public bool isAlive = true;
@@ -25,7 +27,7 @@ public class GeneralStats : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (!isAlive) return;
+        if (!isAlive || isImmune) return;
 
         health = Mathf.Clamp(health - damage, 0, maxHealth);
         lastDamaged = 0;
@@ -47,9 +49,38 @@ public class GeneralStats : MonoBehaviour
         } else if (characterType == "TheMare")
         {
             // this is mostly handled in their AI code
+            TheMare mare = GetComponent<TheMare>();
+            GeneralStats playerStats = GameObject.Find("Player").GetComponent<GeneralStats>();
+
+            if (mare && mare.isFinalSpawn && playerStats.isAlive)
+            {
+                // TODO: animate their death
+
+                // Player State
+                
+                playerStats.isImmune = true;
+
+                Backpack backpack = GameObject.Find("Backpack").GetComponent<Backpack>();
+                backpack.UnequipItem();
+                backpack.canEquip = false;
+
+                Fade fadeOut = GameObject.Find("FadeIn").GetComponent<Fade>();
+                fadeOut.fadeTime = 2.5f;
+                fadeOut.endAlpha = 1;
+
+                StartCoroutine(WinGame());
+            }
         } else if (characterType == "Player")
         {
             Destroy(gameObject); // temporary
         }
+    }
+
+    // Fin
+
+    IEnumerator WinGame()
+    {
+        yield return new WaitForSeconds(3.5f);
+        SceneManager.LoadScene("Credits");
     }
 }

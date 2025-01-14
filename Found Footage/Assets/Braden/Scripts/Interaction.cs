@@ -9,6 +9,7 @@ public class Interaction : MonoBehaviour
     public bool isEnabled = true;
     public bool hasInteracted = false;
     public float interactDistance = 10;
+    public string interactString = "Interact";
 
     [Header("References")]
     public InputActionReference inputAction;
@@ -32,7 +33,13 @@ public class Interaction : MonoBehaviour
 
     void Update()
     {
-        interactLabel.enabled = canInteract();
+        if (canInteract())
+        {
+            interactLabel.text = $"Press E/X to {interactString}";
+            interactLabel.enabled = true;
+        }
+        else
+            interactLabel.enabled = false;
     }
 
     // Input
