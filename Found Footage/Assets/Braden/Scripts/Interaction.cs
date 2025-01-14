@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class Interaction : MonoBehaviour
 {
@@ -19,6 +17,7 @@ public class Interaction : MonoBehaviour
     private GameObject player;
     private Transform myCamera;
     private PlayerMovement playerMovement;
+    private TMP_Text interactLabel;
 
     void Start()
     {
@@ -27,6 +26,13 @@ public class Interaction : MonoBehaviour
         player = GameObject.Find("Player");
         myCamera = GameObject.Find("PlayerCam").transform;
         playerMovement = player.GetComponent<PlayerMovement>();
+
+        interactLabel = GameObject.Find("InteractLabel").GetComponent<TMP_Text>();
+    }
+
+    void Update()
+    {
+        interactLabel.enabled = canInteract();
     }
 
     // Input
@@ -59,6 +65,8 @@ public class Interaction : MonoBehaviour
         if (canInteract())
         {
             hasInteracted = true;
+            interactLabel.enabled = false;
+
             events.Invoke();
         }
     }

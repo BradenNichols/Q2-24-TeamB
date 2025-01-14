@@ -1572,7 +1572,7 @@ MonoBehaviour:
   isTouchActive: 1
   shouldSlowOnShot: 1
   slowTimeOnShot: 0.6
-  slowOnShotSpeed: 1
+  slowOnShotSpeed: 0.1
   target: {fileID: 0}
   shouldPathToTarget: 1
   stats: {fileID: 1335050021517314115}

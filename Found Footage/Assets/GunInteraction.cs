@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class GunInteraction : MonoBehaviour
 {
-    [Header("References")]
     public GameObject idk;
     public Backpack backpack;
     public ViewCount viewCount;
     public Tooltip gunTooltip;
     public GameObject barrier;
+    public AudioSource pickupSound;
 
     public void interact ()
     {
+        pickupSound.Play();
+
         GameObject getgun = Instantiate(idk);
         backpack.AddItem(getgun);
         backpack.EquipItem(getgun);

@@ -48,26 +48,31 @@ public class Tooltip : MonoBehaviour
         textLabel.enabled = true;
         textLabel.text = "";
 
+        bool isCancelled = false;
+
         foreach (TooltipEntry entry in text)
         {
             for (int i = 0; i < entry.text.Length; i++)
             {
                 textLabel.text += entry.text[i];
 
-                if (textLabel.text == "") // if something cancels us
-                    yield break;
+                if (isCancelled || textLabel.text == "") // if something cancels us
+                    { isCancelled = true; yield break; }
 
                 yield return new WaitForSeconds(entry.typeTime);
             }
 
             yield return new WaitForSeconds(entry.waitTime);
 
-            if (textLabel.text == "") // if something cancels us
-                yield break;
+            if (isCancelled ||  textLabel.text == "") // if something cancels us
+                { isCancelled = true; yield break; }
 
             textLabel.text += "\n";
         }
 
-        textLabel.enabled = false;
+        if (!isCancelled)
+        {
+            textLabel.enabled = false;
+        }
     }
 }
