@@ -598,7 +598,7 @@ MonoBehaviour:
   spawnType: Farthest
   spawns:
   - {fileID: 1211663750}
-  mareRetreatSpots:
+  retreatSpots:
   - {fileID: 838558179}
   - {fileID: 468986927}
   spawnTimings:
@@ -832,6 +832,11 @@ PrefabInstance:
       objectReference: {fileID: 2059631362}
     - target: {fileID: 1335050021517314116, guid: 1cc2d6c2ae79dcc4a92ed8ead0b58720,
         type: 3}
+      propertyPath: retreatSpots.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335050021517314116, guid: 1cc2d6c2ae79dcc4a92ed8ead0b58720,
+        type: 3}
       propertyPath: retreatSpots.Array.data[0]
       value: 
       objectReference: {fileID: 838558179}
@@ -848,7 +853,7 @@ PrefabInstance:
     - target: {fileID: 1335050021517314118, guid: 1cc2d6c2ae79dcc4a92ed8ead0b58720,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.09
+      value: -7.32
       objectReference: {fileID: 0}
     - target: {fileID: 1335050021517314118, guid: 1cc2d6c2ae79dcc4a92ed8ead0b58720,
         type: 3}
@@ -858,7 +863,7 @@ PrefabInstance:
     - target: {fileID: 1335050021517314118, guid: 1cc2d6c2ae79dcc4a92ed8ead0b58720,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.39
+      value: 37.43
       objectReference: {fileID: 0}
     - target: {fileID: 1335050021517314118, guid: 1cc2d6c2ae79dcc4a92ed8ead0b58720,
         type: 3}

@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed = 6.5f;
     public float sprintFOV = 80;
     public float sprintBobAdd = 5;
+    public float sprintSoundPitch = 1.2f;
     public Vector3 sprintPositionOffset;
     public Vector3 sprintRotationOffset;
     public bool canSprint = true;
@@ -42,12 +43,12 @@ public class PlayerMovement : MonoBehaviour
     public Transform orientation;
     public Backpack backpack;
     public new MainCamera camera;
+    public AudioSource footstepsSound;
 
     [Header("Private")]
     public Vector2 moveInput;
     public Vector3 moveDirection;
     Rigidbody body;
-    public AudioSource footstepsSound;
 
     float moveSpeed;
 
@@ -109,9 +110,15 @@ public class PlayerMovement : MonoBehaviour
         else
             body.drag = 0;
 
-        if(moveDirection.magnitude > 0)
+        // Footsteps
+        if (moveDirection.magnitude > 0 && isGrounded)
         {
-             footstepsSound.enabled = true;
+            if (isSprinting)
+                footstepsSound.pitch = sprintSoundPitch;
+            else
+                footstepsSound.pitch = 1;
+
+            footstepsSound.enabled = true;
         }
         else
         {

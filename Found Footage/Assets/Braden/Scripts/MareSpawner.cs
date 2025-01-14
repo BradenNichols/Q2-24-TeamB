@@ -11,10 +11,11 @@ public class SpawnTime {
 
 public class MareSpawner : AISpawner
 {
-    [Header("Mare Spawn Data")]
-    ViewCount viewCount;
-    public List<Transform> mareRetreatSpots = new();
+    [Header("Mare Spawning")]
+    public List<Transform> retreatSpots = new();
     public List<SpawnTime> spawnTimings = new();
+
+    ViewCount viewCount;
 
     new void Start()
     {
@@ -42,7 +43,10 @@ public class MareSpawner : AISpawner
     public new GameObject SpawnEnemy()
     {
         GameObject newEnemy = base.SpawnEnemy();
-        newEnemy.GetComponent<TheMare>().retreatSpots = mareRetreatSpots;
+
+        TheMare mareClass = newEnemy.GetComponent<TheMare>();
+        mareClass.retreatSpots = retreatSpots;
+        mareClass.target = player.transform;
 
         return newEnemy;
     }

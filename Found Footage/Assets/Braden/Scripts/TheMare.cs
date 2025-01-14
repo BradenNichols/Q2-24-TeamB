@@ -40,6 +40,7 @@ public class TheMare : BaseEnemy
             {
                 if (agent.remainingDistance <= agent.stoppingDistance + pathEndThreshold)
                 { // reached the retreat position
+                    Debug.Log("REACHED RETREAT");
                     Destroy(gameObject);
                     return;
                 }

@@ -1252,9 +1252,9 @@ MonoBehaviour:
   orientation: {fileID: 1760663019217300902}
   backpack: {fileID: 5816427279985323180}
   camera: {fileID: 1760663020273365347}
+  footstepsSound: {fileID: 5779381187864439424}
   moveInput: {x: 0, y: 0}
   moveDirection: {x: 0, y: 0, z: 0}
-  footstepsSound: {fileID: 5779381187864439424}
 --- !u!54 &1760663019556657052
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1487,7 +1487,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 722be0d8578fa8242b703e95c316e208, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.62
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1531,7 +1531,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.484
       inSlope: 0
       outSlope: 0
       tangentMode: 0

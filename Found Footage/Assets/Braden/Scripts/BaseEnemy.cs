@@ -35,14 +35,14 @@ public class BaseEnemy : MonoBehaviour
             agent.SetDestination(target.position);
         }
 
-        if (shouldSlowOnShot)
-        {
-            if (stats.lastDamaged != null && stats.lastDamaged <= slowTimeOnShot)
-                agent.speed = slowOnShotSpeed;
-            else
-                agent.speed = baseSpeed;
-        }
+        bool isSlowed = shouldSlowOnShot && stats.lastDamaged != null && stats.lastDamaged <= slowTimeOnShot;
+
+        if (isSlowed)
+            agent.speed = slowOnShotSpeed;
+        else if (agent.speed == slowOnShotSpeed)
+            agent.speed = baseSpeed;
 
         animator.SetBool("IsMoving", agent.velocity.magnitude > 0);
+        animator.SetBool("IsBeingDamaged", isSlowed);
     }
 }
