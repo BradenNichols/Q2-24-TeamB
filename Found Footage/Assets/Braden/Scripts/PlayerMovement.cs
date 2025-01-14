@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     float bobTimer = 0;
 
     [Header("Footsteps")]
-    public AudioSource footstepsSound;
     public float sprintSoundPitch = 1.45f;
     public float defaultSoundPitch = 1.25f;
 
@@ -52,6 +51,10 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 moveInput;
     public Vector3 moveDirection;
     Rigidbody body;
+
+    [Header("Audio")]
+    public AudioSource footstepsSound;
+    public AudioSource sprintingSound;
 
     float moveSpeed;
 
@@ -117,15 +120,19 @@ public class PlayerMovement : MonoBehaviour
         if (Time.timeScale > 0 && moveDirection.magnitude > 0 && isGrounded)
         {
             if (isSprinting)
-                footstepsSound.pitch = sprintSoundPitch;
-            else
-                footstepsSound.pitch = defaultSoundPitch;
-
-            footstepsSound.UnPause();
+            {
+                sprintingSound.UnPause();
+                footstepsSound.Pause();
+            } else
+            {
+                sprintingSound.Pause();
+                footstepsSound.UnPause();
+            }
         }
         else
         {
             footstepsSound.Pause();
+            sprintingSound.Pause();
         }
     }
 
@@ -173,6 +180,8 @@ public class PlayerMovement : MonoBehaviour
                     itemClass.Disable();
                 }
             }
+            
+
         } else
         {
             camera.targetFOV = camera.baseFOV;
