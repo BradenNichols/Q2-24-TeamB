@@ -14,21 +14,20 @@ public class BaseEnemy : MonoBehaviour
     [Header("AI")]
     public Transform target;
     public bool shouldPathToTarget = true;
+    protected bool isSlowed = false;
+    protected float pathEndThreshold = 0.5f;
+    protected float baseSpeed;
 
     [Header("References")]
     public GeneralStats stats;
     [SerializeField] protected NavMeshAgent agent;
     [SerializeField] protected Animator animator;
     protected Transform playerTransform;
-    protected float baseSpeed;
 
     protected void Start()
     {
         baseSpeed = agent.speed;
         playerTransform = GameObject.Find("Player").transform;
-
-        if (!target)
-            target = playerTransform;
     }
 
     protected void Update()
@@ -38,7 +37,7 @@ public class BaseEnemy : MonoBehaviour
             agent.SetDestination(target.position);
         }
 
-        bool isSlowed = shouldSlowOnShot && stats.lastDamaged != null && stats.lastDamaged <= slowTimeOnShot;
+        isSlowed = shouldSlowOnShot && stats.lastDamaged != null && stats.lastDamaged <= slowTimeOnShot;
 
         if (isSlowed)
             agent.speed = slowOnShotSpeed;

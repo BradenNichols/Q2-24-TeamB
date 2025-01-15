@@ -8,9 +8,12 @@ public class SmallSpawner : AISpawner
     public int maxEnemies = 5;
     public float randomMinSpawnTime = 4;
     public float randomMaxSpawnTime = 9;
+    public List<Transform> patrolPoints = new();
 
     float currentTimeAmount = 0;
     float timeToSpawn = 0;
+
+    [Header("Internal")]
     [SerializeField] int currentlySpawnedAmount = 0;
 
     new void Start()
@@ -41,6 +44,9 @@ public class SmallSpawner : AISpawner
     {
         GameObject newEnemy = base.SpawnEnemy();
         GeneralStats enemyStats = newEnemy.GetComponent<GeneralStats>();
+        SmallChild enemyClass = newEnemy.GetComponent<SmallChild>();
+
+        enemyClass.patrolPoints = patrolPoints;
 
         currentlySpawnedAmount++;
         enemyStats.deathEvent.AddListener(OnDespawn);

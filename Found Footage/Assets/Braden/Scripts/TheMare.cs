@@ -10,8 +10,6 @@ public class TheMare : BaseEnemy
     public float retreatWalkSpeed = 8;
     public bool isRetreating = false;
 
-    float pathEndThreshold = 0.5f;
-
     // Start is called before the first frame update
     new void Start()
     {

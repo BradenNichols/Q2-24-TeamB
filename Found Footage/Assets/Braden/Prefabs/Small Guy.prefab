@@ -8921,6 +8921,9 @@ MonoBehaviour:
   agent: {fileID: 7394724421015155253}
   animator: {fileID: 2898878309467030190}
   aiState: Patrol
+  distanceToChase: 2
+  patrolPoints: []
+  patrolGoal: {fileID: 0}
 --- !u!195 &7394724421015155253
 NavMeshAgent:
   m_ObjectHideFlags: 0

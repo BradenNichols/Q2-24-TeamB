@@ -1263,9 +1263,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3806334187920066949, guid: 14532e0275a39514a8a869be0b069177,
         type: 3}
+      propertyPath: maxEnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806334187920066949, guid: 14532e0275a39514a8a869be0b069177,
+        type: 3}
+      propertyPath: randomMaxSpawnTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806334187920066949, guid: 14532e0275a39514a8a869be0b069177,
+        type: 3}
+      propertyPath: randomMinSpawnTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806334187920066949, guid: 14532e0275a39514a8a869be0b069177,
+        type: 3}
       propertyPath: spawns.Array.data[0]
       value: 
       objectReference: {fileID: 1211663750}
+    - target: {fileID: 3806334187920066949, guid: 14532e0275a39514a8a869be0b069177,
+        type: 3}
+      propertyPath: patrolPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806334187920066949, guid: 14532e0275a39514a8a869be0b069177,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 838558179}
+    - target: {fileID: 3806334187920066949, guid: 14532e0275a39514a8a869be0b069177,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 468986927}
     - target: {fileID: 3806334187920066970, guid: 14532e0275a39514a8a869be0b069177,
         type: 3}
       propertyPath: m_RootOrder
