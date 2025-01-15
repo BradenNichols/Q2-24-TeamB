@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GeneralStats : MonoBehaviour
@@ -18,6 +19,7 @@ public class GeneralStats : MonoBehaviour
     [Header("On Death")]
     public int minViewerAdd = 0;
     public int maxViewerAdd = 0;
+    public UnityEvent deathEvent;
 
     void Update()
     {
@@ -43,7 +45,9 @@ public class GeneralStats : MonoBehaviour
         isAlive = false;
         health = 0;
 
-        if (characterType == "LadyInRed")
+        deathEvent.Invoke();
+
+        if (characterType == "SmallChild")
         {
             Destroy(gameObject); // temporary
         } else if (characterType == "TheMare")

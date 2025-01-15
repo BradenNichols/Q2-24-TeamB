@@ -9,7 +9,7 @@ public class BaseEnemy : MonoBehaviour
     public bool isTouchActive;
     public bool shouldSlowOnShot = true;
     public float slowTimeOnShot = 0.6f;
-    public float slowOnShotSpeed = 2.5f;
+    public float slowOnShotSpeed = 0.1f;
 
     [Header("AI")]
     public Transform target;
@@ -26,6 +26,9 @@ public class BaseEnemy : MonoBehaviour
     {
         baseSpeed = agent.speed;
         playerTransform = GameObject.Find("Player").transform;
+
+        if (!target)
+            target = playerTransform;
     }
 
     protected void Update()
