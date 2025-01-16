@@ -1431,6 +1431,9 @@ MonoBehaviour:
   characterType: Player
   minViewerAdd: 0
   maxViewerAdd: 0
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3132388156241652433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,7 +1726,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 069c930e1721d3f4e822a53e4ecf1057, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ab87c0ae0e61c584c801f2077d3b9256, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1

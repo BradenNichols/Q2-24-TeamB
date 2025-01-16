@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -311,11 +311,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1760663019556657053, guid: b8894d8103384c04da506c113d264d6c,
-        type: 3}
-      propertyPath: sprintingSound
-      value: 
-      objectReference: {fileID: 1558104191}
     - target: {fileID: 1760663020362367105, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_Name
@@ -839,12 +834,6 @@ Transform:
   m_Father: {fileID: 1948774306}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1558104191 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5779381187864439424, guid: b8894d8103384c04da506c113d264d6c,
-    type: 3}
-  m_PrefabInstance: {fileID: 578463409}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1948774304
 GameObject:
   m_ObjectHideFlags: 0
