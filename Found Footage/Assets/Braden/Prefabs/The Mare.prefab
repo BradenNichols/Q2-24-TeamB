@@ -1551,8 +1551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fbc2a3fe379fe5429d855759cb865fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 7
-  maxHealth: 7
+  health: 6
+  maxHealth: 6
   isImmune: 0
   isAlive: 1
   characterType: TheMare
