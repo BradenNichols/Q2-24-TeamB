@@ -10,6 +10,9 @@ public class SmallChild : BaseEnemy
     public float distanceToChase = 20;
     [HideInInspector] public List<Transform> patrolPoints = new();
 
+    [Header("Sound")]
+    public AudioSource screamSound, chaseSound;
+
     [SerializeField] Transform patrolGoal;
 
     // Start is called before the first frame update
@@ -36,11 +39,23 @@ public class SmallChild : BaseEnemy
 
                 // check for chase
                 if (isSlowed || Vector3.Distance(transform.position, playerTransform.position) <= distanceToChase)
+                    
+                {
                     aiState = "Chase";
+                    screamSound.Play();
+                }
             }
             else if (aiState == "Chase")
             {
                 target = playerTransform;
+                if (agent.velocity.magnitude > 0)
+                {
+                    chaseSound.UnPause();
+                }
+                else
+                {
+                    chaseSound.Pause();
+                }
             }
         } else
         {
@@ -50,6 +65,9 @@ public class SmallChild : BaseEnemy
 
             agent.speed = 0;
         }
+
+        
+
 
         base.Update(); // pathing and such
     }
