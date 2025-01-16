@@ -4,18 +4,36 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
+    public Animator animator;
     public BaseEnemy enemyClass;
 
-    void OnCollisionEnter(Collision collision)
+    bool hasAttacked = false;
+
+    void OnTriggerEnter(Collider other)
     {
         if (!enemyClass.isTouchActive || !enemyClass.stats || !enemyClass.stats.isAlive) return;
 
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !hasAttacked)
         {
             // the Enemy touched a Player
 
-            GeneralStats generalStats = collision.gameObject.GetComponent<GeneralStats>();
+            GameObject player = other.gameObject;
+            hasAttacked = true;
+
+            GeneralStats generalStats = player.GetComponentInParent<GeneralStats>();
             generalStats.Kill();
+
+            // TODO: make the player face the enemy
+
+            StartCoroutine(Kill());
         }
+    }
+
+    IEnumerator Kill()
+    {
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("IsAttacking", true);
+        yield return new WaitForSeconds(1f);
+        Debug.Log("FIN");
     }
 }
