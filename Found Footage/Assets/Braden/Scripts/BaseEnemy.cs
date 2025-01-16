@@ -23,18 +23,24 @@ public class BaseEnemy : MonoBehaviour
     [SerializeField] protected NavMeshAgent agent;
     [SerializeField] protected Animator animator;
     protected Transform playerTransform;
+    protected GeneralStats playerStats;
 
     protected void Start()
     {
         baseSpeed = agent.speed;
+
         playerTransform = GameObject.Find("Player").transform;
+        playerStats = playerTransform.GetComponent<GeneralStats>();
     }
 
     protected void Update()
     {
         if (shouldPathToTarget && target)
         {
-            agent.SetDestination(target.position);
+            if (!playerTransform || !playerStats.isAlive)
+                agent.isStopped = true;
+            else
+                agent.SetDestination(target.position);
         }
 
         isSlowed = shouldSlowOnShot && stats.lastDamaged != null && stats.lastDamaged <= slowTimeOnShot;

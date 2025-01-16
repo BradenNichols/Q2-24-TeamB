@@ -3519,6 +3519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ee9f6ec3ea86641b6b1dc45fb133a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   enemyClass: {fileID: 7394724421015155257}
 --- !u!1 &2913365599521035981
 GameObject:
@@ -7183,7 +7184,7 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 99a54f599e7f51949bd1ef55ae903980, type: 2}
-  - {fileID: 2100000, guid: 6d255ad41f920a9438e3406f0027d533, type: 2}
+  - {fileID: 2100000, guid: 5e7f8678d978d614fbe19d889f50b881, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
