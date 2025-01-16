@@ -28,7 +28,6 @@ public class TheMare : BaseEnemy
                 if (!isRetreating)
                 {
                     isRetreating = true;
-                    Debug.Log("RETREATING");
 
                     shouldPathToTarget = false;
                     isTouchActive = false;
@@ -43,7 +42,6 @@ public class TheMare : BaseEnemy
                 {
                     if (agent.remainingDistance <= agent.stoppingDistance + pathEndThreshold)
                     { // reached the retreat position
-                        Debug.Log("REACHED RETREAT");
                         Destroy(gameObject);
                         return;
                     }
