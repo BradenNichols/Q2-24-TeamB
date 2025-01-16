@@ -8889,7 +8889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fbc2a3fe379fe5429d855759cb865fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 1.5
   maxHealth: 3
   isImmune: 0
   isAlive: 1
@@ -8921,7 +8921,7 @@ MonoBehaviour:
   agent: {fileID: 7394724421015155253}
   animator: {fileID: 2898878309467030190}
   aiState: Patrol
-  distanceToChase: 2
+  distanceToChase: 15
   patrolPoints: []
   patrolGoal: {fileID: 0}
 --- !u!195 &7394724421015155253
@@ -8934,7 +8934,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.35
-  m_Speed: 4.5
+  m_Speed: 5.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 360
