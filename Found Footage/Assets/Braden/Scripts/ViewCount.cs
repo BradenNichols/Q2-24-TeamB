@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ViewCount : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class ViewCount : MonoBehaviour
     [Header("References")]
     public TMP_Text viewCount;
     public TMP_Text viewDecayLabel;
+    public Image viewIcon;
 
     [Header("_Internal")]
     public float timeSinceViewGain = 0;
@@ -80,6 +82,7 @@ public class ViewCount : MonoBehaviour
     void SetColor(Color targetColor)
     {
         viewCount.color = targetColor;
+        viewIcon.color = targetColor;
     }
 
     // Public Functions
@@ -88,7 +91,7 @@ public class ViewCount : MonoBehaviour
     {
         // can be positive or negative amount
         viewers = Mathf.Clamp(viewers + viewerAmount, 0, 9999);
-        viewCount.text = $"VI:{viewers}";
+        viewCount.text = $"{viewers}";
 
         if (viewerAmount >= 0)
         {
@@ -112,5 +115,6 @@ public class ViewCount : MonoBehaviour
     {
         isSystemEnabled = isEnabled;
         viewCount.enabled = isEnabled;
+        viewIcon.enabled = isEnabled;
     }
 }
