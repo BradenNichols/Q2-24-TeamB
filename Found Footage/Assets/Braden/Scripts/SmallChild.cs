@@ -8,6 +8,7 @@ public class SmallChild : BaseEnemy
     [Header("SmallMare AI")]
     public string aiState = "Patrol";
     public float distanceToChase = 20;
+    public LayerMask seeLayers;
     [HideInInspector] public List<Transform> patrolPoints = new();
     [SerializeField] Transform patrolGoal;
 
@@ -38,7 +39,24 @@ public class SmallChild : BaseEnemy
                 }
 
                 // check for chase
-                if (isSlowed || Vector3.Distance(transform.position, playerTransform.position) <= distanceToChase)
+
+                bool shouldChase = isSlowed;
+
+                if (!shouldChase)
+                {
+                    bool close = Vector3.Distance(transform.position, playerTransform.position) <= distanceToChase;
+
+                    if (close)
+                    {
+                        RaycastHit hit;
+                        Physics.Raycast(transform.position, playerTransform.position - transform.position, out hit, distanceToChase + 0.5f, seeLayers);
+
+                        if (hit.collider && hit.collider.CompareTag("Player"))
+                            shouldChase = true;
+                    }
+                }
+
+                if (shouldChase)
                 {
                     aiState = "Chase";
 

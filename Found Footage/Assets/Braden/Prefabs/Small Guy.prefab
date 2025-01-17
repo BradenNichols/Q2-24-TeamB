@@ -8924,7 +8924,7 @@ Transform:
   m_Children:
   - {fileID: 2553878376392579093}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 140.133, z: 0}
 --- !u!114 &7394724421015155251
 MonoBehaviour:
@@ -8970,7 +8970,10 @@ MonoBehaviour:
   agent: {fileID: 7394724421015155253}
   animator: {fileID: 2898878309467030190}
   aiState: Patrol
-  distanceToChase: 15
+  distanceToChase: 22
+  seeLayers:
+    serializedVersion: 2
+    m_Bits: 65
   patrolPoints: []
   patrolGoal: {fileID: 0}
   screamSound: {fileID: 3686781580380848316}
