@@ -4948,7 +4948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisabled: 0
-  damagePerSecond: 1
+  damagePerSecond: 1.5
   castRange: 18
   castSizeMult: 0.65
   magazineSize: 10
