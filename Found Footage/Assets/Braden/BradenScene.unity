@@ -1112,11 +1112,6 @@ PrefabInstance:
       propertyPath: isSystemEnabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3132388156241652433, guid: b8894d8103384c04da506c113d264d6c,
-        type: 3}
-      propertyPath: timeForViewerDecay
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3136962398550044609, guid: b8894d8103384c04da506c113d264d6c,
         type: 3}
       propertyPath: m_IsActive

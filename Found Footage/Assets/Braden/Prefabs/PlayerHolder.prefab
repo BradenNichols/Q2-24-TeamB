@@ -1533,8 +1533,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeForViewerDecay: 30
   decayTickLength: 3.5
-  minViewersLostPerTick: 3
-  maxViewersLostPerTick: 7
+  minViewersLostPerTick: 5
+  maxViewersLostPerTick: 9
   isSystemEnabled: 1
   noDecay: 0
   viewers: 0
