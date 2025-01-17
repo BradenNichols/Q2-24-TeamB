@@ -9,11 +9,16 @@ public class TheMare : BaseEnemy
     public bool isFinalSpawn;
     public float retreatWalkSpeed = 8;
     public bool isRetreating = false;
+    public AudioSource screamerSound;
+    public AudioSource chaseSound;
 
     // Start is called before the first frame update
     new void Start()
     {
         base.Start();
+        screamerSound.Play();
+
+        
     }
 
     // Update is called once per frame
@@ -55,6 +60,14 @@ public class TheMare : BaseEnemy
 
                 agent.speed = 0;
             }
+
+        }
+        else if(chaseSound)
+        {
+            if (agent.velocity.magnitude > 0)
+                chaseSound.UnPause();
+            else
+                chaseSound.Pause();
         }
 
         base.Update(); // pathing and such

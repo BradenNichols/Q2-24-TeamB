@@ -59,6 +59,7 @@ public class SmallChild : BaseEnemy
                 if (shouldChase)
                 {
                     aiState = "Chase";
+                    chaseSound.Play();
 
                     if (screamSound)
                         screamSound.Play();
