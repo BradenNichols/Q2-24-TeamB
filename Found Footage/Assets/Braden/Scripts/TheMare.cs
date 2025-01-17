@@ -60,7 +60,7 @@ public class TheMare : BaseEnemy
 
                 agent.speed = 0;
             }
-
+            chaseSound.Pause();
         }
         else if(chaseSound)
         {
