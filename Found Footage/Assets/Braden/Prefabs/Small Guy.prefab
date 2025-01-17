@@ -8943,8 +8943,8 @@ MonoBehaviour:
   isImmune: 0
   isAlive: 1
   characterType: SmallChild
-  minViewerAdd: 21
-  maxViewerAdd: 29
+  minViewerAdd: 35
+  maxViewerAdd: 43
   deathEvent:
     m_PersistentCalls:
       m_Calls: []

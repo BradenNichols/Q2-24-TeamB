@@ -1556,8 +1556,8 @@ MonoBehaviour:
   isImmune: 0
   isAlive: 1
   characterType: TheMare
-  minViewerAdd: 70
-  maxViewerAdd: 84
+  minViewerAdd: 82
+  maxViewerAdd: 94
   deathEvent:
     m_PersistentCalls:
       m_Calls: []
