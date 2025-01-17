@@ -61,17 +61,8 @@ public class GeneralStats : MonoBehaviour
                 // TODO: animate their death
 
                 // Player State
-                
-                playerStats.isImmune = true;
 
-                Backpack backpack = GameObject.Find("Backpack").GetComponent<Backpack>();
-                backpack.UnequipItem();
-                backpack.canEquip = false;
-
-                Fade fadeOut = GameObject.Find("FadeIn").GetComponent<Fade>();
-                fadeOut.fadeTime = 2.5f;
-                fadeOut.endAlpha = 1;
-
+                playerStats.Kill(); // stop them from moving and other AI from moving but otherwise does nothing
                 StartCoroutine(WinGame());
             }
         } else if (characterType == "Player")
@@ -84,7 +75,13 @@ public class GeneralStats : MonoBehaviour
 
     IEnumerator WinGame()
     {
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(1.5f);
+
+        Fade fadeOut = GameObject.Find("FadeIn").GetComponent<Fade>();
+        fadeOut.fadeTime = 1.7f;
+        fadeOut.endAlpha = 1;
+
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("Credits");
     }
 }
