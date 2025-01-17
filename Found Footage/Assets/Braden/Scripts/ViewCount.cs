@@ -111,7 +111,7 @@ public class ViewCount : MonoBehaviour
             isFirstIncrease = false;
 
             if (viewerAmount > 0 && shouldColor)
-                greenTime = 1f;
+                greenTime = 0.8f;
             else
                 SetColor(Color.white);
         }
