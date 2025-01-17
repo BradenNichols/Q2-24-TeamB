@@ -1484,6 +1484,67 @@ Transform:
   m_Father: {fileID: 3545387717777109391}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1272482017345166466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4754958085852153157}
+  - component: {fileID: 8859880895804262187}
+  - component: {fileID: 284675827274387198}
+  m_Layer: 0
+  m_Name: AttackHitbox
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4754958085852153157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272482017345166466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2553878376392579093}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8859880895804262187
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272482017345166466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.473329, y: 7.657707, z: 3.1761887}
+  m_Center: {x: -0.11336007, y: 3.328854, z: -0.6568771}
+--- !u!114 &284675827274387198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272482017345166466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ee9f6ec3ea86641b6b1dc45fb133a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2898878309467030190}
+  enemyClass: {fileID: 7394724421015155257}
+  deathLookVertical: -5
 --- !u!1 &1315832240795228042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3431,7 +3492,6 @@ GameObject:
   - component: {fileID: 2898878309467030188}
   - component: {fileID: 2898878309467030189}
   - component: {fileID: 2898878309467030190}
-  - component: {fileID: 1744913907856736731}
   m_Layer: 0
   m_Name: Holder
   m_TagString: Enemy
@@ -3454,6 +3514,7 @@ Transform:
   - {fileID: 8752819351616187695}
   - {fileID: 6180252991802565634}
   - {fileID: 986671770418051780}
+  - {fileID: 4754958085852153157}
   m_Father: {fileID: 7394724421015155254}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -3507,20 +3568,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1744913907856736731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2898878309467030191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ee9f6ec3ea86641b6b1dc45fb133a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  enemyClass: {fileID: 7394724421015155257}
 --- !u!1 &2913365599521035981
 GameObject:
   m_ObjectHideFlags: 0
@@ -8925,9 +8972,9 @@ MonoBehaviour:
   aiState: Patrol
   distanceToChase: 15
   patrolPoints: []
+  patrolGoal: {fileID: 0}
   screamSound: {fileID: 3686781580380848316}
   chaseSound: {fileID: 0}
-  patrolGoal: {fileID: 0}
 --- !u!195 &7394724421015155253
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8962,7 +9009,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 13780715a7551dc47a723485a82b11c3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.466
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9006,7 +9053,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

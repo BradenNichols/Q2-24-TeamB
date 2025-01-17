@@ -20,6 +20,9 @@ public class MainCamera : MonoBehaviour
 
     bool isController = false;
 
+    [Header("State")]
+    public bool canLook = true;
+
     [Header("References")]
     public Transform orientation;
     Camera playerCamera;
@@ -50,19 +53,22 @@ public class MainCamera : MonoBehaviour
         if (!transform || !orientation)
             return;
 
-        Vector2 sensitivity = mouseSensitivity;
+        if (canLook)
+        {
+            Vector2 sensitivity = mouseSensitivity;
 
-        if (isController)
-            sensitivity = controllerSensitivity;
+            if (isController)
+                sensitivity = controllerSensitivity;
 
-        sensitivity *= sensitivityMultiplier;
+            sensitivity *= sensitivityMultiplier;
 
-        // Axis
-        float axisX = lookAxis.x * Time.deltaTime * (sensitivity.x * 6);
-        float axisY = lookAxis.y * Time.deltaTime * (sensitivity.y * 6);
+            // Axis
+            float axisX = lookAxis.x * Time.deltaTime * (sensitivity.x * 6);
+            float axisY = lookAxis.y * Time.deltaTime * (sensitivity.y * 6);
 
-        yRotation += axisX;
-        xRotation = Mathf.Clamp(xRotation - axisY, -90f, 90f);
+            yRotation += axisX;
+            xRotation = Mathf.Clamp(xRotation - axisY, -90f, 90f);
+        }
 
         // Rotate
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(xRotation, yRotation, 0), Time.deltaTime * cameraLerpSpeed);
@@ -77,5 +83,18 @@ public class MainCamera : MonoBehaviour
             isController = true;
         else
             isController = false;
+    }
+
+    // Public Functions
+    public void RotateTo(Vector2 rotation)
+    {
+        xRotation = Mathf.Clamp(rotation.x, -90f, 90f); // vertical
+        yRotation = rotation.y; // horizontal
+    }
+
+    public void AddRotation(Vector2 rotation)
+    {
+        xRotation = Mathf.Clamp(xRotation + rotation.x, -90f, 90f); // vertical
+        yRotation += rotation.y; // horizontal
     }
 }

@@ -5407,7 +5407,7 @@ GameObject:
   - component: {fileID: 9134731790023823070}
   m_Layer: 0
   m_Name: AttackHitbox
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5454,6 +5454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 6639071333868599518}
   enemyClass: {fileID: 1335050021517314116}
+  deathLookVertical: -40
 --- !u!1 &4394172041529727888
 GameObject:
   m_ObjectHideFlags: 0

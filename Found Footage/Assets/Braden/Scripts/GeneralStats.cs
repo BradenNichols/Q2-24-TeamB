@@ -76,7 +76,7 @@ public class GeneralStats : MonoBehaviour
             }
         } else if (characterType == "Player")
         {
-            Destroy(gameObject); // temporary
+            //Destroy(gameObject); // temporary
         }
     }
 

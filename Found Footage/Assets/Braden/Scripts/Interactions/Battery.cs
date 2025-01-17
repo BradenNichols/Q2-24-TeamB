@@ -11,11 +11,14 @@ public class Battery : MonoBehaviour
 
     [Header("References")]
     private Backpack playerBackpack;
+    private AudioSource pickupSound;
 
     void Start()
     {
         GameObject backpackObject = GameObject.Find("Backpack");
+
         playerBackpack = backpackObject.GetComponent<Backpack>();
+        pickupSound = GetComponent<AudioSource>();
     }
 
     public void DoInteract()
@@ -28,6 +31,15 @@ public class Battery : MonoBehaviour
             gunScript.AddAmmo(batteryRefillAmount);
         }
 
-        Destroy(gameObject);
+        // Soft Destroy
+
+        GetComponent<MeshCollider>().enabled = false;
+        GetComponent<Light>().enabled = false;
+        GetComponent<MeshRenderer>().enabled = false;
+
+        // Sound
+
+        if (pickupSound)
+            pickupSound.Play();
     }
 }

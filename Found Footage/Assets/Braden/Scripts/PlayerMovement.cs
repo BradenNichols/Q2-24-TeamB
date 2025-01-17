@@ -149,6 +149,12 @@ public class PlayerMovement : MonoBehaviour
         body.AddForce(moveForce, ForceMode.Force);
     }
 
+    void OnDisable()
+    {
+        footstepsSound.Pause();
+        sprintingSound.Pause();
+    }
+
     // [Sprinting] //
 
     public void setSprinting(bool state)
