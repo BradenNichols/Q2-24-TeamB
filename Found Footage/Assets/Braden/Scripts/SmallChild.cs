@@ -25,8 +25,6 @@ public class SmallChild : BaseEnemy
     // Update is called once per frame
     new void Update()
     {
-        // TODO: add patrol and chase
-
         if (stats.isAlive && playerTransform)
         {
             if (aiState == "Patrol")

@@ -45,6 +45,16 @@ public class EnemyAttack : MonoBehaviour
             playerCamera.canLook = false;
             playerCamera.RotateTo(vector);
 
+            // music
+
+            GameObject musicObject = GameObject.Find("Music");
+
+            if (musicObject)
+            {
+                AudioSource music = musicObject.GetComponent<AudioSource>();
+                music.Stop();
+            }
+
             // start kill process
             StartCoroutine(Kill());
         }

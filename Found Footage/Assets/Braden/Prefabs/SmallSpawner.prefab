@@ -50,8 +50,8 @@ MonoBehaviour:
   spawnType: Farthest
   spawns:
   - {fileID: 0}
-  maxEnemies: 6
-  randomMinSpawnTime: 4
-  randomMaxSpawnTime: 10
+  maxEnemies: 4
+  randomMinSpawnTime: 8
+  randomMaxSpawnTime: 16
   patrolPoints: []
   currentlySpawnedAmount: 0

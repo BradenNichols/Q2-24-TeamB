@@ -58,16 +58,22 @@ public class GeneralStats : MonoBehaviour
 
             if (mare && mare.isFinalSpawn && playerStats.isAlive)
             {
-                // TODO: animate their death
-
                 // Player State
 
                 playerStats.Kill(); // stop them from moving and other AI from moving but otherwise does nothing
+
+                // misc
+
+                GameObject musicObject = GameObject.Find("Music");
+
+                if (musicObject)
+                {
+                    AudioSource music = musicObject.GetComponent<AudioSource>();
+                    music.Stop();
+                }
+
                 StartCoroutine(WinGame());
             }
-        } else if (characterType == "Player")
-        {
-            //Destroy(gameObject); // temporary
         }
     }
 

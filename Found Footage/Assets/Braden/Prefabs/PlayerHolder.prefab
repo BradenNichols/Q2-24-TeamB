@@ -1521,10 +1521,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialViewerDecay: 40
-  viewerDecay: 17
+  viewerDecay: 15
   decayTickLength: 3.5
   minViewersLostPerTick: 6
-  maxViewersLostPerTick: 11
+  maxViewersLostPerTick: 13
   isSystemEnabled: 1
   noDecay: 0
   viewers: 0

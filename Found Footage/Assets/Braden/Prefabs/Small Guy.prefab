@@ -9042,8 +9042,8 @@ MonoBehaviour:
   isImmune: 0
   isAlive: 1
   characterType: SmallChild
-  minViewerAdd: 35
-  maxViewerAdd: 43
+  minViewerAdd: 32
+  maxViewerAdd: 39
   deathEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9205,7 +9205,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a1bd61e7225478b4780f13c170b7ce3d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fe2fe5e16e942074fa1c4648f0726717, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
