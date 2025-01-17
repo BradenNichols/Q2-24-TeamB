@@ -16,6 +16,7 @@ public class Interaction : MonoBehaviour
     public UnityEvent events;
 
     private GameObject player;
+    private GeneralStats playerStats;
     private Transform myCamera;
     private PlayerMovement playerMovement;
     private TMP_Text interactLabel;
@@ -25,21 +26,24 @@ public class Interaction : MonoBehaviour
         inputAction.action.started += InteractEvent;
 
         player = GameObject.Find("Player");
+        playerStats = player.GetComponent<GeneralStats>();
         myCamera = GameObject.Find("PlayerCam").transform;
         playerMovement = player.GetComponent<PlayerMovement>();
 
-        interactLabel = GameObject.Find("InteractLabel").GetComponent<TMP_Text>();
+        TMP_Text baseLabel = GameObject.Find("InteractLabel").GetComponent<TMP_Text>();
+
+        interactLabel = Instantiate(baseLabel, GameObject.Find("TopRenderHUD").transform);
+        interactLabel.text = $"Press E/X to {interactString}";
     }
 
     void Update()
     {
-        if (canInteract())
-        {
-            interactLabel.text = $"Press E/X to {interactString}";
-            interactLabel.enabled = true;
-        }
-        else
-            interactLabel.enabled = false;
+        interactLabel.enabled = canInteract();
+    }
+
+    void OnDestroy()
+    {
+        Destroy(interactLabel);
     }
 
     // Input
@@ -51,7 +55,7 @@ public class Interaction : MonoBehaviour
     // Main Functions
     public bool canInteract()
     {
-        if (player == null || hasInteracted || !isEnabled || !playerMovement.canInteract) 
+        if (player == null || hasInteracted || !isEnabled || !playerMovement.canInteract || !playerStats.isAlive) 
             return false;
 
         float distance = Vector3.Distance(player.transform.position, transform.position);
