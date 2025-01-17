@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class ViewCount : MonoBehaviour
 {
     [Header("Stats")]
-    public float timeForViewerDecay = 20;
+    public float initialViewerDecay = 40;
+    public float viewerDecay = 20;
     public float decayTickLength = 2;
     public int minViewersLostPerTick = 5;
     public int maxViewersLostPerTick = 14;
@@ -31,6 +32,7 @@ public class ViewCount : MonoBehaviour
     public float timeSinceDecayLost = 0;
     public float greenTime = 0;
     public bool isDecaying = false;
+    public bool isFirstIncrease = true;
 
     void Start()
     {
@@ -45,6 +47,11 @@ public class ViewCount : MonoBehaviour
             if (!noDecay)
             {
                 timeSinceViewGain += Time.deltaTime;
+
+                float timeForViewerDecay = viewerDecay;
+
+                if (isFirstIncrease)
+                    timeForViewerDecay = initialViewerDecay;
 
                 if (timeSinceViewGain >= timeForViewerDecay && viewers > 0)
                 {
@@ -99,6 +106,7 @@ public class ViewCount : MonoBehaviour
             timeSinceDecayLost = 0; // just to reset it
 
             viewDecayLabel.enabled = false;
+            isFirstIncrease = false;
 
             if (viewerAmount > 0 && shouldColor)
                 greenTime = 1f;

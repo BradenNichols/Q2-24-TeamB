@@ -1531,7 +1531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf55904214e4ec43ab6bb923a55a9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForViewerDecay: 30
+  initialViewerDecay: 40
+  viewerDecay: 18
   decayTickLength: 3.5
   minViewersLostPerTick: 5
   maxViewersLostPerTick: 9
@@ -1547,6 +1548,7 @@ MonoBehaviour:
   timeSinceDecayLost: 0
   greenTime: 0
   isDecaying: 0
+  isFirstIncrease: 1
 --- !u!114 &1760663019556657054
 MonoBehaviour:
   m_ObjectHideFlags: 0
