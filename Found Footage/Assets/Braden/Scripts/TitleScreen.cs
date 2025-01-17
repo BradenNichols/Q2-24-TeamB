@@ -8,6 +8,12 @@ public class TitleScreen : MonoBehaviour
     public Fade fadeOut;
     bool hasPressed = false;
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     // Buttons
     public void Quit()
     {

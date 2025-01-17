@@ -17,6 +17,9 @@ public class CreditsScreen : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         escapeInput.action.started += EscapeEvent;
         nextSlideInput.action.started += NextSlideEvent;
         lastSlideInput.action.started += LastSlideEvent;

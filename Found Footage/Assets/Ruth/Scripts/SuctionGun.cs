@@ -15,6 +15,11 @@ public class SuctionGun : BaseItem
     public float ammoDepletionPerSecond = 10;
     public Vector2 hitSensitivity;
 
+    [Header("Recoil")]
+    public float itemRecoilDivide = 1500f;
+    public float itemRecoilClamp = 0.15f;
+    public Vector2 cameraRecoil;
+
     [Header("Weapon Info")]
     public float ammo = 10;
     public bool canShoot = true;
@@ -42,12 +47,14 @@ public class SuctionGun : BaseItem
     public string enemyTag;
 
     [Header("Private")]
-    private bool isButtonHeld = false;
+    bool isButtonHeld = false;
     float activeSoundVolume;
     ItemData itemData;
     ViewCount viewCount;
     MainCamera cameraScript;
     Tooltip noBatteryTip;
+
+    Vector3 baseHoldPosition;
 
     // OLD POS OFFSET: Vector3(1, -1.2, 1.2)
 
@@ -70,6 +77,28 @@ public class SuctionGun : BaseItem
 
         cameraScript = GameObject.Find("PlayerCam").GetComponent<MainCamera>();
         viewCount = GameObject.Find("Player").GetComponent<ViewCount>();
+
+        baseHoldPosition = itemData.holdPositionOffset;
+    }
+    void Update()
+    {
+        if (isShooting)
+        {
+            // Recoil
+
+            float recoilX = (UnityEngine.Random.Range(-100f, 100f) / 100f) * cameraRecoil.x;
+            float recoilY = (UnityEngine.Random.Range(-100f, 100f) / 100f) * cameraRecoil.y;
+
+            Vector2 recoil = new Vector2(recoilX * Time.deltaTime, recoilY * Time.deltaTime);
+            cameraScript.AddRotation(recoil);
+
+            // Item Recoil
+
+            float newItemRecoilX = Mathf.Clamp(itemData.holdPositionOffset.x + (recoilX / itemRecoilDivide), baseHoldPosition.x - itemRecoilClamp, baseHoldPosition.x + itemRecoilClamp);
+            float newItemRecoilY = Mathf.Clamp(itemData.holdPositionOffset.y + (recoilY / itemRecoilDivide), baseHoldPosition.y - itemRecoilClamp, baseHoldPosition.y + itemRecoilClamp);
+
+            itemData.holdPositionOffset = new Vector3(newItemRecoilX, newItemRecoilY, baseHoldPosition.z);
+        }
     }
 
     void FixedUpdate()
@@ -213,6 +242,8 @@ public class SuctionGun : BaseItem
 
         gasParticle.Stop();
         beamParticle.Stop();
+
+        itemData.holdPositionOffset = baseHoldPosition;
 
         activeSound.volume = 0; // prevent popping sound
         cameraScript.sensitivityMultiplier = Vector2.one;

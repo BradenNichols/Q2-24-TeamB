@@ -4955,6 +4955,9 @@ MonoBehaviour:
   weaponCooldown: 0.3
   ammoDepletionPerSecond: 10
   hitSensitivity: {x: 0.5, y: 0.5}
+  itemRecoilDivide: 7500
+  itemRecoilClamp: 0.03
+  cameraRecoil: {x: 35, y: 50}
   ammo: 50
   canShoot: 1
   isShooting: 0

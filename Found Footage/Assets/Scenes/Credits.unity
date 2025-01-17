@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 7641606630052308247}
   - component: {fileID: 7641606630052308248}
   m_Layer: 0
-  m_Name: TitleMenu
+  m_Name: CreditsMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
