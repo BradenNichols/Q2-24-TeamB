@@ -7,6 +7,7 @@ public class EnemyAttack : MonoBehaviour
 {
     public Animator animator;
     public BaseEnemy enemyClass;
+    public AudioSource deathSound;
     public float deathLookVertical;
 
     bool hasAttacked = false;
@@ -53,10 +54,14 @@ public class EnemyAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         animator.SetBool("IsAttacking", true);
-        yield return new WaitForSeconds(0.85f);
+
+        yield return new WaitForSeconds(0.3f);
+        deathSound.Play();
+
+        yield return new WaitForSeconds(0.5f);
 
         Fade fadeOut = GameObject.Find("FadeIn").GetComponent<Fade>();
-        fadeOut.fadeTime = 0.2f;
+        fadeOut.fadeTime = 0.125f;
         fadeOut.endAlpha = 1;
         fadeOut.enabled = true;
 
