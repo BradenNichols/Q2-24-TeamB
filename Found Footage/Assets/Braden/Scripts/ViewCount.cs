@@ -37,6 +37,8 @@ public class ViewCount : MonoBehaviour
     void Start()
     {
         AddViewers(Random.Range(minInitialViewers, maxInitialViewers), false);
+        isFirstIncrease = true;
+
         SetEnabled(isSystemEnabled);
     }
 

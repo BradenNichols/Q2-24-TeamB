@@ -6,12 +6,22 @@ using UnityEngine.SceneManagement;
 public class TitleScreen : MonoBehaviour
 {
     public Fade fadeOut;
+    public AudioSource titleMusic;
+    public float titleFadeSpeed = 0.8f;
+
     bool hasPressed = false;
+    bool isFadingMusic = false;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    void Update()
+    {
+        if (isFadingMusic)
+            titleMusic.volume -= Time.deltaTime * titleFadeSpeed;
     }
 
     // Buttons
@@ -26,6 +36,7 @@ public class TitleScreen : MonoBehaviour
     {
         if (hasPressed) return;
         hasPressed = true;
+        isFadingMusic = true;
 
         fadeOut.enabled = true;
         StartCoroutine(PlayYield());
