@@ -80,6 +80,7 @@ public class SmallChild : BaseEnemy
             shouldPathToTarget = false;
             isTouchActive = false;
             shouldSlowOnShot = false;
+            chaseSound.Stop();
 
             agent.speed = 0;
         }

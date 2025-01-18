@@ -1558,8 +1558,8 @@ MonoBehaviour:
   isImmune: 0
   isAlive: 1
   characterType: TheMare
-  minViewerAdd: 82
-  maxViewerAdd: 94
+  minViewerAdd: 88
+  maxViewerAdd: 97
   animator: {fileID: 6639071333868599518}
   mareFinalDeathSound: {fileID: 1358401538432248363}
   deathEvent:
@@ -1588,7 +1588,7 @@ MonoBehaviour:
   animator: {fileID: 6639071333868599518}
   retreatSpots: []
   isFinalSpawn: 0
-  retreatWalkSpeed: 12
+  retreatWalkSpeed: 10.5
   isRetreating: 0
   screamerSound: {fileID: 179281844858137307}
   chaseSound: {fileID: 8284405210524271669}
