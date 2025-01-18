@@ -23,13 +23,19 @@ public class Tooltip : MonoBehaviour
     public int playedTimes = 0;
 
     [Header("References")]
-    public TMP_Text textLabel;
+    GameObject baseTextObject;
+    GameObject myTextObject;
+    TMP_Text textLabel;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (!textLabel)
-            textLabel = GameObject.Find("Tooltip").GetComponent<TMP_Text>();
+        baseTextObject = GameObject.Find("Tooltip");
+
+        myTextObject = Instantiate(baseTextObject, GameObject.Find("TopRenderHUD").transform);
+        myTextObject.name = "TooltipClone";
+
+        textLabel = myTextObject.GetComponent<TMP_Text>();
 
         if (playOnStart)
             Play();
@@ -44,11 +50,21 @@ public class Tooltip : MonoBehaviour
     {
         playedTimes++;
 
+        GameObject currentTooltip = GameObject.Find("TooltipPlaying");
+
+        if (currentTooltip)
+        {
+            TMP_Text label = currentTooltip.GetComponent<TMP_Text>();
+            label.enabled = false;
+
+            currentTooltip.name = "TooltipClone";
+        }
+
+        myTextObject.name = "TooltipPlaying";
+
         yield return new WaitForSeconds(initialWait);
         textLabel.enabled = true;
         textLabel.text = "";
-
-        bool isCancelled = false;
 
         foreach (TooltipEntry entry in text)
         {
@@ -56,23 +72,21 @@ public class Tooltip : MonoBehaviour
             {
                 textLabel.text += entry.text[i];
 
-                if (isCancelled || textLabel.text == "") // if something cancels us
-                    { isCancelled = true; yield break; }
+                if (!textLabel) // if something cancels us
+                    yield break;
 
                 yield return new WaitForSeconds(entry.typeTime);
             }
 
             yield return new WaitForSeconds(entry.waitTime);
 
-            if (isCancelled ||  textLabel.text == "") // if something cancels us
-                { isCancelled = true; yield break; }
+            if (!textLabel) // if something cancels us
+                yield break;
 
             textLabel.text += "\n";
         }
 
-        if (!isCancelled)
-        {
-            textLabel.enabled = false;
-        }
+        myTextObject.name = "TooltipClone";
+        textLabel.enabled = false;
     }
 }

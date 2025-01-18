@@ -30,6 +30,7 @@ public class SuctionGun : BaseItem
     [Header("References")]
     public InputActionReference fireAction;
     public InputActionReference lookAction;
+    public Tooltip noBatteryTip;
 
     public ParticleSystem gasParticle;
     ParticleSystemRenderer gasRenderer;
@@ -52,7 +53,6 @@ public class SuctionGun : BaseItem
     ItemData itemData;
     ViewCount viewCount;
     MainCamera cameraScript;
-    Tooltip noBatteryTip;
 
     Vector3 baseHoldPosition;
 
@@ -77,6 +77,11 @@ public class SuctionGun : BaseItem
 
         cameraScript = GameObject.Find("PlayerCam").GetComponent<MainCamera>();
         viewCount = GameObject.Find("Player").GetComponent<ViewCount>();
+
+        GameObject batteryTip = GameObject.Find("NoBatteryTooltip");
+
+        if (batteryTip)
+            noBatteryTip = batteryTip.GetComponent<Tooltip>();
 
         baseHoldPosition = itemData.holdPositionOffset;
     }
@@ -106,7 +111,7 @@ public class SuctionGun : BaseItem
         if (isShooting) // Shoot update
         {
             if (ammo <= 0) {
-                if (noBatteryTip.playedTimes == 0)
+                if (noBatteryTip && noBatteryTip.playedTimes == 0)
                     noBatteryTip.Play();
 
                 StopShooting();

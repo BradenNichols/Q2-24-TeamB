@@ -9044,6 +9044,7 @@ MonoBehaviour:
   characterType: SmallChild
   minViewerAdd: 32
   maxViewerAdd: 39
+  animator: {fileID: 2898878309467030190}
   deathEvent:
     m_PersistentCalls:
       m_Calls: []

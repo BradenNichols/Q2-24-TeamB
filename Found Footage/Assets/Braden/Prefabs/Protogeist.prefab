@@ -4889,7 +4889,6 @@ GameObject:
   - component: {fileID: 2756115680474539679}
   - component: {fileID: 2428858460170666358}
   - component: {fileID: 2428858460170666359}
-  - component: {fileID: 5983672779910976672}
   - component: {fileID: 2061663019882325264}
   - component: {fileID: 1262609711382976969}
   m_Layer: 0
@@ -4916,7 +4915,7 @@ Transform:
   - {fileID: 1036797273183965584}
   - {fileID: 6712592305054481610}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2428858460170666358
 MonoBehaviour:
@@ -4971,29 +4970,6 @@ MonoBehaviour:
   hitBeam: {fileID: 2100000, guid: 2a179206790c74d43bd8d5e4734e9ce4, type: 2}
   activeSound: {fileID: 2061663019882325264}
   enemyTag: Enemy
---- !u!114 &5983672779910976672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3275348619487738917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd856ff16660974697dff7523a1eddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text:
-  - text: The Protogeist has run out of power..
-    typeTime: 0.05
-    waitTime: 1
-  - text: .. find a battery to recharge it!
-    typeTime: 0.07
-    waitTime: 4
-  initialWait: 0.5
-  playOnStart: 0
-  playedTimes: 0
-  textLabel: {fileID: 0}
 --- !u!82 &2061663019882325264
 AudioSource:
   m_ObjectHideFlags: 0

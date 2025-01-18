@@ -19,6 +19,8 @@ public class GeneralStats : MonoBehaviour
     [Header("On Death")]
     public int minViewerAdd = 0;
     public int maxViewerAdd = 0;
+    public Animator animator;
+    public AudioSource mareFinalDeathSound;
     public UnityEvent deathEvent;
 
     void Update()
@@ -49,7 +51,8 @@ public class GeneralStats : MonoBehaviour
 
         if (characterType == "SmallChild")
         {
-            Destroy(gameObject); // temporary
+            animator.SetBool("IsDead", true);
+            Destroy(gameObject, 6f); // temporary
         } else if (characterType == "TheMare")
         {
             // this is mostly handled in their AI code
@@ -58,9 +61,13 @@ public class GeneralStats : MonoBehaviour
 
             if (mare && mare.isFinalSpawn && playerStats.isAlive)
             {
-                // Player State
+                // State
 
                 playerStats.Kill(); // stop them from moving and other AI from moving but otherwise does nothing
+                animator.SetBool("IsDead", true);
+
+                if (mareFinalDeathSound)
+                    mareFinalDeathSound.Play();
 
                 // misc
 
@@ -81,7 +88,7 @@ public class GeneralStats : MonoBehaviour
 
     IEnumerator WinGame()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
 
         Fade fadeOut = GameObject.Find("FadeIn").GetComponent<Fade>();
         fadeOut.fadeTime = 1.7f;

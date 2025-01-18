@@ -1411,7 +1411,7 @@ PrefabInstance:
     - target: {fileID: 3806334187920066949, guid: 14532e0275a39514a8a869be0b069177,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3806334187920066949, guid: 14532e0275a39514a8a869be0b069177,
         type: 3}
@@ -1511,7 +1511,7 @@ PrefabInstance:
     - target: {fileID: 3806334187920066972, guid: 14532e0275a39514a8a869be0b069177,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -1766,8 +1766,13 @@ PrefabInstance:
       objectReference: {fileID: 468986927}
     - target: {fileID: 6722797069738834972, guid: ca4cf7c6764f2a34a9f1686980d16302,
         type: 3}
+      propertyPath: spawnTimings.Array.data[0].atViewCount
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722797069738834972, guid: ca4cf7c6764f2a34a9f1686980d16302,
+        type: 3}
       propertyPath: spawnTimings.Array.data[0].isFinalSpawn
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6722797069738834973, guid: ca4cf7c6764f2a34a9f1686980d16302,
         type: 3}

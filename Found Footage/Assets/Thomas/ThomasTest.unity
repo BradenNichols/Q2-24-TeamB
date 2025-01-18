@@ -3093,9 +3093,29 @@ PrefabInstance:
       objectReference: {fileID: 714131339}
     - target: {fileID: 6722797069738834972, guid: ca4cf7c6764f2a34a9f1686980d16302,
         type: 3}
+      propertyPath: retreatSpots.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722797069738834972, guid: ca4cf7c6764f2a34a9f1686980d16302,
+        type: 3}
       propertyPath: spawnTimings.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6722797069738834972, guid: ca4cf7c6764f2a34a9f1686980d16302,
+        type: 3}
+      propertyPath: retreatSpots.Array.data[0]
+      value: 
+      objectReference: {fileID: 994051287}
+    - target: {fileID: 6722797069738834972, guid: ca4cf7c6764f2a34a9f1686980d16302,
+        type: 3}
+      propertyPath: retreatSpots.Array.data[1]
+      value: 
+      objectReference: {fileID: 398915704}
+    - target: {fileID: 6722797069738834972, guid: ca4cf7c6764f2a34a9f1686980d16302,
+        type: 3}
+      propertyPath: retreatSpots.Array.data[2]
+      value: 
+      objectReference: {fileID: 714131339}
     - target: {fileID: 6722797069738834972, guid: ca4cf7c6764f2a34a9f1686980d16302,
         type: 3}
       propertyPath: spawnTimings.Array.data[0].atViewCount
@@ -27795,18 +27815,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7401ddcb135cd6347a14846ef54b2b79, type: 3}
---- !u!114 &1680489470 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9048349997405322243, guid: b8894d8103384c04da506c113d264d6c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1760663021194662284}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1685794104
 GameObject:
   m_ObjectHideFlags: 0
@@ -28643,6 +28651,84 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 38ad61e863d45004692fc7ad751903ba, type: 3}
+--- !u!1 &1743546161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1743546165}
+  - component: {fileID: 1743546164}
+  - component: {fileID: 1743546163}
+  - component: {fileID: 1743546162}
+  m_Layer: 6
+  m_Name: SprintTip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1743546162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743546161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50c74b518d20dbb47b29f1609b762b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1743546163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743546161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd856ff16660974697dff7523a1eddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+  - text: Press SHIFT/L3 to sprint.
+    typeTime: 0.06
+    waitTime: 4
+  initialWait: 0.4
+  playOnStart: 0
+  playedTimes: 0
+--- !u!65 &1743546164
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743546161}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1743546165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743546161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.84, y: 3.24, z: 32.1}
+  m_LocalScale: {x: 0.34438482, y: 7.646042, z: 9.890583}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 315
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1757824296
 GameObject:
   m_ObjectHideFlags: 0
@@ -32551,7 +32637,6 @@ MonoBehaviour:
   initialWait: 2.5
   playOnStart: 1
   playedTimes: 0
-  textLabel: {fileID: 1680489470}
 --- !u!4 &2052595675
 Transform:
   m_ObjectHideFlags: 0
@@ -32704,7 +32789,6 @@ MonoBehaviour:
   initialWait: 1
   playOnStart: 0
   playedTimes: 0
-  textLabel: {fileID: 1680489470}
 --- !u!4 &2065839952
 Transform:
   m_ObjectHideFlags: 0
@@ -33700,6 +33784,60 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 38ad61e863d45004692fc7ad751903ba, type: 3}
+--- !u!1 &2138393206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2138393208}
+  - component: {fileID: 2138393207}
+  m_Layer: 0
+  m_Name: NoBatteryTooltip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2138393207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138393206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd856ff16660974697dff7523a1eddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+  - text: The Protogeist has run out of power..
+    typeTime: 0.05
+    waitTime: 1
+  - text: .. find a battery to recharge it!
+    typeTime: 0.07
+    waitTime: 4
+  initialWait: 0.5
+  playOnStart: 0
+  playedTimes: 0
+--- !u!4 &2138393208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138393206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 314
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2139025318
 GameObject:
   m_ObjectHideFlags: 0
