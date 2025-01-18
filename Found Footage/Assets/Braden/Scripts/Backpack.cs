@@ -152,9 +152,9 @@ public class Backpack : MonoBehaviour
             collider.enabled = false;
     }
 
-    public void EquipItem(GameObject item)
+    public void EquipItem(GameObject item, bool forceEquip = false)
     {
-        if (heldItem == item || item == null || !canEquip) return;
+        if (heldItem == item || item == null || (!forceEquip && !canEquip)) return;
         else if (heldItem != null) UnequipItem();
 
         heldItem = item;
@@ -173,7 +173,15 @@ public class Backpack : MonoBehaviour
         BaseItem itemClass = item.GetComponent<BaseItem>();
 
         if (itemClass)
+        {
             itemClass.Equip();
+
+            if (!canEquip)
+            {
+                itemClass.isDisabled = true;
+                itemClass.Disable();
+            }
+        }   
     }
 
     public void UnequipItem()

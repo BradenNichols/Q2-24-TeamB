@@ -51,7 +51,7 @@ MonoBehaviour:
   spawns:
   - {fileID: 0}
   maxEnemies: 4
-  randomMinSpawnTime: 8
-  randomMaxSpawnTime: 16
+  randomMinSpawnTime: 6
+  randomMaxSpawnTime: 13
   patrolPoints: []
   currentlySpawnedAmount: 0

@@ -41,6 +41,7 @@ public class TheMare : BaseEnemy
                     agent.speed = retreatWalkSpeed;
 
                     Transform retreat = getFarthestRetreatFromPlayer();
+                    Debug.Log(retreat.name);
                     agent.SetDestination(retreat.position);
                 }
                 else // we have set it already
@@ -60,11 +61,12 @@ public class TheMare : BaseEnemy
 
                 agent.speed = 0;
             }
+
             chaseSound.Pause();
         }
         else if(chaseSound)
         {
-            if (agent.velocity.magnitude > 0)
+            if (agent.velocity.magnitude > 0 && Time.timeScale > 0)
                 chaseSound.UnPause();
             else
                 chaseSound.Pause();

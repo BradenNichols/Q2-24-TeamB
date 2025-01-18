@@ -1411,7 +1411,7 @@ PrefabInstance:
     - target: {fileID: 3806334187920066949, guid: 14532e0275a39514a8a869be0b069177,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3806334187920066949, guid: 14532e0275a39514a8a869be0b069177,
         type: 3}
@@ -1778,6 +1778,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MareSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722797069738834973, guid: ca4cf7c6764f2a34a9f1686980d16302,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

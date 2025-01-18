@@ -17,7 +17,7 @@ public class GunInteraction : MonoBehaviour
 
         GameObject getgun = Instantiate(idk);
         backpack.AddItem(getgun);
-        backpack.EquipItem(getgun);
+        backpack.EquipItem(getgun, true);
 
         viewCount.noDecay = false;
         gunTooltip.Play();

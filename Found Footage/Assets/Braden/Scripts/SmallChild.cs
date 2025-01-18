@@ -69,7 +69,7 @@ public class SmallChild : BaseEnemy
 
                 if (chaseSound)
                 {
-                    if (agent.velocity.magnitude > 0)
+                    if (agent.velocity.magnitude > 0 && Time.timeScale > 0)
                         chaseSound.UnPause();
                     else
                         chaseSound.Pause();
