@@ -17,8 +17,6 @@ public class TheMare : BaseEnemy
     {
         base.Start();
         screamerSound.Play();
-
-        
     }
 
     // Update is called once per frame
