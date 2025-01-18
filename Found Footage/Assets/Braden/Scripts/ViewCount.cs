@@ -83,6 +83,9 @@ public class ViewCount : MonoBehaviour
                 if (greenTime <= 0)
                     SetColor(Color.white);
             }
+
+            if (Input.GetKeyDown(KeyCode.P))
+                AddViewers(50);
         }
     }
 

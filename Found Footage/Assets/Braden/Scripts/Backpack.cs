@@ -191,7 +191,15 @@ public class Backpack : MonoBehaviour
             BaseItem itemClass = heldItem.GetComponent<BaseItem>();
 
             if (itemClass)
+            {
+                if (itemClass.isDisabled)
+                {
+                    itemClass.isDisabled = false;
+                    itemClass.Enable();
+                }
+
                 itemClass.Unequip();
+            }
 
             heldItem.SetActive(false);
             heldItemData.isHeld = false;

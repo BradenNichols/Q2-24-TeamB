@@ -15,6 +15,8 @@ public class GunInteraction : MonoBehaviour
     {
         pickupSound.Play();
 
+        backpack.UnequipItem();
+
         GameObject getgun = Instantiate(idk);
         backpack.AddItem(getgun);
         backpack.EquipItem(getgun, true);
